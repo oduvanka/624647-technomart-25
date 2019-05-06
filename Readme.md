@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Юлия Елкина](https://up.htmlacademy.ru/htmlcss/25/user/624647).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Палкин](https://htmlacademy.ru/profile/odlopez).
 
 ---
 
