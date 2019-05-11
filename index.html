@@ -34,7 +34,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <section>
         <ul>
           <li>Материалы</li>
@@ -45,80 +45,86 @@
           <li>Доставка</li>
         </ul>
       </section>
-      <section>
+      <section class="goods">
         <h2>Популярные товары:</h2>
-        <a href="#">Все популярные товары</a>
-        <ul>
-          <li>
+        <a class="button" href="#">Все популярные товары</a>
+        <ul class="goods-list">
+          <li class="good-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <p>32500 Р.</p>
-            <p>25500 Р.</p>
+            <img src="" alt="Фото товара">
+            <p class="price price-old">32500 Р.</p>
+            <p class="price price-new">25500 Р.</p>
           </li>
-          <li>
+          <li class="good-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
-            <p>22500 Р.</p>
-            <p>15500 Р.</p>
+            <img src="" alt="Фото товара">
+            <p class="price price-old">22500 Р.</p>
+            <p> class="price price-new"15500 Р.</p>
           </li>
-          <li>
+          <li class="good-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
+            <img src="" alt="Фото товара">
+            <p class="price price-old">30500 Р.</p>
+            <p class="price price-new">25500 Р.</p>
           </li>
-          <li>
+          <li class="good-item">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <p></p>
-            <p>25500 Р.</p>
+            <img src="" alt="Фото товара">
+            <p class="price price-new">25500 Р.</p>
+            <span class="label-new">new</span>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="manufactures">
         <h2>Популярные производители:</h2>
-        <a href="#">Все производители</a>
-            <ul>
-              <li><img src="#" alt="BOSCH"></li>
-              <li><img src="#" alt="Makita"></li>
-              <li><img src="#" alt="DeWALT"></li>
-              <li><img src="#" alt="ИНТЕРСКОЛ"></li>
-              <li><img src="#" alt="HITACHI"></li>
-              <li><img src="#" alt="LG"></li>
-              <li><img src="#" alt="AEG POWER SOLUTIONS"></li>
-              <li><img src="#" alt="metabo. work. don't play."></li>
-            </ul>
+        <a class="button" href="#">Все производители</a>
+        <ul class="manufactures-list">
+          <li class="manufacture-item"><img src="#" alt="BOSCH"></li>
+          <li class="manufacture-item"><img src="#" alt="Makita"></li>
+          <li class="manufacture-item"><img src="#" alt="DeWALT"></li>
+          <li class="manufacture-item"><img src="#" alt="ИНТЕРСКОЛ"></li>
+          <li class="manufacture-item"><img src="#" alt="HITACHI"></li>
+          <li class="manufacture-item"><img src="#" alt="LG"></li>
+          <li class="manufacture-item"><img src="#" alt="AEG POWER SOLUTIONS"></li>
+          <li class="manufacture-item"><img src="#" alt="metabo. work. don't play."></li>
+        </ul>
       </section>
       <section>
         <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-        <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <ul>
-          <li>Доставка</li>
-          <li>Гарантия</li>
-          <li>Кредит</li>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        <ul class="services-list">
+          <li class="service-item service-active">Доставка</li>
+          <li class="service-item">Гарантия</li>
+          <li class="service-item">Кредит</li>
         </ul>
-        <section>
+        <section class="service-info">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
             Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
         </section>
       </section>
-      <section>
+      <section class="about">
         <h2>Компания "Техномарт"</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-          Техномарт работает со многими транспортными компаниями:</p>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="#">Подробнее о компании</a>
-        <section>
+        <section class="deltransport-companies">
+          <h3 class="visually-hidden">Транспортные компании</h3>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+            Техномарт работает со многими транспортными компаниями:</p>
+          <ul class="transport-companies-list">
+            <li class="transport-company-item">Деловые линии</li>
+            <li class="transport-company-item">Автотрейдинг</li>
+            <li class="transport-company-item">ЖелДорЭкспедиция</li>
+          </ul>
+        </section>
+        <a class="button" href="#">Подробнее о компании</a>
+        <section class="contacts">
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
           <img src="#" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком">
-          <button>Заблудились? Напишите нам!</button>
+          <a class="button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
-      <!----<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>-->
     </main>
     <footer>
       <p>Техномарт</p>
@@ -142,6 +148,7 @@
       <div>
         <section>
           <p>Разработано — <a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
+          <!--<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>-->
           <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         </section>
         <ul>
