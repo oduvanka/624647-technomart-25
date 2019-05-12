@@ -42,13 +42,22 @@
         <li><a href="catalog.html">Инструмент</a></li>
         <li class="breadcrumps-current">Перфораторы</li>
       </ul>
-      <h2 class="page-title">Перфораторы</h2>
+      <div class="catalog-category">
+        <h2>Перфораторы</h2>
+      </div>
       <section class="filters">
         <h3>Фильтр:</h3>
         <section class="filter-price">
           <h4>Цена:</h4>
-          <span>0</span>
-          <span>30000</span>
+          <div class="filter-price-slider">
+            <!--Здесь будет ползунок-->
+          </div>
+          <div class="filter-price-from">
+            <span>0</span>
+          </div>
+          <div class="filter-price-to">
+            <span>30000</span>
+          </div>
         </section>
         <section class="filter-manufactures">
           <h4>Производители:</h4>
@@ -69,16 +78,18 @@
         </section>
       </section>
       <section class="sorting">
-        <h3>Сортировка:</h3>
-        <ul class="sorting-parametr">
-          <li class="sorting-parametr-current"><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По функционалу</a></li>
-        </ul>
-        <ul class="sorting-direction">
-          <li><a href="#" title="sort-ascending">По возрастанию</a></li>
-          <li class="sorting-direction-current"><a href="#" title="sort-descending">По убыванию</a></li>
-        </ul>
+        <div class="sorting-parameters-group">
+          <h3>Сортировка:</h3>
+          <ul class="sorting-parameters-list">
+            <li class="sorting-parameters-item sorting-parameter-current"><a href="#">По цене</a></li>
+            <li class="sorting-parameters-item"><a href="#">По типу</a></li>
+            <li class="sorting-parameters-item"><a href="#">По функционалу</a></li>
+          </ul>
+          <ul class="sorting-direction-list">
+            <li class="sorting-direction-item"><a href="#" title="По возрастанию"></a></li>
+            <li class="sorting-direction-item sorting-direction-current"><a href="#" title="По убыванию"></a></li>
+          </ul>
+        </div>
       </section>
       <section class="catalog">
         <h3 class="visually-hidden">Список товаров</h3>
@@ -89,8 +100,10 @@
               <img src="" alt="Фото товара" width="218" height="170">
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
@@ -99,18 +112,23 @@
               <img src="" alt="Фото товара" width="218" height="170">
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
             <article>
               <h4>Перфоратор BOSCH BFG 2000</h4>
               <img src="" alt="Фото товара" width="218" height="170">
+              <p class="price price-old">30500 Р.</p>
               <p class="price price-new">12500 Р.</p>
               <span class="label-new">new</span>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
@@ -119,8 +137,10 @@
               <img src="" alt="Фото товара" width="218" height="170">
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
@@ -130,17 +150,22 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
               <span class="label-new">new</span>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
             <article>
               <h4>Перфоратор BOSCH BFG 2000</h4>
               <img src="" alt="Фото товара" width="218" height="170">
+              <p class="price price-old">30500 Р.</p>
               <p class="price price-new">12500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
@@ -150,8 +175,10 @@
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
               <span class="label-new">new</span>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
@@ -160,17 +187,22 @@
               <img src="" alt="Фото товара" width="218" height="170">
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="catalog-item">
             <article>
               <h4>Перфоратор BOSCH BFG 2000</h4>
               <img src="" alt="Фото товара" width="218" height="170">
+              <p class="price price-old">30500 Р.</p>
               <p class="price price-new">12500 Р.</p>
-              <a class="button visually-hidden">Купить</a>
-              <button class="visually-hidden">В закладки</button>
+              <div class="goods-actions">
+                <a class="button visually-hidden">Купить</a>
+                <button class="visually-hidden">В закладки</button>
+              </div>
             </article>
           </li>
         </ul>
