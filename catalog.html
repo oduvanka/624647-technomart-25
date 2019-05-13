@@ -47,17 +47,17 @@
       </div>
       <form class="filters" method="get">
         <h3>Фильтр:</h3>
-        <section class="filter-price">
-          <h4>Цена:</h4>
+        <fieldset class="filter-price">
+          <legend>Цена:</legend>
           <div class="filter-price-slider">
             <input type="range" min="0" max="35000" step="100" value="30000">
           </div>
           <div>
             <p><span class="filter-price-from">0</span> - <span class="filter-price-to">30000</span></p>
           </div>
-        </section>
-        <section class="filter-manufactures">
-          <h4>Производители:</h4>
+        </fieldset>
+        <fieldset class="filter-manufactures">
+          <legend>Производители:</legend>
           <input type="checkbox" id="manufactures-1" name="manufactures-bosch" checked>
           <label for="manufactures-1">BOSCH</label>
           <input type="checkbox" id="manufactures-2" name="manufactures-interscol">
@@ -68,14 +68,14 @@
           <label for="manufactures-4">Dewalt</label>
           <input type="checkbox" id="manufactures-5" name="manufactures-hitachi">
           <label for="manufactures-5">Hitachi</label>
-        </section>
-        <section class="filter-power-supply">
-          <h4>Питание:</h4>
+        </fieldset>
+        <fieldset class="filter-power-supply">
+          <legend>Питание:</legend>
           <input type="radio" id="power-supply-1" name="power-supply" value="battery" checked>
           <label for="power-supply-1">Аккумуляторные</label>
           <input type="radio" id="power-supply-2" name="power-supply" value="mains">
           <label for="power-supply-2">Сетевые</label>
-        </section>
+        </fieldset>
         <button type="submit">Показать</button>
       </form>
       <section class="sorting">
