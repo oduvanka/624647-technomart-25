@@ -7,12 +7,12 @@
   </head>
   <body>
     <header class="main-header">
-      <a><img src="img/logo.svg" alt="Техномарт" width="220" height="47"></a>
+      <a class="main-header-logo"><img src="img/logo.svg" alt="Техномарт" width="220" height="47"></a>
       <div class="user-products">
         <input type="search" name="search" placeholder="Поиск:">
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span>0</span></a>
-        <a class="button button-order-goods" href="#">Оформить заказ</a>
+        <a class="btn btn-order-goods" href="#">Оформить заказ</a>
       </div>
       <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div>
@@ -41,44 +41,46 @@
         <ul class="offers-list">
           <li class="offer-item offer-item-materials">
             <h3>Материалы</h3>
-            <a class="button" href="catalog.html">На любой вкус</a>
+            <a class="btn btn-details btn-details-offers" href="catalog.html">На любой вкус</a>
             <span class="label-new">new</span>
           </li>
           <li class="offer-item offer-item-tool">
             <h3>Инструмент</h3>
-            <a class="button" href="catalog.html">На все случаи</a>
+            <a class="btn btn-details btn-details-offers" href="catalog.html">На все случаи</a>
           </li>
           <li class="offer-item">
             <h3>Техника</h3>
-            <a class="button" href="catalog.html">Для стройки</a>
+            <a class="btn btn-details btn-details-offers" href="catalog.html">Для стройки</a>
           </li>
           <li class="offer-item offer-item-drills">
-            <div>
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-            </div>
-            <button type="button">Назад</button>
-            <button type="button">Вперёд</button>
-            <div>
-              <button type="button" title="Слайд Дрели">1</button>
-              <button type="button" title="Слайд Перфораторы">2</button>
-            </div>
-            <a class="button" href="catalog.html">Открыть каталог</a>
+            <figure class="slider">
+              <div>
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+              </div>
+              <button class="control control-slider control-slider-back" type="button">Назад</button>
+              <button class="control control-slider control-slider-next" type="button">Вперёд</button>
+              <div>
+                <button class="control control-slider control-slider-slide1" type="button" title="Слайд Дрели">Дрели</button>
+                <button class="control control-slider control-slider-slide2" type="button" title="Слайд Перфораторы">Перфораторы</button>
+              </div>
+              <a class="btn btn-details btn-details-offers" href="catalog.html">Открыть каталог</a>
+            </figure>
           </li>
           <li class="offer-item offer-item-sale">
             <h3>Скидки 50%</h3>
-            <a class="button" href="catalog.html">На 350 товаров</a>
+            <a class="btn btn-details btn-details-offers" href="catalog.html">На 350 товаров</a>
           </li>
           <li class="offer-item offer-item-delivery">
             <h3>Доставка</h3>
-            <a class="button" href="catalog.html">Бесплатно</a>
+            <a class="btn btn-details btn-details-offers" href="catalog.html">Бесплатно</a>
           </li>
         </ul>
       </section>
       <section class="catalog">
         <div class="catalog-header">
           <h2>Популярные товары:</h2>
-          <a class="button" href="#">Все популярные товары</a>
+          <a class="btn btn-details btn-details-goods" href="#">Все популярные товары</a>
         </div>
         <ul class="catalog-list">
           <li class="catalog-item">
@@ -88,8 +90,8 @@
               <p class="price price-old">32500 Р.</p>
               <p class="price price-new">25500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -100,8 +102,8 @@
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -112,8 +114,8 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -125,8 +127,8 @@
               <p class="price price-new">25500 Р.</p>
               <span class="label-new">new</span>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -135,7 +137,7 @@
       <section class="manufactures">
         <div class="manufactures-header">
           <h2>Популярные производители:</h2>
-          <a class="button" href="#">Все производители</a>
+          <a class="btn btn-details btn-details-manufactures" href="#">Все производители</a>
         </div>
         <ul class="manufactures-list">
           <li class="manufacture-item">
@@ -206,17 +208,17 @@
           <li class="transport-company-item">Автотрейдинг</li>
           <li class="transport-company-item">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="company.html">Подробнее о компании</a>
+        <a class="btn btn-details btn-details-company" href="company.html">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
         <img src="#" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком">
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
+        <a class="btn btn-create-message" href="#">Заблудились? Напишите нам!</a>
       </section>
     </main>
     <footer class="main-footer">
-      <a><img src="img/logo.svg" alt="Техномарт" width="220" height="68"></a>
+      <a class="main-footer-logo"><img src="img/logo.svg" alt="Техномарт" width="220" height="68"></a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
       <ul class="footer-site-navigations">
@@ -234,10 +236,10 @@
       </ul>
       <div class="copyright">
         <p>(c) 2010-2019 Компания "Техномарт"<br>Все права защищены</p>
-        <ul class="social-networks-list">
-          <li class="social-network-item"><a href="https://vk.com/tehnomart/" target="_blank">VK</a></li>
-          <li class="social-network-item"><a href="https://facebook.com/tehnomart/" target="_blank">Facebook</a></li>
-          <li class="social-network-item"><a href="https://instagram.com/tehnomart/" target="_blank">Instagram</a></li>
+        <ul class="socials-list">
+          <li class="socials-item"><a href="https://vk.com/tehnomart/" target="_blank">VK</a></li>
+          <li class="socials-item"><a href="https://facebook.com/tehnomart/" target="_blank">Facebook</a></li>
+          <li class="socials-item"><a href="https://instagram.com/tehnomart/" target="_blank">Instagram</a></li>
         </ul>
         <p>Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
         <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>

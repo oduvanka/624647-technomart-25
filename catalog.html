@@ -7,12 +7,12 @@
   </head>
   <body>
     <header class="main-header">
-      <a href="index.html"><img src="img/logo.svg" alt="Техномарт" width="220" height="47"></a>
+      <a class="main-header-logo" href="index.html"><img src="img/logo.svg" alt="Техномарт" width="220" height="47"></a>
       <div class="user-products">
         <input type="search" name="search" placeholder="Поиск:">
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span>0</span></a>
-        <a class="button button-order-goods" href="#">Оформить заказ</a>
+        <a class="btn btn-order-goods" href="#">Оформить заказ</a>
       </div>
       <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div>
@@ -76,19 +76,29 @@
           <input type="radio" id="power-supply-2" name="power-supply" value="mains">
           <label for="power-supply-2">Сетевые</label>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="btn btn-send-filter" type="submit">Показать</button>
       </form>
       <section class="sorting">
         <div class="sorting-parameters-group">
           <h3>Сортировка:</h3>
           <ul class="sorting-parameters-list">
-            <li class="sorting-parameters-item sorting-parameter-current"><a>По цене</a></li>
-            <li class="sorting-parameters-item"><a>По типу</a></li>
-            <li class="sorting-parameters-item"><a>По функционалу</a></li>
+            <li class="sorting-parameters-item sorting-parameter-current">
+              <button class="link" type="button">По цене</button>
+            </li>
+            <li class="sorting-parameters-item">
+              <button class="link" type="button">По типу</button>
+            </li>
+            <li class="sorting-parameters-item">
+              <button class="link" type="button">По функционалу</button>
+            </li>
           </ul>
           <ul class="sorting-direction-list">
-            <li class="sorting-direction-item"><a title="По возрастанию"></a></li>
-            <li class="sorting-direction-item sorting-direction-current"><a title="По убыванию"></a></li>
+            <li class="sorting-direction-item">
+              <button class="control" type="button" title="По возрастанию"></button>
+            </li>
+            <li class="sorting-direction-item sorting-direction-current">
+              <button class="control" type="button" title="По убыванию"></button>
+            </li>
           </ul>
         </div>
       </section>
@@ -102,8 +112,8 @@
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -114,8 +124,8 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -127,8 +137,8 @@
               <p class="price price-new">12500 Р.</p>
               <span class="label-new">new</span>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -139,8 +149,8 @@
               <p class="price price-old">22500 Р.</p>
               <p class="price price-new">15500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -152,8 +162,8 @@
               <p class="price price-new">25500 Р.</p>
               <span class="label-new">new</span>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -164,8 +174,8 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">12500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -177,8 +187,8 @@
               <p class="price price-new">15500 Р.</p>
               <span class="label-new">new</span>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -189,8 +199,8 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">25500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
@@ -201,17 +211,25 @@
               <p class="price price-old">30500 Р.</p>
               <p class="price price-new">12500 Р.</p>
               <div class="goods-actions visually-hidden">
-                <a class="button">Купить</a>
-                <button type="button">В закладки</button>
+                <a class="btn btn-add-basket">Купить</a>
+                <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
             </article>
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><button type="button">1</button></li>
-          <li class="pagination-item"><button type="button">2</button></li>
-          <li class="pagination-item"><button type="button">3</button></li>
-          <li class="pagination-item"><button type="button">Следующая</button></li>
+          <li class="pagination-item pagination-item-current">
+            <button class="btn btn-pagination" type="button">1</button>
+          </li>
+          <li class="pagination-item">
+            <button class="btn btn-pagination" type="button">2</button>
+          </li>
+          <li class="pagination-item">
+            <button class="btn btn-pagination" type="button">3</button>
+          </li>
+          <li class="pagination-item">
+            <button class="btn btn-pagination" type="button">Следующая</button>
+          </li>
         </ul>
       </section>
       <section class="goods-info">
@@ -221,7 +239,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <a href="index.ru"><img src="img/logo.svg" alt="Техномарт" width="220" height="68"></a>
+      <a class="main-footer-logo" href="index.ru"><img src="img/logo.svg" alt="Техномарт" width="220" height="68"></a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
       <ul class="footer-site-navigations">
@@ -239,10 +257,10 @@
       </ul>
       <div class="copyright">
         <p>(c) 2010-2019 Компания "Техномарт"<br>Все права защищены</p>
-        <ul class="social-networks-list">
-          <li class="social-network-item"><a href="https://vk.com/tehnomart/" target="_blank">VK</a></li>
-          <li class="social-network-item"><a href="https://facebook.com/tehnomart/" target="_blank">Facebook</a></li>
-          <li class="social-network-item"><a href="https://instagram.com/tehnomart/" target="_blank">Instagram</a></li>
+        <ul class="socials-list">
+          <li class="socials-item"><a href="https://vk.com/tehnomart/" target="_blank">VK</a></li>
+          <li class="socials-item"><a href="https://facebook.com/tehnomart/" target="_blank">Facebook</a></li>
+          <li class="socials-item"><a href="https://instagram.com/tehnomart/" target="_blank">Instagram</a></li>
         </ul>
         <p>Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
         <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
