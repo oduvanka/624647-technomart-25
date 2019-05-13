@@ -50,32 +50,33 @@
         <section class="filter-price">
           <h4>Цена:</h4>
           <div class="filter-price-slider">
-            <!--Здесь будет ползунок-->
+            <input type="range" min="0" max="35000" step="100" value="30000">
           </div>
-          <div class="filter-price-from">
-            <span>0</span>
-          </div>
-          <div class="filter-price-to">
-            <span>30000</span>
+          <div>
+            <p><span class="filter-price-from">0</span> - <span class="filter-price-to">30000</span></p>
           </div>
         </section>
         <section class="filter-manufactures">
           <h4>Производители:</h4>
-          <ul>
-            <li>BOSCH</li>
-            <li>Интерскол</li>
-            <li>Makita</li>
-            <li>Dewalt</li>
-            <li>Hitachi</li>
-          </ul>
+          <input type="checkbox" id="manufactures-1" name="manufactures-bosch" checked>
+          <label for="manufactures-1">BOSCH</label>
+          <input type="checkbox" id="manufactures-2" name="manufactures-interscol">
+          <label for="manufactures-2">Интерскол</label>
+          <input type="checkbox" id="manufactures-3" name="manufactures-makita" checked>
+          <label for="manufactures-3">Makita</label>
+          <input type="checkbox" id="manufactures-4" name="manufactures-dewalt">
+          <label for="manufactures-4">Dewalt</label>
+          <input type="checkbox" id="manufactures-5" name="manufactures-hitachi">
+          <label for="manufactures-5">Hitachi</label>
         </section>
         <section class="filter-power-supply">
           <h4>Питание:</h4>
-          <ul>
-            <li>Аккумуляторные</li>
-            <li>Сетевые</li>
-          </ul>
+          <input type="radio" id="power-supply-1" name="power-supply" value="battery" checked>
+          <label for="power-supply-1">Аккумуляторные</label>
+          <input type="radio" id="power-supply-2" name="power-supply" value="mains">
+          <label for="power-supply-2">Сетевые</label>
         </section>
+        <button>Показать</button>
       </section>
       <section class="sorting">
         <div class="sorting-parameters-group">
