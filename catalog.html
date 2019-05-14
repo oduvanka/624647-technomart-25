@@ -58,23 +58,37 @@
         </fieldset>
         <fieldset class="filter-manufactures">
           <legend>Производители:</legend>
-          <input type="checkbox" id="manufactures" name="manufactures-bosch" checked>
-          <label for="manufactures-1">BOSCH</label>
-          <input type="checkbox" id="manufactures" name="manufactures-interscol">
-          <label for="manufactures-2">Интерскол</label>
-          <input type="checkbox" id="manufactures" name="manufactures-makita" checked>
-          <label for="manufactures-3">Makita</label>
-          <input type="checkbox" id="manufactures" name="manufactures-dewalt">
-          <label for="manufactures-4">Dewalt</label>
-          <input type="checkbox" id="manufactures" name="manufactures-hitachi">
-          <label for="manufactures-5">Hitachi</label>
+          <p>
+            <input type="checkbox" id="manufactures-bosch" name="manufactures-bosch" value="bosch" checked>
+            <label for="manufactures-bosch">BOSCH</label>
+          </p>
+          <p>
+            <input type="checkbox" id="manufactures-interscol" name="manufactures-interscol" value="interscol">
+            <label for="manufactures-interscol">Интерскол</label>
+          </p>
+          <p>
+            <input type="checkbox" id="manufactures-makita" name="manufactures-makita" value="makita" checked>
+            <label for="manufactures-makita">Makita</label>
+          </p>
+          <p>
+            <input type="checkbox" id="manufactures-dewalt" name="manufactures-dewalt" value="dewalt">
+            <label for="manufactures-dewalt">Dewalt</label>
+          </p>
+          <p>
+            <input type="checkbox" id="manufactures-hitachi" name="manufactures-hitachi" value="hitachi">
+            <label for="manufactures-hitachi">Hitachi</label>
+          </p>
         </fieldset>
         <fieldset class="filter-power-supply">
           <legend>Питание:</legend>
-          <input type="radio" id="power-supply-1" name="power-supply" value="battery" checked>
-          <label for="power-supply-1">Аккумуляторные</label>
-          <input type="radio" id="power-supply-2" name="power-supply" value="mains">
-          <label for="power-supply-2">Сетевые</label>
+          <p>
+            <input type="radio" id="power-supply-battery" name="power-supply" value="battery" checked>
+            <label for="power-supply-battery">Аккумуляторные</label>
+          </p>
+          <p>
+            <input type="radio" id="power-supply-mains" name="power-supply" value="mains">
+            <label for="power-supply-mains">Сетевые</label>
+          </p>
         </fieldset>
         <button class="btn btn-send-filter" type="submit">Показать</button>
       </form>
