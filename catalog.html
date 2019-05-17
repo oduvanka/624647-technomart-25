@@ -107,32 +107,38 @@
             <label for="power-supply-mains">Сетевые</label>
           </p>
         </fieldset>
+        <section class="sorting">
+          <h3>Сортировка:</h3>
+          <fieldset class="sort-parameters">
+            <legend class="visually-hidden">По параметрам</legend>
+            <p>
+              <input id="sort-param-price" type="radio" name="sort-params" value="price" checked>
+              <label for="sort-param-price">По цене</label>
+            </p>
+            <p>
+              <input id="sort-param-type" type="radio" name="sort-params" value="type">
+              <label for="sort-param-type">По типу</label>
+            </p>
+            <p>
+              <input id="sort-param-functional" type="radio" name="sort-params" value="functional">
+              <label for="sort-param-functional">По функционалу</label>
+            </p>             
+          </ul>
+          <fieldset class="sort-directions">
+            <legend class="visually-hidden">По направлению</legend>
+            <p>
+              <input id="sort-direction-ascending" type="radio" name="sort-direction" value="ascending">
+              <label for="sort-direction-ascending">По возрастанию</label>
+            </p>
+            <p>
+              <input id="sort-direction-descending" type="radio" name="sort-direction" value="descending" checked>
+              <label for="sort-direction-descending">По убыванию</label>
+            </p>
+          </fieldset>
+        </section>
         <button class="btn btn-send-filter" type="submit">Показать</button>
       </form>
-      <section class="sorting">
-        <div class="sorting-parameters-group">
-          <h3>Сортировка:</h3>
-          <ul class="sorting-parameters-list">
-            <li class="sorting-parameters-item sorting-parameter-current">
-              <button class="link" type="button">По цене</button>
-            </li>
-            <li class="sorting-parameters-item">
-              <button class="link" type="button">По типу</button>
-            </li>
-            <li class="sorting-parameters-item">
-              <button class="link" type="button">По функционалу</button>
-            </li>
-          </ul>
-          <ul class="sorting-direction-list">
-            <li class="sorting-direction-item">
-              <button class="control" type="button" title="По возрастанию"></button>
-            </li>
-            <li class="sorting-direction-item sorting-direction-current">
-              <button class="control" type="button" title="По убыванию"></button>
-            </li>
-          </ul>
-        </div>
-      </section>
+      
       <section class="catalog">
         <h3 class="visually-hidden">Список товаров</h3>
         <ul class="catalog-list">
