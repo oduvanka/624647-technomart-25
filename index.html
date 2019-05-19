@@ -259,7 +259,29 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Где находится наш офис</h2>
-      <img src="map-big.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="783" height="372">
+      <img src="img/map-big.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="783" height="372">
+      <button class="btn btn-close" type="button">Закрыть</button>
+    </section>
+
+    <section class="modal modal-message">
+      <h2 class="visualli-hidden">Написать письмо</h2>
+      <form method="POST">
+        <p>
+          <label for="message-name">Ваше имя:</label>
+          <input type="text" id="message-name" value="" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="message-email">Ваш e-mail:</label>
+          <input type="text" id="message-email" value="" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="message-text">Текст письма:</label>
+          <textarea id="message-text" value="" placeholder="В свободной форме"></textarea>
+        </p>
+        <div class="modal-footer modal-footer-bg">
+          <button class="btn" type="submit">Отправить</button>
+        </div>
+      </form>
       <button class="btn btn-close" type="button">Закрыть</button>
     </section>
   </body>
