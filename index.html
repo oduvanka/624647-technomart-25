@@ -15,7 +15,7 @@
       <div class="user-products">
         <form method="GET">
           <label for="search">Поиск:</label>
-          <input type="search" id="search" name="search" placeholder="Поиск:">
+          <input type="search" id="search" name="search" value="" placeholder="Поиск:">
         </form>
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span>0</span></a>
@@ -270,15 +270,15 @@
       <form method="POST">
         <p>
           <label for="message-name">Ваше имя:</label>
-          <input type="text" id="message-name" value="" placeholder="Имя Фамилия">
+          <input type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="message-email">Ваш e-mail:</label>
-          <input type="text" id="message-email" value="" placeholder="email@example.com">
+          <input type="text" id="message-email" name="user-email" value="" placeholder="email@example.com">
         </p>
         <p>
           <label for="message-text">Текст письма:</label>
-          <textarea id="message-text" value="" placeholder="В свободной форме"></textarea>
+          <textarea id="message-text" name="user-message" value="" placeholder="В свободной форме"></textarea>
         </p>
         <div class="message-footer message-footer-bg">
           <button class="btn" type="submit">Отправить</button>

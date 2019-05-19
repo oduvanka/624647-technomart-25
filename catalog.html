@@ -15,7 +15,7 @@
       <div class="user-products">
         <form method="GET">
           <label for="search">Поиск:</label>
-          <input type="search" id="search" name="search" placeholder="Поиск:">
+          <input type="search" id="search" name="search" value="" placeholder="Поиск:">
         </form>
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span>0</span></a>
@@ -61,10 +61,10 @@
           <div class="filter-price-inputs">
             <p>
               <label class="visually-hidden" for="price-from">От:</label>
-              <input class="filter-price-from" type="number" id="price-from" value="0">
+              <input class="filter-price-from" type="number" id="price-from" name="price-from" value="0">
               -
               <label class="visually-hidden" for="price-to">До:</label>
-              <input class="filter-price-to" type="number" id="price-to" value="30000">
+              <input class="filter-price-to" type="number" id="price-to" name="price-to" value="30000">
             </p>
           </div>
         </fieldset>
