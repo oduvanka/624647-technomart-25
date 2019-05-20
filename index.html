@@ -268,18 +268,20 @@
     <section class="modal modal-message">
       <h2 class="visualli-hidden">Написать письмо</h2>
       <form method="POST">
-        <p>
-          <label for="message-name">Ваше имя:</label>
-          <input type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="message-email">Ваш e-mail:</label>
-          <input type="text" id="message-email" name="user-email" value="" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="message-text">Текст письма:</label>
-          <textarea id="message-text" name="user-message" value="" placeholder="В свободной форме"></textarea>
-        </p>
+        <div class="message-content">
+          <p>
+            <label for="message-name">Ваше имя:</label>
+            <input type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="message-email">Ваш e-mail:</label>
+            <input type="email" id="message-email" name="user-email" value="" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="message-text">Текст письма:</label>
+            <textarea id="message-text" name="user-message" value="" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
         <div class="message-footer message-footer-bg">
           <button class="btn" type="submit">Отправить</button>
         </div>
