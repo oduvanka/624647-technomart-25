@@ -17,6 +17,8 @@ a {
 /* Шапка */
 
 .main-header {
+  font-family: "Cuprum", "Arial", sans-serif;
+  
   background-color: #f2f6f9;
 }
 
@@ -42,7 +44,6 @@ a {
 .user-products {
   height: 42px;
 
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -105,7 +106,6 @@ a {
 }
 
 .page-title {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
@@ -123,14 +123,12 @@ a {
 }
 
 .header-phone a {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 39px;
   color: #ee3643;
 }
 
 .header-address {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
@@ -145,7 +143,6 @@ a {
   padding-right: 25px;
   height: 45px;
 
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 45px;
   color: #000000;
@@ -178,7 +175,6 @@ a {
 }
 
 .site-navigation li {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 60px;
   color: #ffffff;
@@ -203,14 +199,103 @@ a {
 
 /* Основная часть */
 
+/* Подвал */
+
+.main-footer {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #f1f5f7;
+
+  background-color: #32425c;
+}
+
+.footer-logo-bg {
+  width: 220px;
+  height: 63px;
+  background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
+}
+
+.footer-site-navigations,
+.footer-users-navigations {
+  list-style: none;
+}
+
+.main-footer a,
+.footer-site-navigations a {
+  color: #f1f5f7;
+}
+
+.footer-users-navigations a {
+  color: #ffd180;
+}
+
+.footer-site-navigations a:hover,
+.footer-site-navigations a:focus,
+.footer-users-navigations a:hover,
+.footer-users-navigations a:focus {
+  text-decoration: underline;
+}
+
+.footer-site-navigations a:active,
+.footer-users-navigations a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.copyright a {
+  color: #ffd180;
+}
+
+.copyright a:hover,
+.copyright a:focus {
+  text-decoration: underline;
+}
+
+.copyright a:active {
+  text-decoration: none;
+  color: #ee3643;
+}
+
+.socials-list {
+  list-style: none;
+}
+
+.socials-list li {
+  width: 42px;
+  height: 42px;
+
+  background-color: #212939;
+  border-radius: 50%;
+}
+
+.socials-list li:hover,
+.socials-list li:focus,
+.socials-list li:active {
+  background-color: #ed3543;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
+
   border: 0;
   padding: 0;
+
   clip: rect(0, 0, 0, 0);
+
   overflow: hidden;
 }
 
