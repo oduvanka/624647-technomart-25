@@ -2,12 +2,206 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+
+  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
+
+/* Шапка */
+
+.main-header {
+  background-color: #f2f6f9;
+}
+
+.header-logo-bg {
+  width: 220px;
+  height: 42px;
+
+  background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
+}
+
+.header-logo-bg:hover,
+.header-logo-bg:focus {
+  background-color: #ca2b36;
+  border-bottom-color: #9a2129;
+}
+
+.header-logo-bg:active {
+  background-color: #ba2731;
+  border-bottom-color: #8d1e25;
+}
+
+.user-products {
+  height: 42px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.input-search {
+  color: #ffffff;
+
+  background-color: #293449;
+  border: none;
+}
+
+.input-search:hover {
+  background-color: #212939;
+}
+
+.input-search:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.bookmark,
+.basket {
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.bookmark:hover,
+.bookmark:focus,
+.basket:hover,
+.basket:focus {
+  background-color: #212939;
+}
+
+.bookmark:active,
+.basket:active {
+  opacity: 0.6;
+
+  background-color: #161d29;
+}
+
+.btn-order-goods {
+  color: #ffffff;
+
+  background-color: #62a63d;
+}
+
+.btn-order-goods:hover,
+.btn-order-goods:focus {
+  background-color: #5fbb2d;
+}
+
+.btn-order-goods:active {
+  opacity: 0.5;
+
+  background-color: #508534;
+}
+
+.page-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 23px;
+  color: #ee3643;
+}
+
+.header-phone {
+  width: 264px;
+  height: 39px;
+
+  text-align: center;
+
+  border: 3px solid #ffffff;
+}
+
+.header-phone a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 39px;
+  color: #ee3643;
+}
+
+.header-address {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.user-navigation {
+  list-style: none;
+}
+
+.user-navigation li {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 45px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 45px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.user-navigation a {
+  color: #000000;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ee3643;
+}
+
+.user-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.main-navigation {
+  /*height: 60px;*/
+
+  background-color: #32425c;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation li {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.site-navigation a {
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  opacity: 0.5;
+  
+  background-color: #1d2639;
+}
+
+/* Основная часть */
 
 .visually-hidden {
   position: absolute;
