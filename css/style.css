@@ -18,7 +18,7 @@ a {
 
 .main-header {
   font-family: "Cuprum", "Arial", sans-serif;
-  
+
   background-color: #f2f6f9;
 }
 
@@ -198,6 +198,186 @@ a {
 }
 
 /* Основная часть */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.offers-list {
+  list-style: none;
+}
+
+.offer-item {
+  /*width: 300px;
+  height: 123px;*/
+
+  background-color: #f0f0f0;
+}
+
+.offer-item h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.slider {
+  /*height: 266px;*/
+  padding-left: 25px;
+  color: #ffffff;
+  background: url("../img/slider/slide-1.jpg") no-repeat;
+}
+
+.btn-offer {
+  width: 135px;
+
+  color: #ffffff;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  background-color: #f9f5f0;
+}
+
+.section-header h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.btn {
+  display: inline-block;
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 3px;
+}
+
+.btn-details {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.manufactures-list {
+  list-style: none;
+}
+
+.manufacture-item {
+  width: 220px;
+  height: 145px;
+
+  border: 1px solid #ebebeb;
+}
+
+.services {
+  background-color: #f5f8fa;
+}
+
+.services h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.service-info h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.about-company h2,
+.contacts h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.transport-companies-list {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+
+  list-style: none;
+}
+
+.btn-create-message {
+  width: 300px;
+
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.filters-header,
+.filter-price-slider,
+.filter-price-inputs,
+.sorting-parameters-group {
+  background-color: #f7f2ec;
+}
+
+.sorting-parameters-list,
+.sorting-direction-list {
+  list-style: none;
+}
+
+.btn-send-filter {
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+
+/*
+.btn-add-basket {
+  color: #ffffff;
+  background-color: #63a63d;
+}
+
+.btn-add-bookmark {
+  background-color: #ffffff;
+  border: 3px solid #63a63d;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 10px;
+}
+
+.btn-pagination {
+  min-width: 38px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+*/
 
 /* Подвал */
 
