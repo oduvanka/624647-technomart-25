@@ -200,7 +200,142 @@ a {
 /* Основная часть */
 
 .breadcrumbs {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+
   list-style: none;
+}
+
+.breadcrumbs a {
+  color: #000000;
+}
+
+.btn {
+  display: inline-block;
+  height: 38px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 3px;
+}
+
+.catalog-header {
+  height: 89px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: #f1f5f7;
+}
+
+.catalog-header h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #32425c;
+}
+
+.filters-header,
+.filter-price-slider,
+.filter-price-inputs {
+  background-color: #f7f2ec;
+  border-radius: 3px;
+}
+
+.filters-header {
+  height: 38px;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-price,
+.filter-manufactures,
+.filter-power-supply {
+  border: none;
+}
+
+.filter-price legend,
+.filter-manufactures legend,
+.filter-power-supply legend {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-price-from,
+.filter-price-to {
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+  
+  background-color: #f7f2ec;
+  border: none;
+}
+
+.filter-manufactures label,
+.filter-power-supply label {
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sorting {
+  /*height: 38px;*/
+  padding-left: 18px;
+  padding-right: 18px;
+
+  background-color: #f7f2ec;
+  border-radius: 3px;
+}
+
+.sorting-header {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sort-parameters,
+.sort-directions {
+  border: none;
+}
+
+.sort-parameters label,
+.sort-directions label {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.btn-send-filter {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
 }
 
 .offers-list {
@@ -237,6 +372,15 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.btn-offer:hover,
+.btn-offer:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-offer:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .section-header {
   background-color: #f9f5f0;
 }
@@ -249,31 +393,114 @@ a {
   color: #32425c;
 }
 
-.btn {
-  display: inline-block;
-  height: 38px;
-  padding-left: 10px;
-  padding-right: 10px;
+.btn-details {
+  color: #ffffff;
 
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  border: none;
-  border-radius: 3px;
+  background-color: #ed3543;
 }
 
-.btn-details {
+.btn-details:hover,
+.btn-details:focus {
+  background-color: #ca2b36;
+}
+
+.btn-details:active {
+  background-color: #ba2731;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  border: none;
+  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
+}
+
+.catalog-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+}
+
+.catalog-item .price {
+  width: 140px;
+  height: 36px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999999;
+
+  background-color: #ffffff;
+}
+
+.price-new {
   color: #ffffff;
 
   background-color: #ee3643;
 }
 
-.catalog-list {
-  list-style: none;
+.label-new {
+/*  width: 60px;
+  height: 60px;*/
+
+  background-image: url("../img/flag-new.png");
+  background-repeat: no-repeat;
+}
+
+.btn-add-basket {
+  width: 135px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #63a53d;
+  box-shadow: inset 0 -3px 0 0 #367314;
+}
+
+.btn-add-basket:hover,
+.btn-add-basket:focus {
+  background-color: #5fbb2d;
+}
+
+.btn-add-basket:active {
+  background-color: #508534;
+  box-shadow: none;
+}
+
+.btn-add-bookmark {
+  width: 135px;
+  height: 38px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #32425c;
+
+  background-color: #ffffff;
+  border: 3px solid #63a53d;
+}
+
+.btn-add-bookmark:hover,
+.btn-add-bookmark:focus {
+  border-color: #31415b;
+}
+
+.btn-add-bookmark:active {
+  opacity: 0.3;
 }
 
 .manufactures-list {
@@ -285,6 +512,18 @@ a {
   height: 145px;
 
   border: 1px solid #ebebeb;
+}
+
+.manufacture-item:hover,
+.manufacture-item:focus  {
+  border: none;
+  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
+}
+
+.manufacture-item:active {
+  border: none;
+  box-shadow: 0 4px 10px 0 rgba(41, 51, 73, 0.5);
+  opacity: 0.3;
 }
 
 .services {
@@ -336,34 +575,6 @@ a {
   background-color: #ee3643;
 }
 
-.filters-header,
-.filter-price-slider,
-.filter-price-inputs,
-.sorting-parameters-group {
-  background-color: #f7f2ec;
-}
-
-.sorting-parameters-list,
-.sorting-direction-list {
-  list-style: none;
-}
-
-.btn-send-filter {
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
-}
-
-/*
-.btn-add-basket {
-  color: #ffffff;
-  background-color: #63a63d;
-}
-
-.btn-add-bookmark {
-  background-color: #ffffff;
-  border: 3px solid #63a63d;
-}
-
 .pagination-list {
   list-style: none;
 }
@@ -374,10 +585,31 @@ a {
 
 .btn-pagination {
   min-width: 38px;
+  
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
   background-color: #ffffff;
   border: 1px solid #e4e4e4;
 }
-*/
+
+.goods-info {
+  padding-left: 130px;
+  padding-right: 130px;
+
+  background-color: #f2f6f8;
+}
+
+.goods-info h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
 
 /* Подвал */
 
