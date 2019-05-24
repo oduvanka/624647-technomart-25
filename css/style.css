@@ -350,6 +350,26 @@ a {
   color: #ffffff;
 }
 
+.offer-item-materials {
+  background-color: #ffbf47;
+}
+
+.offer-item-tool {
+  background-color: #3bbbe2;
+}
+
+.offer-item-equipment {
+  background-color: #db90d8;
+}
+
+.offer-item-sale {
+  background-color: #8dd68e;
+}
+
+.offer-item-delivery {
+  background-color: #ffbf47;
+}
+
 .slider {
   padding-left: 25px;
   color: #ffffff;
