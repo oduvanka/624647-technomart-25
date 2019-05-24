@@ -22,24 +22,25 @@ a {
   background-color: #f2f6f9;
 }
 
-.main-header-logo {
-  
-  width: 220px;
-  height: 42px;
-
+.main-logo {
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
+.main-logo[href]:hover,
+.main-logo[href]:focus {
   background-color: #ca2b36;
   border-bottom-color: #9a2129;
 }
 
-.main-header-logo:active {
+.main-logo[href]:active {
   background-color: #ba2731;
   border-bottom-color: #8d1e25;
+}
+
+.main-header-logo {
+  width: 220px;
+  height: 42px;
 }
 
 .user-products {
@@ -613,8 +614,6 @@ a {
 .main-footer-logo {
   width: 220px;
   height: 63px;
-  background-color: #ee3643;
-  border-bottom: 5px solid #b52933;
 }
 
 .footer-site-navigations,
