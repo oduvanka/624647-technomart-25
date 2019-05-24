@@ -653,7 +653,23 @@ a {
   color: #000000;
 
   background-color: #ffffff;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #e5e5e5;
+}
+
+.btn-pagination:hover,
+.btn-pagination:focus {
+  border-color: #bdc5c9;
+}
+
+.btn-pagination:active {
+  border-color: #ed3543;
+}
+
+.pagination-item-current a {
+  color: #ffffff;
+
+  background-color: #ed3543;
+  border: none;
 }
 
 .goods-info {
