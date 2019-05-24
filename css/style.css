@@ -294,6 +294,11 @@ a {
   text-transform: uppercase;
 }
 
+.filter-manufactures input:disabled + label,
+.filter-power-supply input:disabled + label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .sorting {
   padding-left: 18px;
   padding-right: 18px;
@@ -322,6 +327,22 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #ed3543;
+}
+
+.sort-parameters input:hover + label,
+.sort-directions input:hover + label {
+  color: #000000;
+
+  border-bottom: 1px solid #ed3543;
+}
+
+.sort-parameters input:checked + label,
+.sort-directions input:checked + label {
+  color: #ee3643;
+  
+  border: none;
 }
 
 .btn-send-filter {
