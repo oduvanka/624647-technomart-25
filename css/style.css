@@ -557,6 +557,29 @@ a {
   list-style: none;
 }
 
+.services-item a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+
+  background-color: #31415b;
+}
+
+.service-active a {
+  color: #32425c;
+
+  background-color: #ffffff;
+}
+
+.service-item a:hover,
+.service-item a:focus {
+  color: #ffffff;
+
+  background-color: #293349;
+}
+
 .service-info h3 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
