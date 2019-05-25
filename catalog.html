@@ -16,7 +16,7 @@
       <div class="user-products">
         <form method="GET">
           <label class="visually-hidden" for="search">Поиск:</label>
-          <input class="input-search" type="search" id="search" name="search" value="" placeholder="Поиск:">
+          <input class="input-search visually-hidden" type="search" id="search" name="search" value="" placeholder="Поиск:">
         </form>
         <a class="bookmark" href="#">Закладки: <span>0</span></a>
         <a class="basket" href="#">Корзина: <span>0</span></a>
@@ -75,34 +75,34 @@
         <fieldset class="filter-manufactures">
           <legend>Производители:</legend>
           <p> 
-            <input type="checkbox" id="manufactures-bosch" name="manufactures-bosch" value="bosch" checked>
+            <input class="visually-hidden" type="checkbox" id="manufactures-bosch" name="manufactures-bosch" value="bosch" checked>
             <label for="manufactures-bosch">BOSCH</label>
           </p>
           <p>
-            <input type="checkbox" id="manufactures-interscol" name="manufactures-interscol" value="interscol">
+            <input class="visually-hidden" type="checkbox" id="manufactures-interscol" name="manufactures-interscol" value="interscol">
             <label for="manufactures-interscol">Интерскол</label>
           </p>
           <p>
-            <input type="checkbox" id="manufactures-makita" name="manufactures-makita" value="makita" checked>
+            <input class="visually-hidden" type="checkbox" id="manufactures-makita" name="manufactures-makita" value="makita" checked>
             <label for="manufactures-makita">Makita</label>              
           </p>
           <p>
-            <input type="checkbox" id="manufactures-dewalt" name="manufactures-dewalt" value="dewalt">
+            <input class="visually-hidden" type="checkbox" id="manufactures-dewalt" name="manufactures-dewalt" value="dewalt">
             <label for="manufactures-dewalt">Dewalt</label>
           </p>
           <p>
-            <input type="checkbox" id="manufactures-hitachi" name="manufactures-hitachi" value="hitachi">
+            <input class="visually-hidden" type="checkbox" id="manufactures-hitachi" name="manufactures-hitachi" value="hitachi">
             <label for="manufactures-hitachi">Hitachi</label>
           </p>
         </fieldset>
         <fieldset class="filter-power-supply">
           <legend>Питание:</legend>
           <p>
-            <input type="radio" id="power-supply-battery" name="power-supply" value="battery" checked>
+            <input class="visually-hidden" type="radio" id="power-supply-battery" name="power-supply" value="battery" checked>
             <label for="power-supply-battery">Аккумуляторные</label>
           </p>
           <p>
-            <input type="radio" id="power-supply-mains" name="power-supply" value="mains">
+            <input class="visually-hidden" type="radio" id="power-supply-mains" name="power-supply" value="mains">
             <label for="power-supply-mains">Сетевые</label>
           </p>
         </fieldset>
@@ -111,26 +111,26 @@
           <fieldset class="sort-parameters">
             <legend class="visually-hidden">По параметрам</legend>
             <p>
-              <input type="radio" id="sort-param-price" name="sort-params" value="price" checked>
+              <input class="visually-hidden" type="radio" id="sort-param-price" name="sort-params" value="price" checked>
               <label for="sort-param-price">По цене</label>
             </p>
             <p>
-              <input type="radio" id="sort-param-type" name="sort-params" value="type">
+              <input class="visually-hidden" type="radio" id="sort-param-type" name="sort-params" value="type">
               <label for="sort-param-type">По типу</label>
             </p>
             <p>
-              <input type="radio" id="sort-param-functional" name="sort-params" value="functional">
+              <input class="visually-hidden" type="radio" id="sort-param-functional" name="sort-params" value="functional">
               <label for="sort-param-functional">По функционалу</label>
             </p>             
           </fieldset>
           <fieldset class="sort-directions">
             <legend class="visually-hidden">По направлению</legend>
             <p>
-              <input type="radio" id="sort-direction-ascending" name="sort-direction" value="ascending">
+              <input class="visually-hidden" type="radio" id="sort-direction-ascending" name="sort-direction" value="ascending">
               <label for="sort-direction-ascending">По возрастанию</label>
             </p>
             <p>
-              <input type="radio" id="sort-direction-descending" name="sort-direction" value="descending" checked>
+              <input class="visually-hidden" type="radio" id="sort-direction-descending" name="sort-direction" value="descending" checked>
               <label for="sort-direction-descending">По убыванию</label>
             </p>
           </fieldset>
