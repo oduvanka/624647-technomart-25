@@ -14,9 +14,34 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  display: block;
+  padding: 11px 3px 10px 3px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 3px;
+}
+
 /* Шапка */
 
 .main-header {
+  margin-bottom: 59px;
+
   font-family: "Cuprum", "Arial", sans-serif;
 
   background-color: #f2f6f9;
@@ -210,23 +235,6 @@ a {
   color: #000000;
 }
 
-.btn {
-  display: block;
-  padding: 11px 3px 10px 3px;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 3px;
-}
-
 .catalog-header {
   padding-right: 30px;
   padding-left: 30px;
@@ -234,6 +242,9 @@ a {
 }
 
 .catalog-header h2 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -355,7 +366,14 @@ a {
   border: 1px solid #e3e3e3;
 }
 
+.offers {
+  margin-bottom: 53px;
+}
+
 .offers-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -364,6 +382,9 @@ a {
 }
 
 .offer-item h3 {
+  margin: 0;
+  padding: 0;
+  
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -415,10 +436,16 @@ a {
 }
 
 .section-header {
+  margin-bottom: 20px;
+  padding: 25px 24px 26px 30px;
+
   background-color: #f9f5f0;
 }
 
 .section-header h2 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -442,22 +469,50 @@ a {
   background-color: #ba2731;
 }
 
+.catalog {
+  margin-bottom: 1px;
+}
+
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .catalog-item {
+  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
 }
 
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.inner-page .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.inner-page .catalog-item:nth-child(4n) {
+  margin-right: 20px;
+}
+
 .catalog-item:hover,
 .catalog-item:focus {
-  border: none;
+  border-color: transparent;
   box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
 }
 
 .catalog-item h4 {
+  margin: 0;
+  padding: 0;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -538,34 +593,57 @@ a {
   opacity: 0.3;
 }
 
+.manufactures {
+  margin-bottom: 85px;
+}
+
 .manufactures-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .manufacture-item {
-  width: 220px;
+  width: 218px;
   height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 
   border: 1px solid #ebebeb;
 }
 
+.manufacture-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .manufacture-item:hover,
 .manufacture-item:focus  {
-  border: none;
+  border-color: transparent;
   box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
 }
 
 .manufacture-item:active {
-  border: none;
+  border-color: transparent;
   box-shadow: 0 4px 10px 0 rgba(41, 51, 73, 0.5);
   opacity: 0.3;
 }
 
-.services {
+.services-bg {
   background-color: #f5f8fa;
 }
 
+.services {
+  margin-bottom: 81px;
+  padding: 66px 10px;
+}
+
 .services h2 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -575,6 +653,9 @@ a {
 }
 
 .services-list {
+  margin: 0;
+  padding: 0;
+  margin-right: 80px;
   list-style: none;
 }
 
@@ -602,6 +683,9 @@ a {
 }
 
 .service-info h3 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -610,8 +694,24 @@ a {
   color: #32425c;
 }
 
+.index-column {
+  display: flex;
+}
+
+.about-company {
+  width: 540px;
+}
+
+.contacts {
+  width: 300px;
+  margin-left: auto;
+}
+
 .about-company h2,
 .contacts h3 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -680,6 +780,9 @@ a {
 }
 
 .goods-info h3 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -691,6 +794,8 @@ a {
 /* Подвал */
 
 .main-footer {
+  margin-top: 86px;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
