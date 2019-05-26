@@ -37,6 +37,24 @@ a {
   border-radius: 3px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  border: 0;
+  padding: 0;
+
+  clip: rect(0, 0, 0, 0);
+
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+}
+
 /* Шапка */
 
 .main-header {
@@ -841,12 +859,19 @@ a {
   text-decoration: none;
 }
 
-.copyright {
-  font-size: 16px;
-  line-height: 18px;
-  color: #ffffff;
+.main-footer-bottom {
+  padding-top: 35px;
+  padding-bottom: 30px;
 
   background-color: #293449;
+}
+
+.copyright {
+  display: flex;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff; 
 }
 
 .copyright a {
@@ -863,11 +888,25 @@ a {
   color: #ee3643;
 }
 
+.copyright-info {
+  width: 230px;
+  margin: 0;
+  padding: 0;
+  margin-right: 160px;
+}
+
 .socials-list {
+  display: flex;
+  justify-content: space-between;
+  width: 132px;
+  margin: 0;
+  padding: 0;
+  margin-right: 120px;
+
   list-style: none;
 }
 
-.socials-list a {
+.socials-item a {
   display: block;
   width: 42px;
   min-height: 42px;
@@ -876,26 +915,21 @@ a {
   border-radius: 50%;
 }
 
-.socials-list a:hover,
-.socials-list a:focus,
-.socials-list a:active {
+.socials-item a:hover,
+.socials-item a:focus,
+.socials-item a:active {
   background-color: #ed3543;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-
-  border: 0;
+.copyright-developer-email {
+  width: 140px;
+  margin: 0;
   padding: 0;
-
-  clip: rect(0, 0, 0, 0);
-
-  overflow: hidden;
+  margin-right: auto;
 }
 
-.modal {
-  display: none;
+.copyright-developer {
+  width: 110px;
+  margin: 0;
+  padding: 0;
 }
