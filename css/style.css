@@ -37,6 +37,22 @@ a {
   border-radius: 3px;
 }
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -65,13 +81,27 @@ a {
   background-color: #f2f6f9;
 }
 
+.main-header-wrapper {
+  background-color: #293449;
+}
+
+.main-header-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 43px;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
 .main-logo {
   display: block;
 
   text-align: center;
 
   background-color: #ee3643;
-  border-bottom: 5px solid #b52933;
+  box-shadow: 0 5px 0 0 #b52933;
 }
 
 .main-logo[href]:hover,
@@ -89,16 +119,12 @@ a {
   width: 220px;
   height: 42px;
 }
-
-.user-products {
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;
-
-  background-color: #293449;
-}
-
+  
 .input-search {
+  width: 270px;
+  padding-left: 50px;
+  padding-right: 10px;
+
   color: #ffffff;
 
   background-color: #293449;
@@ -116,6 +142,7 @@ a {
 
 .bookmark,
 .basket {
+  width: 150px;
   color: #ffffff;
 
   background-color: #293449;
@@ -136,6 +163,7 @@ a {
 }
 
 .btn-order-goods {
+  width: 150px;
   color: #ffffff;
 
   background-color: #62a63d;
@@ -152,12 +180,26 @@ a {
   background-color: #508534;
 }
 
+.main-header-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 .page-title {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
   line-height: 23px;
   color: #ee3643;
+}
+
+.header-contacts {
+  width: 270px;
 }
 
 .header-phone {
@@ -182,6 +224,10 @@ a {
 }
 
 .user-navigation {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -208,11 +254,19 @@ a {
 }
 
 .main-navigation {
-  background-color: #32425c;
+  padding-bottom: 60px;
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  background-color: #31415b;
+  box-shadow: inset 0 -5px 0 0 #293349;
 }
 
 .site-navigation li {
@@ -222,6 +276,7 @@ a {
 }
 
 .site-navigation a {
+
   color: #ffffff;
 
   background-color: #32425c;
@@ -260,14 +315,6 @@ a {
 }
 
 .catalog-header h2 {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
   color: #32425c;
 }
 
@@ -461,14 +508,6 @@ a {
 }
 
 .section-header h2 {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
   color: #32425c;
 }
 
@@ -649,7 +688,7 @@ a {
   opacity: 0.3;
 }
 
-.services-bg {
+.services-wrapper {
   background-color: #f5f8fa;
 }
 
@@ -659,21 +698,15 @@ a {
 }
 
 .services h2 {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
   color: #000000;
 }
 
 .services-list {
+  width: 240px;
   margin: 0;
   padding: 0;
   margin-right: 80px;
+
   list-style: none;
 }
 
@@ -700,20 +733,19 @@ a {
   background-color: #293349;
 }
 
-.service-info h3 {
-  margin: 0;
-  padding: 0;
+.service-info {
+  width: 620px;
+}
 
-  font-family: "Cuprum", "Arial", sans-serif;
+.service-info h3 {
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
-  text-transform: uppercase;
   color: #32425c;
 }
 
-.index-column {
-  display: flex;
+.service-info p {
+  width: 380px;
 }
 
 .about-company {
@@ -722,19 +754,10 @@ a {
 
 .contacts {
   width: 300px;
-  margin-left: auto;
 }
 
 .about-company h2,
 .contacts h3 {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
   color: #000000;
 }
 
@@ -798,14 +821,6 @@ a {
 }
 
 .goods-info h3 {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
   color: #000000;
 }
 

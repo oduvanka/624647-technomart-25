@@ -10,28 +10,32 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-logo main-header-logo">
-        <img src="img/logo.svg" alt="Техномарт" width="109" height="19">
-      </a>
-      <div class="user-products">
-        <form method="GET">
-          <label class="visually-hidden" for="search">Поиск:</label>
-          <input class="input-search" type="search" id="search" name="search" value="" placeholder="Поиск:">
-        </form>
-        <a class="bookmark" href="#">Закладки: <span>0</span></a>
-        <a class="basket" href="#">Корзина: <span>0</span></a>
-        <a class="btn-order-goods" href="#">Оформить заказ</a>
+      <div class="main-header-wrapper">
+        <div class="main-header-top container">
+          <a class="main-logo main-header-logo">
+            <img src="img/logo.svg" alt="Техномарт" width="109" height="19">
+          </a>
+          <form method="GET">
+            <label class="visually-hidden" for="search">Поиск:</label>
+            <input class="input-search" type="search" id="search" name="search" value="" placeholder="Поиск:">
+          </form>
+          <a class="bookmark" href="#">Закладки: <span>0</span></a>
+          <a class="basket" href="#">Корзина: <span>0</span></a>
+          <a class="btn-order-goods" href="#">Оформить заказ</a>
+        </div>
       </div>
-      <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <div>
-        <p class="header-phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-        <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <div class="main-header-middle container">
+        <h1 class="page-title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
+        <div class="header-contacts">
+          <p class="header-phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="user-navigation">
+          <li class="login-link"><a href="#">Войти</a></li>
+          <li class="registration-link"><a href="#">Регистрация</a></li>
+        </ul>
       </div>
-      <ul class="user-navigation">
-        <li class="login-link"><a href="#">Войти</a></li>
-        <li class="registration-link"><a href="#">Регистрация</a></li>
-      </ul>
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <ul class="site-navigation">
           <li><a>Главная</a>
           <li><a href="company.html">Компания</a></li>
@@ -45,7 +49,7 @@
     </header>
     <main>
       <section class="offers container">
-        <h2 class="visually-hidden">Наши предложения</h2>
+        <h2 class="section-title visually-hidden">Наши предложения</h2>
         <ul class="offers-list">
           <li class="offer-item offer-item-materials">
             <h3>Материалы</h3>
@@ -87,7 +91,7 @@
       </section>
       <section class="catalog container">
         <div class="section-header catalog-header">
-          <h2>Популярные товары:</h2>
+          <h2 class="section-title">Популярные товары:</h2>
           <a class="btn btn-details btn-details-goods" href="catalog.html">Все популярные товары</a>
         </div>
         <ul class="catalog-list">
@@ -144,7 +148,7 @@
       </section>
       <section class="manufactures container">
         <div class="section-header manufactures-header">
-          <h2>Популярные производители:</h2>
+          <h2 class="section-title">Популярные производители:</h2>
           <a class="btn btn-details btn-details-manufactures" href="#">Все производители</a>
         </div>
         <ul class="manufactures-list">
@@ -190,30 +194,30 @@
           </li>
         </ul>
       </section>
-      <div class="services-bg">
+      <div class="services-wrapper">
         <section class="services container">
-          <h2>Сервисы</h2>
+          <h2 class="section-title">Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
           <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="index-column">
+          <div class="index-columns">
             <ul class="services-list">
               <li class="service-item service-active"><a>Доставка</a></li>
               <li class="service-item"><a>Гарантия</a></li>
               <li class="service-item"><a>Кредит</a></li>
             </ul>
             <section class="service-info">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
+              <h3 class="section-title">Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
             </section>
           </div>
         </section>
       </div>
-      <div class="index-column container">
+      <div class="index-columns container">
         <section class="about-company">
-          <h2>Компания "Техномарт"</h2>
+          <h2 class="section-title">Компания "Техномарт"</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
-          <h3 class="visually-hidden">Транспортные компании</h3>
+          <h3 class="section-title visually-hidden">Транспортные компании</h3>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:</p>
           <ul class="transport-companies-list">
@@ -224,7 +228,7 @@
           <a class="btn btn-details btn-details-company" href="company.html">Подробнее о компании</a>
         </section>
         <section class="contacts">
-          <h3>Контакты</h3>
+          <h3 class="section-title">Контакты</h3>
           <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
           <a href="#">
             <img src="img/map-mini.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="300" height="158">
@@ -276,7 +280,7 @@
     </footer>
 
     <section class="modal modal-map">
-      <h2 class="visually-hidden">Где находится наш офис</h2>
+      <h2 class="section-title visually-hidden">Где находится наш офис</h2>
       <img src="img/map-big.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="783" height="372">
       <button class="btn btn-close" type="button">Закрыть</button>
     </section>
@@ -298,7 +302,7 @@
             <textarea id="message-text" name="user-message" value="" placeholder="В свободной форме"></textarea>
           </p>
         </div>
-        <div class="message-footer message-footer-bg">
+        <div class="message-footer message-footer-wrapper">
           <button class="btn" type="submit">Отправить</button>
         </div>
       </form>
@@ -309,7 +313,7 @@
         <h2>
           Товар добавлен в корзину!
         </h2>
-        <div class="imformer-footer-bg">
+        <div class="imformer-footer-wrapper">
           <a class="btn" href="#">Оформить заказ</a>
           <button class="btn" type="button">Продолжить покупки</button>
         </div>
