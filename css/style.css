@@ -296,6 +296,11 @@ a {
 /* Основная часть */
 
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -304,13 +309,23 @@ a {
   list-style: none;
 }
 
+.breadcrumbs li {
+  margin-right: 15px;
+  padding-left: 40px;
+}
+
+.breadcrumbs li:first-child {
+  padding-left: 0;
+}
+
 .breadcrumbs a {
   color: #000000;
 }
 
 .catalog-header {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 32px 30px 27px 30px;
+  margin-bottom: 20px;
+
   background-color: #f1f5f7;
 }
 
@@ -318,16 +333,27 @@ a {
   color: #32425c;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 220px;
+}
+
 .filters-header,
-.filter-price-slider,
-.filter-price-inputs {
+.filter-price-slider {
+  margin: 0;
+  padding: 0;
+
   background-color: #f7f2ec;
   border-radius: 3px;
 }
 
 .filters-header {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 9px 18px 10px 18px;
+  margin-bottom: 9px;
 
   font-size: 13px;
   font-weight: 400;
@@ -339,7 +365,17 @@ a {
 .filter-price,
 .filter-manufactures,
 .filter-power-supply {
+  margin: 0;
+  padding: 0;
+
   border: none;
+}
+
+.filter-price,
+.filter-manufactures {
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .filter-price legend,
@@ -352,18 +388,56 @@ a {
   color: #000000;
 }
 
+.filter-price p,
+.filter-manufactures p,
+.filter-power-supply p {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-manufactures p:last-child {
+  margin-bottom: 20px;
+}
+
+.filter-price legend {
+  margin-bottom: 15px;
+}
+
+.filter-price-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
 .filter-price-from,
 .filter-price-to {
+  width: 95px;
+  height: 38px;
+
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   color: #000000;
   
   background-color: #f7f2ec;
   border: none;
+  border-radius: 3px;
+}
+
+.filter-manufactures legend,
+.filter-power-supply legend {
+  margin-bottom: 12px;
+}
+
+.filter-power-supply legend {
+  letter-spacing: 0.01em;
 }
 
 .filter-manufactures label,
 .filter-power-supply label {
+  padding-left: 35px;
+
   font-size: 15px;
   line-height: 20px;
   color: #000000;
@@ -393,6 +467,9 @@ a {
 
 .sort-parameters,
 .sort-directions {
+  margin: 0;
+  padding: 0;
+
   border: none;
 }
 
@@ -526,8 +603,8 @@ a {
   background-color: #ba2731;
 }
 
-.catalog {
-  margin-bottom: 1px;
+.inner-page .catalog {
+  width: 700px;
 }
 
 .catalog-list {
@@ -535,6 +612,7 @@ a {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-bottom: 32px;
 
   list-style: none;
 }
@@ -567,6 +645,7 @@ a {
 }
 
 .catalog-item h4 {
+  width: 155px;
   margin: 0;
   padding: 0;
 
@@ -778,6 +857,11 @@ a {
 }
 
 .pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+
   list-style: none;
 }
 
@@ -813,9 +897,9 @@ a {
   border: none;
 }
 
-.goods-info {
-  padding-left: 130px;
-  padding-right: 130px;
+.goods-info-wrapper {
+  padding-top: 67px;
+  padding-bottom: 69px;
 
   background-color: #f2f6f8;
 }
@@ -836,6 +920,10 @@ a {
   color: #f1f5f7;
 
   background-color: #32425c;
+}
+
+.inner-page .main-footer {
+  margin-top: 0;
 }
 
 .main-footer-top {
