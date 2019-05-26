@@ -76,6 +76,7 @@ a {
 
 .main-header {
   margin-bottom: 59px;
+  padding-bottom: 60px;
 
   font-family: "Cuprum", "Arial", sans-serif;
 
@@ -255,10 +256,6 @@ a {
   opacity: 0.3;
 }
 
-.main-navigation {
-  padding-bottom: 60px;
-}
-
 .site-navigation {
   display: flex;
   justify-content: space-evenly;
@@ -394,6 +391,10 @@ a {
   background-color: #ba2731;
 }
 
+.btn-details-goods {
+  width: 253px;
+}
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -512,6 +513,10 @@ a {
   margin-bottom: 85px;
 }
 
+.btn-details-manufactures {
+  width: 253px;
+}
+
 .manufactures-list {
   display: flex;
   flex-wrap: wrap;
@@ -557,6 +562,13 @@ a {
 
 .services h2 {
   color: #000000;
+}
+
+.services p {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 46px;
 }
 
 .services-list {
@@ -606,15 +618,76 @@ a {
   width: 380px;
 }
 
+.btn-create {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.btn-create:hover,
+.btn-create:focus {
+  background-color: #ca2b36;
+}
+
+.btn-create:active {
+  background-color: #ba2731;
+}
+
+.btn-create-application {
+  width: 195px;
+}
+
 .about-company {
   width: 540px;
+}
+
+.about-company h2 {
+  color: #000000;
+}
+
+.about-company p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.transport-companies-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+
+  list-style: none;
+}
+
+.transport-company-item {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+.transport-company-item::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 25px;
+  
+  background-color: #ed3543;
+  border: 1px solid #ed3543;
+}
+
+.btn-details-company {
+  width: 220px;
 }
 
 .contacts {
   width: 300px;
 }
 
-.about-company h2,
 .contacts h3 {
   color: #000000;
 }
@@ -626,32 +699,14 @@ a {
 }
 
 .contacts-map {
+  display: block;
+  width: 300px;
+  height: 158px;
   margin-bottom: 40px;
-}
-
-.transport-companies-list {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-
-  list-style: none;
 }
 
 .btn-create-message {
   width: 300px;
-
-  color: #ffffff;
-
-  background-color: #ee3643;
-}
-
-.btn-create-message:hover,
-.btn-create-message:focus {
-  background-color: #ca2b36;
-}
-
-.btn-create-message:active {
-  background-color: #ba2731;
 }
 
 /* Основная часть - страница catalog*/
