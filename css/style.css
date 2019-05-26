@@ -22,7 +22,7 @@ a {
 
 .btn {
   display: block;
-  padding: 11px 3px 10px 3px;
+  padding: 11px 0 10px 0;
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -45,6 +45,7 @@ a {
 .section-title {
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
@@ -82,13 +83,14 @@ a {
 }
 
 .main-header-wrapper {
+  margin-bottom: 43px;
+
   background-color: #293449;
 }
 
 .main-header-top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 43px;
 
   font-size: 17px;
   line-height: 18px;
@@ -293,7 +295,366 @@ a {
   background-color: #1d2639;
 }
 
-/* Основная часть */
+/* Основная часть - страница index */
+.offers {
+  margin-bottom: 53px;
+}
+
+.offers-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.offer-item {
+  width: 300px;
+  height: 123px;
+
+  background-color: #f0f0f0;
+}
+
+.offer-item h3 {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.offer-item-materials {
+  background-color: #ffbf47;
+}
+
+.offer-item-tool {
+  background-color: #3bbbe2;
+}
+
+.offer-item-equipment {
+  background-color: #db90d8;
+}
+
+.offer-item-sale {
+  background-color: #8dd68e;
+}
+
+.offer-item-delivery {
+  background-color: #ffbf47;
+}
+
+.slider {
+  padding-left: 25px;
+  color: #ffffff;
+  background: url("../img/slider/slide-1.jpg") no-repeat;
+}
+
+.btn-offer {
+  width: 135px;
+
+  color: #ffffff;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-offer:hover,
+.btn-offer:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-offer:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  margin-bottom: 20px;
+  padding: 25px 24px 26px 30px;
+
+  background-color: #f9f5f0;
+}
+
+.section-header h2 {
+  color: #32425c;
+}
+
+.btn-details {
+  color: #ffffff;
+
+  background-color: #ed3543;
+}
+
+.btn-details:hover,
+.btn-details:focus {
+  background-color: #ca2b36;
+}
+
+.btn-details:active {
+  background-color: #ba2731;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+
+  list-style: none;
+}
+
+.catalog-item {
+  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  border-color: transparent;
+  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
+}
+
+.catalog-item h4 {
+  width: 155px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+}
+
+.catalog-item .price {
+  width: 140px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999999;
+
+  background-color: #ffffff;
+}
+
+.price-new {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.label-new {
+  width: 60px;
+  height: 60px;
+
+  background-image: url("../img/flag-new.png");
+  background-repeat: no-repeat;
+}
+
+.btn-add-basket {
+  width: 129px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #63a53d;
+  box-shadow: inset 0 -3px 0 0 #367314;
+}
+
+.btn-add-basket:hover,
+.btn-add-basket:focus {
+  background-color: #5fbb2d;
+}
+
+.btn-add-basket:active {
+  background-color: #508534;
+  box-shadow: none;
+}
+
+.btn-add-bookmark {
+  width: 135px;
+  padding: 7px 3px 7px 3px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #32425c;
+
+  background-color: #ffffff;
+  border: 3px solid #63a53d;
+
+  cursor: pointer;
+}
+
+.btn-add-bookmark:hover,
+.btn-add-bookmark:focus {
+  border-color: #31415b;
+}
+
+.btn-add-bookmark:active {
+  opacity: 0.3;
+}
+
+.manufactures {
+  margin-bottom: 85px;
+}
+
+.manufactures-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.manufacture-item {
+  width: 218px;
+  height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  border: 1px solid #ebebeb;
+}
+
+.manufacture-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.manufacture-item:hover,
+.manufacture-item:focus  {
+  border-color: transparent;
+  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
+}
+
+.manufacture-item:active {
+  border-color: transparent;
+  box-shadow: 0 4px 10px 0 rgba(41, 51, 73, 0.5);
+  opacity: 0.3;
+}
+
+.services-wrapper {
+  background-color: #f5f8fa;
+}
+
+.services {
+  margin-bottom: 81px;
+  padding: 66px 10px;
+}
+
+.services h2 {
+  color: #000000;
+}
+
+.services-list {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  margin-right: 80px;
+
+  list-style: none;
+}
+
+.service-item a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+
+  background-color: #31415b;
+}
+
+.service-active a {
+  color: #32425c;
+
+  background-color: #ffffff;
+}
+
+.service-item a:hover,
+.service-item a:focus {
+  color: #ffffff;
+
+  background-color: #293349;
+}
+
+.service-info {
+  width: 620px;
+}
+
+.service-info h3 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #32425c;
+}
+
+.service-info p {
+  width: 380px;
+}
+
+.about-company {
+  width: 540px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+.about-company h2,
+.contacts h3 {
+  color: #000000;
+}
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.contacts-map {
+  margin-bottom: 40px;
+}
+
+.transport-companies-list {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+
+  list-style: none;
+}
+
+.btn-create-message {
+  width: 300px;
+
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.btn-create-message:hover,
+.btn-create-message:focus {
+  background-color: #ca2b36;
+}
+
+.btn-create-message:active {
+  background-color: #ba2731;
+}
+
+/* Основная часть - страница catalog*/
 
 .breadcrumbs {
   display: flex;
@@ -508,126 +869,8 @@ a {
   border: 1px solid #e3e3e3;
 }
 
-.offers {
-  margin-bottom: 53px;
-}
-
-.offers-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.offer-item {
-  background-color: #f0f0f0;
-}
-
-.offer-item h3 {
-  margin: 0;
-  padding: 0;
-  
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #ffffff;
-}
-
-.offer-item-materials {
-  background-color: #ffbf47;
-}
-
-.offer-item-tool {
-  background-color: #3bbbe2;
-}
-
-.offer-item-equipment {
-  background-color: #db90d8;
-}
-
-.offer-item-sale {
-  background-color: #8dd68e;
-}
-
-.offer-item-delivery {
-  background-color: #ffbf47;
-}
-
-.slider {
-  padding-left: 25px;
-  color: #ffffff;
-  background: url("../img/slider/slide-1.jpg") no-repeat;
-}
-
-.btn-offer {
-  width: 135px;
-
-  color: #ffffff;
-
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.btn-offer:hover,
-.btn-offer:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.btn-offer:active {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.section-header {
-  margin-bottom: 20px;
-  padding: 25px 24px 26px 30px;
-
-  background-color: #f9f5f0;
-}
-
-.section-header h2 {
-  color: #32425c;
-}
-
-.btn-details {
-  color: #ffffff;
-
-  background-color: #ed3543;
-}
-
-.btn-details:hover,
-.btn-details:focus {
-  background-color: #ca2b36;
-}
-
-.btn-details:active {
-  background-color: #ba2731;
-}
-
 .inner-page .catalog {
   width: 700px;
-}
-
-.catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 32px;
-
-  list-style: none;
-}
-
-.catalog-item {
-  width: 218px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-}
-
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .inner-page .catalog-item:nth-child(3n) {
@@ -636,224 +879,6 @@ a {
 
 .inner-page .catalog-item:nth-child(4n) {
   margin-right: 20px;
-}
-
-.catalog-item:hover,
-.catalog-item:focus {
-  border-color: transparent;
-  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
-}
-
-.catalog-item h4 {
-  width: 155px;
-  margin: 0;
-  padding: 0;
-
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
-  color: #000000;
-}
-
-.catalog-item .price {
-  width: 140px;
-
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
-  text-align: center;
-}
-
-.price-old {
-  text-decoration: line-through;
-  color: #999999;
-
-  background-color: #ffffff;
-}
-
-.price-new {
-  color: #ffffff;
-
-  background-color: #ee3643;
-}
-
-.label-new {
-  width: 60px;
-  height: 60px;
-
-  background-image: url("../img/flag-new.png");
-  background-repeat: no-repeat;
-}
-
-.btn-add-basket {
-  width: 129px;
-
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-
-  background-color: #63a53d;
-  box-shadow: inset 0 -3px 0 0 #367314;
-}
-
-.btn-add-basket:hover,
-.btn-add-basket:focus {
-  background-color: #5fbb2d;
-}
-
-.btn-add-basket:active {
-  background-color: #508534;
-  box-shadow: none;
-}
-
-.btn-add-bookmark {
-  width: 135px;
-  padding: 7px 3px 7px 3px;
-
-  font-size: 14px;
-  line-height: 18px;
-  color: #32425c;
-
-  background-color: #ffffff;
-  border: 3px solid #63a53d;
-
-  cursor: pointer;
-}
-
-.btn-add-bookmark:hover,
-.btn-add-bookmark:focus {
-  border-color: #31415b;
-}
-
-.btn-add-bookmark:active {
-  opacity: 0.3;
-}
-
-.manufactures {
-  margin-bottom: 85px;
-}
-
-.manufactures-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.manufacture-item {
-  width: 218px;
-  height: 145px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-
-  border: 1px solid #ebebeb;
-}
-
-.manufacture-item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.manufacture-item:hover,
-.manufacture-item:focus  {
-  border-color: transparent;
-  box-shadow: 0 10px 25px 0 rgba(41, 51, 73, 0.5);
-}
-
-.manufacture-item:active {
-  border-color: transparent;
-  box-shadow: 0 4px 10px 0 rgba(41, 51, 73, 0.5);
-  opacity: 0.3;
-}
-
-.services-wrapper {
-  background-color: #f5f8fa;
-}
-
-.services {
-  margin-bottom: 81px;
-  padding: 66px 10px;
-}
-
-.services h2 {
-  color: #000000;
-}
-
-.services-list {
-  width: 240px;
-  margin: 0;
-  padding: 0;
-  margin-right: 80px;
-
-  list-style: none;
-}
-
-.service-item a {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #ffffff;
-
-  background-color: #31415b;
-}
-
-.service-active a {
-  color: #32425c;
-
-  background-color: #ffffff;
-}
-
-.service-item a:hover,
-.service-item a:focus {
-  color: #ffffff;
-
-  background-color: #293349;
-}
-
-.service-info {
-  width: 620px;
-}
-
-.service-info h3 {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
-  color: #32425c;
-}
-
-.service-info p {
-  width: 380px;
-}
-
-.about-company {
-  width: 540px;
-}
-
-.contacts {
-  width: 300px;
-}
-
-.about-company h2,
-.contacts h3 {
-  color: #000000;
-}
-
-.transport-companies-list {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-
-  list-style: none;
-}
-
-.btn-create-message {
-  width: 300px;
-
-  color: #ffffff;
-
-  background-color: #ee3643;
 }
 
 .pagination-list {
