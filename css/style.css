@@ -418,6 +418,7 @@ img {
 }
 
 .slider {
+  position: relative;
   padding: 21px 25px 0 25px;
 
   color: #ffffff;
