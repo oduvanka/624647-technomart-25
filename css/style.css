@@ -445,6 +445,23 @@ img {
   line-height: 24px;
 }
 
+.control-navigation-back {
+  position: absolute;
+  top: center;
+  left: 0;
+}
+
+.control-navigation-next {
+  position: absolute;
+  top: center;
+  right: 0;
+}
+
+.controls-pages-wrapper {
+  position: absolute;
+  bottom: 0;
+}
+
 .slider .btn-offer {
   color: #ffffff;
 
