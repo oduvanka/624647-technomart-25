@@ -125,6 +125,7 @@ a {
   
 .input-search {
   width: 270px;
+  height: 42px;
   padding-left: 50px;
   padding-right: 10px;
 
@@ -1221,6 +1222,25 @@ a {
 .socials-item a:focus,
 .socials-item a:active {
   background-color: #ed3543;
+}
+
+.socials-item-vkontakte a {
+  background-image: url("../img/icon/icon-vk.svg");
+}
+
+.social-item-facebook a {
+  background-image: url("../img/icon/icon-fb.svg");
+}
+
+.social-item-instagram a {
+  background-image: url("../img/icon/icon-insta.svg");
+}
+
+.socials-item-vkontakte a,
+.social-item-facebook a,
+.social-item-instagram a {
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .copyright-developer-email {
