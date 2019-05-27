@@ -313,7 +313,6 @@ a {
 
 .offer-item {
   position: relative;
-  min-height: 123px;
   padding: 21px 25px 0 25px;
 
   background-color: #f0f0f0;
@@ -408,7 +407,7 @@ a {
 
 .slider {
   padding: 21px 25px 0 25px;
-  
+
   color: #ffffff;
 
   background-image: url("../img/slider/slide-1.jpg");
