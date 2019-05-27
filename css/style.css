@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
@@ -120,7 +125,13 @@ a {
 
 .main-header-logo {
   width: 220px;
-  height: 42px;
+  height: 29px;
+  padding-top: 13px;
+}
+
+.main-header-logo img {
+  width: 109px;
+  height: 19px;
 }
   
 .input-search {
@@ -1102,8 +1113,14 @@ a {
 
 .main-footer-logo {
   width: 220px;
-  height: 63px;
+  height: 43px;
   margin-bottom: 27px;
+  padding-top: 20px;
+}
+
+.main-footer-logo img {
+  width: 138px;
+  height: 23px;
 }
 
 .footer-address {
