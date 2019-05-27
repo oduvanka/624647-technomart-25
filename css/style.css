@@ -298,6 +298,13 @@ a {
 }
 
 .offers-list {
+  display: grid;
+  grid-template-areas:
+    "materials tool equipment"
+    "drills drills sale"
+    "drills drills delivery";
+  grid-gap: 20px;
+
   margin: 0;
   padding: 0;
 
@@ -305,15 +312,17 @@ a {
 }
 
 .offer-item {
-  width: 300px;
-  height: 123px;
+  min-height: 123px;
+  padding: 0 25px;
 
   background-color: #f0f0f0;
 }
 
-.offer-item h3 {
+.offer-title {
   margin: 0;
   padding: 0;
+  margin-bottom: 11px;
+  padding-top: 21px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
@@ -323,33 +332,65 @@ a {
 }
 
 .offer-item-materials {
+  grid-area: materials;
+
   background-color: #ffbf47;
+  background-image: url("../img/icon/icon-offers1.svg");
+  background-repeat: no-repeat;
+  background-position: 213px 31px;
+  background-size: 44px 65px;
 }
 
 .offer-item-tool {
+  grid-area: tool;
+
   background-color: #3bbbe2;
+  background-image: url("../img/icon/icon-offers2.svg");
+  background-repeat: no-repeat;
+  background-position: 193px 33px;
+  background-size: 75px 61px;
 }
 
 .offer-item-equipment {
+  grid-area: equipment;
+
   background-color: #db90d8;
+  background-image: url("../img/icon/icon-offers3.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
+  background-size: 78px 62px;
+}
+
+.offer-item-drills {
+  grid-area: drills;
+  padding: 0;
+
+  background-color: #e5e5e5;
 }
 
 .offer-item-sale {
+  grid-area: sale;
+
   background-color: #8dd68e;
+  background-image: url("../img/icon/icon-offers4.svg");
+  background-repeat: no-repeat;
+  background-position: 196px 26px;
+  background-size: 59px 72px;
 }
 
 .offer-item-delivery {
-  background-color: #ffbf47;
-}
+  grid-area: delivery;
 
-.slider {
-  padding-left: 25px;
-  color: #ffffff;
-  background: url("../img/slider/slide-1.jpg") no-repeat;
+  background-color: #ffbf47;
+  background-image: url("../img/icon/icon-offers5.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
+  background-size: 78px 63px;
 }
 
 .btn-offer {
   width: 135px;
+  margin-bottom: 22px;
 
   color: #ffffff;
 
@@ -363,6 +404,49 @@ a {
 
 .btn-offer:active {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider {
+  padding: 0 25px;
+
+  color: #ffffff;
+
+  background-image: url("../img/slider/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider .offer-title {
+  margin-bottom: 0;
+
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.slider p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slider .btn-offer {
+  color: #ffffff;
+
+  background-color: #ed3543;
+}
+
+.slider .btn-offer:hover,
+.slider .btn-offer:focus {
+  background-color: #ca2b36;
+}
+
+.slider .btn-offer:active {
+  background-color: #ba2731;
 }
 
 .section-header {
