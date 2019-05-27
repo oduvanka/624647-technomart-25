@@ -271,6 +271,7 @@ img {
 .site-navigation {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -287,10 +288,15 @@ img {
 }
 
 .site-navigation a {
+  display: block;
+  padding: 22px 31px 21px 31px;
 
+  font-size: 17px;
+  line-height: 17px;
   color: #ffffff;
 
   background-color: #32425c;
+  box-shadow: inset 0 -5px 0 0 #293349;
 }
 
 .site-navigation a:hover,
@@ -1159,7 +1165,8 @@ img {
 .footer-users-navigation {
   display: flex;
   justify-content: flex-end;
-  width: 560px;
+  flex-wrap: wrap;
+  width: 620px;
   margin: 0;
   padding: 0;
   margin-bottom: 33px;
