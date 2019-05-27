@@ -59,6 +59,8 @@ img {
   text-transform: uppercase;
 }
 
+.visually-hidden:not(:focus):not(:active),
+.visually-hidden-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1023,6 +1025,37 @@ img {
   border-bottom: 1px dotted #ed3543;
 }
 
+.sort-directions label {
+  position: relative;
+  padding-left: 12px;
+}
+
+.sort-direction-ascending::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 0; 
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #c5c5c5;
+}
+
+.sort-direction-descending::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 0; 
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #c5c5c5;
+}
+
 .sort-parameters input:hover + label,
 .sort-directions input:hover + label {
   color: #000000;
@@ -1030,11 +1063,27 @@ img {
   border-bottom: 1px solid #ed3543;
 }
 
+.sort-directions input:hover + .sort-direction-ascending::before {
+  border-bottom-color: #000000;
+}
+
+.sort-directions input:hover + .sort-direction-descending::before {
+  border-top-color: #000000;
+}
+
 .sort-parameters input:checked + label,
 .sort-directions input:checked + label {
   color: #ee3643;
   
   border: none;
+}
+
+.sort-directions input:checked + .sort-direction-ascending::before {
+  border-bottom-color: #ed3543;
+}
+
+.sort-directions input:checked + .sort-direction-descending::before {
+  border-top-color: #ed3543;
 }
 
 .btn-send-filter {
