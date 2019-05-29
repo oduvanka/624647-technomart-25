@@ -27,7 +27,7 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 11px 24px 10px 24px;
+  padding: 10px 24px;
   min-width: 87px;
 
   font-family: "Cuprum", "Arial", sans-serif;
@@ -555,17 +555,51 @@ img {
   text-align: center;
 }
 
-.price-old {
+.catalog-item .price-old {
+  margin-bottom: 8px;
+
   text-decoration: line-through;
   color: #a9a9a9;
 
   background-color: #ffffff;
 }
 
-.price-new {
+.catalog-item .price-new {
+  position: relative;
+  width: 80px;
+  margin-bottom: 20px;
+  padding: 11px 10px 9px 10px;
+
   color: #ffffff;
 
   background-color: #ee3643;
+  border-right: 5px solid #ee3643;
+}
+
+.catalog-item .price-new::before {
+  content: "";
+  position: absolute; 
+  left: -15px;
+  top: 0;
+  width: 15px;
+  height: 38px;
+  
+  background-color: #ee3643;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.catalog-item .price-new::after {
+  content: "";
+  position: absolute; 
+  right: -25px; 
+  top: 0;
+  width: 0;
+  height: 0;
+  
+  border-left: 20px solid #ee3643;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
 }
 
 .label-new {
@@ -577,9 +611,26 @@ img {
 
   background-image: url("../img/flag-new.png");
   background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.goods-actions {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 43px;
+
+  background-color: #ffffff;
+}
+
+.catalog-item:hover .goods-actions {
+  display: block;
 }
 
 .btn-add-basket {
+  margin-bottom: 8px;
+
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -599,7 +650,10 @@ img {
 }
 
 .btn-add-bookmark {
-  padding: 7px 3px 7px 3px;
+  width: 135px;
+  margin-bottom: 43px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   font-size: 14px;
   line-height: 18px;
