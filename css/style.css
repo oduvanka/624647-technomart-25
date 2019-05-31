@@ -689,6 +689,7 @@ img {
 }
 
 .manufacture-item {
+  display: flex;
   width: 218px;
   height: 145px;
   margin-right: 20px;
@@ -711,6 +712,10 @@ img {
   border-color: transparent;
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
+}
+
+.manufacture-item a {
+  margin: auto;
 }
 
 .services-wrapper {
