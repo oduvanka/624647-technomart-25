@@ -222,6 +222,7 @@ img {
 
 .page-title {
   width: 200px;
+  padding-left: 53px;
 
   font-size: 16px;
   font-style: italic;
@@ -232,24 +233,46 @@ img {
 
 .header-contacts {
   width: 270px;
+
+  text-align: center;
 }
 
 .header-phone {
-  width: 264px;
-  min-height: 39px;
-
-  text-align: center;
+  position: relative;
+  width: 223px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  padding: 8px 10px 7px 31px;
 
   border: 3px solid #ffffff;
+}
+
+.header-phone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .header-phone a {
   font-size: 21px;
   line-height: 21px;
+  vertical-align: middle;
   color: #e9292a;
 }
 
 .header-address {
+  width: 270px;
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
