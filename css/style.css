@@ -1108,14 +1108,26 @@ img {
 }
 
 .sorting {
-  padding-left: 18px;
-  padding-right: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 240px;
+  width: 662px;
+  padding-left: 19px;
+  padding-right: 19px;
 
   background-color: #f7f3ec;
   border-radius: 3px;
 }
 
 .sorting-header {
+  margin: 0;
+  padding: 0;
+  margin-right: 139px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -1129,6 +1141,33 @@ img {
   padding: 0;
 
   border: none;
+}
+
+.sort-parameters {
+  margin-right: 43px;
+}
+
+.sort-parameters-wrap,
+.sort-directions-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sort-parameters-wrap {
+  width: 355px;
+}
+
+.sort-directions-wrap {
+  width: 43px;
+}
+
+.sort-parameters p,
+.sort-directions p {
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 7px;
 }
 
 .sort-parameters label,
@@ -1224,6 +1263,7 @@ img {
 
 .inner-page .catalog {
   width: 700px;
+  padding-top: 58px;
 }
 
 .inner-page .catalog-item:nth-child(3n) {
