@@ -878,6 +878,10 @@ img {
   border: 1px solid #ee3643;
 }
 
+.btn-details-company {
+  width: 172px;
+}
+
 .contacts {
   width: 300px;
 }
@@ -897,6 +901,10 @@ img {
   width: 300px;
   height: 158px;
   margin-bottom: 40px;
+}
+
+.btn-create-message {
+  width: 252px;
 }
 
 /* Основная часть - страница catalog*/
