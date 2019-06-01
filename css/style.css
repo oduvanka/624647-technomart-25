@@ -667,6 +667,7 @@ img {
 }
 
 .btn-add-basket {
+  position: relative;
   margin-bottom: 8px;
 
   font-size: 14px;
@@ -685,6 +686,27 @@ img {
 .btn-add-basket:active {
   background-color: #518534;
   box-shadow: none;
+}
+
+.btn-add-basket::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.btn-add-basket:hover::before,
+.btn-add-basket:focus::before,
+.btn-add-basket:active::before {
+  opacity: 1;
 }
 
 .btn-add-bookmark {
@@ -1058,8 +1080,6 @@ img {
   border: none;
   border-bottom: 1px solid #e5e5e5;
 }
-
-.filter-price-range {}
 
 .range-controls {
   position: relative;
