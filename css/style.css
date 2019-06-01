@@ -175,8 +175,11 @@ img {
 }
 
 .bookmark,
-.basket {
-  width: 150px;
+.cart {
+  position: relative;
+  width: 100px;
+  padding: 12px 10px 12px 46px;
+
   color: #ffffff;
 
   background-color: #293449;
@@ -184,16 +187,62 @@ img {
 
 .bookmark:hover,
 .bookmark:focus,
-.basket:hover,
-.basket:focus {
+.cart:hover,
+.cart:focus {
   background-color: #212a3a;
 }
 
 .bookmark:active,
-.basket:active {
+.cart:active {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #161d29;
+}
+
+.bookmark::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.bookmark:hover::before,
+.bookmark:focus::before,
+.cart:hover::before,
+.cart:focus::before {
+  opacity: 1;
+}
+
+.bookmark:active::before,
+.cart:active::before {
+  opacity: 0.5;
+}
+
+.cart-full {
+  background-color: #ee3643;
 }
 
 .btn-order-goods {
@@ -666,7 +715,7 @@ img {
   display: block;
 }
 
-.btn-add-basket {
+.btn-add-cart {
   position: relative;
   margin-bottom: 8px;
 
@@ -678,17 +727,17 @@ img {
   box-shadow: inset 0 -3px 0 0 #367315;
 }
 
-.btn-add-basket:hover,
-.btn-add-basket:focus {
+.btn-add-cart:hover,
+.btn-add-cart:focus {
   background-color: #5fbb2d;
 }
 
-.btn-add-basket:active {
+.btn-add-cart:active {
   background-color: #518534;
   box-shadow: none;
 }
 
-.btn-add-basket::before {
+.btn-add-cart::before {
   content: "";
   position: absolute;
   top: 11px;
@@ -703,9 +752,9 @@ img {
   opacity: 0.3;
 }
 
-.btn-add-basket:hover::before,
-.btn-add-basket:focus::before,
-.btn-add-basket:active::before {
+.btn-add-cart:hover::before,
+.btn-add-cart:focus::before,
+.btn-add-cart:active::before {
   opacity: 1;
 }
 
