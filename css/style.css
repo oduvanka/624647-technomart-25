@@ -384,6 +384,9 @@ img {
 }
 
 .user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   width: 300px;
   margin: 0;
   padding: 0;
@@ -391,16 +394,20 @@ img {
   list-style: none;
 }
 
-.user-navigation a {
-  font-size: 21px;
-  line-height: 21px;
-  color: #000000;
-
-  background-color: #ffffff;
+.user-navigation li {
+  margin-left: 10px;
 }
 
 .user-navigation a {
+  display: block;
+  padding: 12px 14px;
+
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
   color: #000000;
+
+  background-color: #ffffff;
 }
 
 .user-navigation a:hover,
@@ -410,6 +417,54 @@ img {
 
 .user-navigation a:active {
   color: rgb(0, 0, 0, 0.3);
+}
+
+.user-navigation a:hover path,
+.user-navigation a:focus path {
+  fill: #32425c;
+}
+
+.user-navigation a:active path {
+  fill: #c5c5c5;
+}
+
+.login-link a {
+  width: 94px;
+
+  text-align: start;
+}
+
+.login-link a span {
+  display: inline-block;
+  margin-right: 10px;
+
+  vertical-align: middle;
+}
+
+.registration-link a {
+  width: 130px;
+}
+
+.user-link a {
+  width: 272px;
+  text-align: start;
+}
+
+.user-link a span {
+  display: inline-block;
+  margin-right: 10px;
+
+  vertical-align: middle;
+}
+
+.user-link-orders a,
+.user-link-profile a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
+
+  background: none;
 }
 
 .site-navigation {
