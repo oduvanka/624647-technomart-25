@@ -322,14 +322,14 @@
 
     <section class="modal modal-map">
       <h2 class="title visually-hidden">Где находится наш офис</h2>
-      <img src="img/map-big.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="783" height="372">
+      <img src="img/map-big.jpg" alt="Адрес на карте: улица Большая Конюшенная, дом 19, на пересечении с Волынским переулком" width="940" height="446">
       <button class="btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
     <section class="modal modal-message">
       <h2 class="title visually-hidden">Написать письмо</h2>
       <form method="POST">
-        <div class="message-content">
+        <div class="message-content modal-content">
           <p>
             <label for="message-name">Ваше имя:</label>
             <input type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия">
@@ -344,21 +344,28 @@
           </p>
         </div>
         <div class="message-footer message-footer-wrapper">
-          <button class="btn" type="submit">Отправить</button>
+          <div class="modal-content">
+            <button class="btn btn-send-message" type="submit">Отправить</button>
+          </div>
         </div>
       </form>
+      
       <button class="btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
     <section class="modal modal-informer">
+      <div class="modal-content">
         <h2>
           Товар добавлен в корзину!
         </h2>
-        <div class="imformer-footer-wrapper">
-          <a class="btn" href="#">Оформить заказ</a>
-          <button class="btn" type="button">Продолжить покупки</button>
+      </div>
+      <div class="imformer-footer-wrapper">
+        <div class="modal-content">
+          <a class="btn btn-order-goods" href="#">Оформить заказ</a>
+          <button class="btn btn-continue-shopping" type="button">Продолжить покупки</button>
         </div>
-        <button class="btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-      </section>
+      </div>
+      <button class="btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </section>
   </body>
 </html>

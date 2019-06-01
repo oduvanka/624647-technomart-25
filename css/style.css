@@ -294,7 +294,7 @@ img {
   background-color: #ee3643;
 }
 
-.btn-order-goods {
+.main-header .btn-order-goods {
   width: 130px;
   padding: 12px 10px;
 
@@ -304,12 +304,12 @@ img {
   background-color: #63a63e;
 }
 
-.btn-order-goods:hover,
-.btn-order-goods:focus {
+.main-header .btn-order-goods:hover,
+.main-header .btn-order-goods:focus {
   background-color: #5fbb2d;
 }
 
-.btn-order-goods:active {
+.main-header .btn-order-goods:active {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #518534;
@@ -1954,10 +1954,15 @@ img {
 /* Модальные окна */
 
 .modal {
-  display: none;
+  /*display: none;*/
   position: relative;
 
   background-color: #ffffff;
+}
+
+.modal-content {
+  width: 460px;
+  margin: 0 auto;
 }
 
 .btn-close {
@@ -2014,18 +2019,46 @@ img {
 
 .modal-message {
   width: 620px;
-  height: 430px;
+  /*height: 430px;*/
 
   border-top: 7px solid #ee3643;
 
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
+.message-content {
+  margin-bottom: 37px;
+}
+
+.message-footer-wrapper {
+  padding-top: 37px;
+  padding-bottom: 37px;
+
+  background-color: #f4f4f4;
+}
+
+.modal-message .btn-send-message {
+  width: inherit
+}
+
 .modal-informer {
   width: 620px;
-  height: 282px;
+  /*height: 282px;*/
 
   border-top: 7px solid #ee3643;
 
   box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.imformer-footer-wrapper {
+  padding-top: 37px;
+  padding-bottom: 37px;
+
+  background-color: #f4f4f4;
+}
+
+.modal-informer .btn-continue-shopping {
+  color: #000000;
+  
+  background-color: #ffffff;
 }
