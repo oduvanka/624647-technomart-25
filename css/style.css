@@ -152,7 +152,13 @@ img {
   width: 109px;
   height: 19px;
 }
-  
+
+.search-group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .input-search {
   width: 270px;
   height: 42px;
@@ -173,6 +179,53 @@ img {
   color: #000000;
   background-color: #ffffff;
 }
+
+.search-group::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 11px; 
+  height: 11px; 
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+  opacity: 0.3;
+  }
+  .search-group::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 29px;
+    width: 5px;
+    height: 2px;
+    
+    background-color: #ffffff;
+
+    border-radius: 0 50% 50% 0;
+    opacity: 0.3;
+    transform: rotate(45deg);
+  }
+
+  .search-group:hover::before,
+  .search-group:focus::before,
+  .search-group:hover::after,
+  .search-group:focus::after {
+    opacity: 1;
+  }
+
+  .search-group:active::before {
+    border-color: #ee3643;
+
+    opacity: 1;
+  }
+
+  .search-group:active::after {
+    background-color: #ee3643;
+
+    opacity: 1;
+  }
 
 .bookmark,
 .cart {
