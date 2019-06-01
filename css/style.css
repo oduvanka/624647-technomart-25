@@ -299,7 +299,10 @@ img {
 }
 
 .btn-order-goods {
-  width: 150px;
+  width: 130px;
+  padding: 12px 10px;
+
+  text-align: center;
   color: #ffffff;
 
   background-color: #63a63e;
