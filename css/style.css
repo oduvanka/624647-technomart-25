@@ -92,10 +92,6 @@ img {
   overflow: hidden;
 }
 
-.modal {
-  display: none;
-}
-
 /* Шапка */
 
 .main-header {
@@ -1953,4 +1949,83 @@ img {
   width: 110px;
   margin: 0;
   padding: 0;
+}
+
+/* Модальные окна */
+
+.modal {
+  display: none;
+  position: relative;
+
+  background-color: #ffffff;
+}
+
+.btn-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  display: block;
+  box-sizing: content-box;
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+  
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.btn-close::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 12px;
+  width: 4px;
+  height: 27px;
+
+  background-color: #ee3643;
+
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.btn-close::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 27px;
+  height: 4px;
+
+  background-color: #ee3643;
+
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.modal-map {
+  width: 940px;
+  height: 446px;
+
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.5);
+}
+
+.modal-message {
+  width: 620px;
+  height: 430px;
+
+  border-top: 7px solid #ee3643;
+
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-informer {
+  width: 620px;
+  height: 282px;
+
+  border-top: 7px solid #ee3643;
+
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
