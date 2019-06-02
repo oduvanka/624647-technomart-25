@@ -1000,6 +1000,12 @@ img {
   opacity: 0.3;
 }
 
+.catalog-item .label-new {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
 .manufactures {
   margin-bottom: 85px;
 }
