@@ -149,10 +149,8 @@ img {
   height: 19px;
 }
 
-.search-group {
+.form-search {
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 
 .input-search {
@@ -161,13 +159,36 @@ img {
   padding-left: 50px;
   padding-right: 10px;
 
-  color: #ffffff;
-
   background-color: #293449;
   border: none;
 }
 
-.input-search:hover {
+.input-search::placeholder {
+  color: #ffffff;
+}
+
+.input-search:-ms-input-placeholder {
+  color: #ffffff;
+} /* IE */
+
+.input-search::-ms-input-placeholder {
+  color: #ffffff;
+} /* Microsoft Edge */
+
+.input-search::-webkit-input-placeholder {
+  color: #ffffff;
+} /* Chrome 56-, Opera 43-, Safari 10-, Android */
+
+.input-search:-moz-placeholder {
+  color: #ffffff;
+} /* Firefox 18- */
+
+.input-search::-moz-placeholder {
+  color: #ffffff;
+} /* Firefox 51- */
+
+.input-search:hover
+{
   background-color: #212a3a;
 }
 
@@ -176,12 +197,26 @@ img {
   background-color: #ffffff;
 }
 
-.search-group::before {
+.btn-search {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.btn-search::before {
   content: "";
   position: absolute;
   top: 12px;
   left: 17px;
-
   width: 11px; 
   height: 11px; 
   border: 2px solid #ffffff;
@@ -189,7 +224,8 @@ img {
   border-radius: 50%;
   opacity: 0.3;
   }
-  .search-group::after {
+
+  .btn-search::after {
     content: "";
     position: absolute;
     top: 25px;
@@ -204,20 +240,18 @@ img {
     transform: rotate(45deg);
   }
 
-  .search-group:hover::before,
-  .search-group:focus::before,
-  .search-group:hover::after,
-  .search-group:focus::after {
+  .input-search:hover + .btn-search::before,
+  .input-search:hover + .btn-search::after {
     opacity: 1;
   }
 
-  .search-group:active::before {
+  .input-search:focus + .btn-search::before {
     border-color: #ee3643;
 
     opacity: 1;
   }
 
-  .search-group:active::after {
+  .input-search:focus + .btn-search::after {
     background-color: #ee3643;
 
     opacity: 1;
