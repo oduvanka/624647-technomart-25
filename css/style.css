@@ -507,7 +507,7 @@ img {
   list-style: none;
 
   background-color: #32425c;
-  box-shadow: 0 5px 0 0 #293449;
+  box-shadow: inset 0 -5px 0 0 #293449;
 }
 
 .site-navigation li {
@@ -518,13 +518,11 @@ img {
 
 .site-navigation a {
   display: block;
-  padding: 22px 31px 16px 31px;
+  padding: 22px 31px 21px 31px;
 
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
-
-  background-color: #32425c;
 }
 
 .site-navigation a:hover,
@@ -536,7 +534,6 @@ img {
   color: rgba(255, 255, 255, 0.5);
   
   background-color: #1d2739;
-  /*нужно ли обнулить бокс-шадоу?*/
 }
 
 /* Основная часть - страница index */
@@ -615,7 +612,7 @@ img {
   min-width: 620px;
   padding: 0;
 
-  background-color: #e5e5e5;
+  background-color: #f3f7f8;
 }
 
 .offer-item-sale {
@@ -1992,15 +1989,24 @@ img {
 /* Модальные окна */
 
 .modal {
-  /*display: none;*/
+  display: none;
   position: relative;
 
   background-color: #ffffff;
 }
 
-.modal-content {
+.modal-container {
   width: 460px;
   margin: 0 auto;
+}
+
+.modal-footer-wrapper {
+  padding-top: 37px;
+  padding-bottom: 37px;
+
+  text-align: center;
+  
+  background-color: #f4f4f4;
 }
 
 .btn-close {
@@ -2048,6 +2054,8 @@ img {
   transform: rotate(45deg);
 }
 
+/* Модальное окно для карты */
+
 .modal-map {
   width: 940px;
   height: 446px;
@@ -2055,9 +2063,10 @@ img {
   box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Модальное окно для отправки сообщений */
+
 .modal-message {
   width: 620px;
-  /*height: 430px;*/
 
   border-top: 7px solid #ee3643;
 
@@ -2065,34 +2074,129 @@ img {
 }
 
 .message-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 37px;
+  padding-top: 48px;
 }
 
-.message-footer-wrapper {
-  padding-top: 37px;
-  padding-bottom: 37px;
-
-  background-color: #f4f4f4;
+.message-content p {
+  width: 220px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 21px;
 }
+
+.message-content .message-text-group {
+  width: inherit;
+}
+
+.message-content label {
+  display: block;
+  margin-bottom: 8px;
+  
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.message-content .message-input {
+  width: inherit;
+  box-sizing: border-box;
+  padding: 9px 16px 10px 16px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 2px solid #dee3e4;
+
+  border-radius: 2px;
+}
+
+.message-content .message-input:hover {
+  border-color: #b5b5b5;
+}
+
+.message-content .message-input:focus {
+  border-color: #ee3643;
+}
+
+.message-content .message-input::placeholder {
+  color: #a9a9a9;
+}
+
+.message-content .message-input:-ms-input-placeholder {
+  color: #a9a9a9;
+} /* IE */
+
+.message-content .message-input::-ms-input-placeholder {
+  color: #a9a9a9;
+} /* Microsoft Edge */
+
+.message-content .message-input::-webkit-input-placeholder {
+  color: #a9a9a9;
+} /* Chrome 56-, Opera 43-, Safari 10-, Android */
+
+.message-content .message-input:-moz-placeholder {
+  color: #a9a9a9;
+} /* Firefox 18- */
+
+.message-content .message-input::-moz-placeholder {
+  color: #a9a9a9;
+} /* Firefox 51- */
 
 .modal-message .btn-send-message {
-  width: inherit
+  width: inherit;
 }
+
+/* Модальное окно-информер */
 
 .modal-informer {
   width: 620px;
-  /*height: 282px;*/
 
   border-top: 7px solid #ee3643;
 
   box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
 
-.imformer-footer-wrapper {
-  padding-top: 37px;
-  padding-bottom: 37px;
+.informer-content {
+  margin-bottom: 60px;
+  padding-top: 48px;
+}
 
-  background-color: #f4f4f4;
+.modal-informer b {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  padding-left: 99px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.modal-informer b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66px;
+  height: 66px;
+
+  background-image: url("../img/icon/sucsess.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-informer .btn-order-goods {
+  margin-right: 16px;
 }
 
 .modal-informer .btn-continue-shopping {

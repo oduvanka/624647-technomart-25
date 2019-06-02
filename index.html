@@ -327,39 +327,37 @@
 
     <section class="modal modal-message">
       <h2 class="title visually-hidden">Написать письмо</h2>
-      <form method="POST">
-        <div class="message-content modal-content">
-          <p>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <div class="message-content modal-container">
+          <p class="message-name-group">
             <label for="message-name">Ваше имя:</label>
-            <input type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия">
+            <input class="message-input message-input-name" type="text" id="message-name" name="user-name" value="" placeholder="Имя Фамилия" required autofocus>
           </p>
-          <p>
+          <p class="message-email-group">
             <label for="message-email">Ваш e-mail:</label>
-            <input type="email" id="message-email" name="user-email" value="" placeholder="email@example.com">
+            <input class="message-input message-input-email" type="email" id="message-email" name="user-email" value="" placeholder="email@example.com" required>
           </p>
-          <p>
+          <p class="message-text-group">
             <label for="message-text">Текст письма:</label>
-            <textarea id="message-text" name="user-message" placeholder="В свободной форме"></textarea>
+            <textarea class="message-input message-input-text" id="message-text" name="user-message" rows="5" placeholder="В свободной форме" required></textarea>
           </p>
         </div>
-        <div class="message-footer message-footer-wrapper">
-          <div class="modal-content">
+        <div class="modal-footer-wrapper">
+          <div class="modal-container">
             <button class="btn btn-send-message" type="submit">Отправить</button>
           </div>
         </div>
       </form>
-      
       <button class="btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
     <section class="modal modal-informer">
-      <div class="modal-content">
-        <h2>
-          Товар добавлен в корзину!
-        </h2>
+      <div class="modal-container informer-content">
+        <h2 class="title visually-hidden">Информер</h2>
+        <b>Товар добавлен в корзину!</b>
       </div>
-      <div class="imformer-footer-wrapper">
-        <div class="modal-content">
+      <div class="modal-footer-wrapper">
+        <div class="modal-container">
           <a class="btn btn-order-goods" href="#">Оформить заказ</a>
           <button class="btn btn-continue-shopping" type="button">Продолжить покупки</button>
         </div>
