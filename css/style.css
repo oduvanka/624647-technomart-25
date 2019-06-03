@@ -2248,10 +2248,13 @@ img {
 }
 
 .modal-informer .btn-order-goods {
+  width: 172px;
   margin-right: 16px;
 }
 
 .modal-informer .btn-continue-shopping {
+  width: 220px;
+
   color: #000000;
   
   background-color: #ffffff;
