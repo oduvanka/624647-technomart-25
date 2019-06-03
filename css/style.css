@@ -328,6 +328,15 @@ img {
   background-color: #ee3643;
 }
 
+.cart-full:hover,
+.cart-full:focus {
+  background-color: #ca2c37;
+}
+
+.cart-full:active {
+  background-color: #ba2732;
+}
+
 .main-header .btn-order-goods {
   width: 130px;
   padding: 12px 10px;
