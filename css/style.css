@@ -154,6 +154,7 @@ img {
 }
 
 .input-search {
+  position: relative;
   width: 270px;
   height: 42px;
   padding-left: 50px;
@@ -197,26 +198,17 @@ img {
   background-color: #ffffff;
 }
 
-.btn-search {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-  
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
-}
-
-.btn-search::before {
-  content: "";
+.icon-search {
   position: absolute;
   top: 12px;
   left: 17px;
+}
+
+.icon-search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 11px; 
   height: 11px; 
   border: 2px solid #ffffff;
@@ -225,37 +217,37 @@ img {
   opacity: 0.3;
   }
 
-  .btn-search::after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 29px;
-    width: 5px;
-    height: 2px;
-    
-    background-color: #ffffff;
+.icon-search::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 5px;
+  height: 2px;
+  
+  background-color: #ffffff;
 
-    border-radius: 0 50% 50% 0;
-    opacity: 0.3;
-    transform: rotate(45deg);
-  }
+  border-radius: 0 50% 50% 0;
+  opacity: 0.3;
+  transform: rotate(45deg);
+}
 
-  .input-search:hover + .btn-search::before,
-  .input-search:hover + .btn-search::after {
-    opacity: 1;
-  }
+.input-search:hover + .icon-search::before,
+.input-search:hover + .icon-search::after {
+  opacity: 1;
+}
 
-  .input-search:focus + .btn-search::before {
-    border-color: #ee3643;
+.input-search:focus + .icon-search::before {
+  border-color: #ee3643;
 
-    opacity: 1;
-  }
+  opacity: 1;
+}
 
-  .input-search:focus + .btn-search::after {
-    background-color: #ee3643;
+.input-search:focus + .icon-search::after {
+  background-color: #ee3643;
 
-    opacity: 1;
-  }
+  opacity: 1;
+}
 
 .bookmark,
 .cart {
