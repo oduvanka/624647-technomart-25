@@ -34,13 +34,11 @@
         <ul class="user-navigation">
           <li class="user-navigation-item">
             <a class="user-navigation-link login-link" href="#">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                  <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
-                  <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
-                </svg>
-              </span>
-              Войти
+              <svg class="icon-login" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+              </svg>
+              <span>Войти</span>
             </a>
           </li>
           <li class="user-navigation-item">
@@ -129,13 +127,14 @@
                 <img src="img/catalog/perforator-1.jpg" alt="Перфоратор облегчённый, с синим корпусом и тонкой чёрной рукояткой" width="218" height="170">
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 9000</h3>
-              <p class="price price-old">32500 Р.</p>
-              <p class="price price-new">25500 Р.</p>
+              <p class="price-old">32500 Р.</p>
+              <div class="price-wrapper">
+                <p class="price-new">25500 Р.</p>
+              </div>
               <div class="goods-actions">
                 <a class="btn btn-add-cart" href="#">Купить</a>
                 <button class="btn btn-add-bookmark" type="button">В закладки</button>
               </div>
-              
             </article>
           </li>
           <li class="catalog-item">
@@ -144,8 +143,10 @@
                 <img src="img/catalog/perforator-2.jpg" alt="Перфоратор с чёрной рукояткой, тумблером блокировки вращения и красной кнопкой включения" width="218" height="170">
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
-              <p class="price price-old">22500 Р.</p>
-              <p class="price price-new">15500 Р.</p>
+              <p class="price-old">22500 Р.</p>
+              <div class="price-wrapper">
+                <p class="price-new">15500 Р.</p>
+              </div>
               <div class="goods-actions">
                 <a class="btn btn-add-cart" href="#">Купить</a>
                 <button class="btn btn-add-bookmark" type="button">В закладки</button>
@@ -158,8 +159,10 @@
                 <img src="img/catalog/perforator-3.jpg" alt="Перфоратор с чёрной рукояткой, удлиннённым синим корпусом и красной кнопкой включения" width="218" height="170">
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="price price-old">30500 Р.</p>
-              <p class="price price-new">25500 Р.</p>
+              <p class="price-old">30500 Р.</p>
+              <div class="price-wrapper">
+                <p class="price-new">25500 Р.</p>
+              </div>
               <div class="goods-actions">
                 <a class="btn btn-add-cart" href="#">Купить</a>
                 <button class="btn btn-add-bookmark" type="button">В закладки</button>
@@ -172,8 +175,10 @@
                 <img src="img/catalog/perforator-2.jpg" alt="Перфоратор с чёрной рукояткой, тумблером блокировки вращения и красной кнопкой включения" width="218" height="170">
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
-              <p class="price price-old"></p>
-              <p class="price price-new">25500 Р.</p>
+              <p class="price-old"></p>
+              <div class="price-wrapper">
+                <p class="price-new">12500 Р.</p>
+              </div>
               <div class="goods-actions">
                 <a class="btn btn-add-cart" href="#">Купить</a>
                 <button class="btn btn-add-bookmark" type="button">В закладки</button>
@@ -191,42 +196,42 @@
         </div>
         <ul class="manufactures-list">
           <li class="manufacture-item">
-            <a href="https://www.bosch.ru/" target="_blank">
+            <a class="manufacture-link manufacture-link-bosch" href="https://www.bosch.ru/" target="_blank">
               <img src="img/manufactures/bosch.png" alt="BOSCH" width="126" height="37">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="http://www.makita.ru/" target="_blank">
+            <a class="manufacture-link manufacture-link-makita" href="http://www.makita.ru/" target="_blank">
               <img src="img/manufactures/makita.png" alt="Makita" width="123" height="40">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="https://ru.dewalt.global/" target="_blank">
+            <a class="manufacture-link manufacture-link-dewalt" href="https://ru.dewalt.global/" target="_blank">
               <img src="img/manufactures/dewalt.png" alt="DeWALT" width="146" height="44">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="http://www.interskol.ru/" target="_blank">
+            <a class="manufacture-link manufacture-link-interskol" href="http://www.interskol.ru/" target="_blank">
               <img src="img/manufactures/interskol.png" alt="ИНТЕРСКОЛ" width="200" height="88">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="http://www.hitachi.ru/ru" target="_blank">
+            <a class="manufacture-link manufacture-link-hitachi" href="http://www.hitachi.ru/ru" target="_blank">
               <img src="img/manufactures/hitachi.png" alt="HITACHI" width="169" height="31">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="https://www.lg.com/ru" target="_blank">
+            <a class="manufacture-link manufacture-link-lg" href="https://www.lg.com/ru" target="_blank">
               <img src="img/manufactures/lg.png" alt="LG" width="121" height="73">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="https://www.aegps.com/" target="_blank">
+            <a class="manufacture-link manufacture-link-aeg" href="https://www.aegps.com/" target="_blank">
               <img src="img/manufactures/aeg.png" alt="AEG POWER SOLUTIONS" width="151" height="96">
             </a>
           </li>
           <li class="manufacture-item">
-            <a href="https://www.metabo.com/ru/ru/" target="_blank">
+            <a class="manufacture-link manufacture-link-metabo" href="https://www.metabo.com/ru/ru/" target="_blank">
               <img src="img/manufactures/metabo.png" alt="metabo. work. don't play." width="204" height="69">
             </a>
           </li>
@@ -269,7 +274,7 @@
           <h2 class="title section-title">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
           <h3 class="title section-title visually-hidden">Транспортные компании</h3>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p class="about-transport-companies">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:</p>
           <ul class="transport-companies-list">
             <li class="transport-company-item">Деловые линии</li>
@@ -317,7 +322,7 @@
       </div>
       <div class="main-footer-bottom">
         <div class="copyright container">
-          <p class="copyright-info">&copy; 2010-2019 Компания «Техномарт»<br>Все права защищены</p>
+          <p class="copyright-info">&copy; 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
           <ul class="socials-list">
             <li class="socials-item socials-item-vkontakte"><a href="https://vk.com/tehnomart/" aria-label="Техномарт во Вконтакте" target="_blank"></a></li>
             <li class="socials-item social-item-facebook"><a href="https://facebook.com/tehnomart/" aria-label="Техномарт в Фэйсбуке" target="_blank"></a></li>
