@@ -2130,9 +2130,13 @@ img {
 
 .modal {
   display: none;
-  position: relative;
+  position: fixed;
 
   background-color: #ffffff;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-container {
@@ -2151,8 +2155,8 @@ img {
 
 .btn-close {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 8px;
+  right: 8px;
   display: block;
   box-sizing: content-box;
   width: 21px;
@@ -2197,8 +2201,12 @@ img {
 /* Модальное окно для карты */
 
 .modal-map {
+  top: 50%;
+  left: 50%;
   width: 940px;
   height: 446px;
+  margin-top: -223px;
+  margin-left: -470px;
 
   box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.5);
 }
@@ -2206,7 +2214,10 @@ img {
 /* Модальное окно для отправки сообщений */
 
 .modal-message {
+  top: 100px;
+  left: 50%;
   width: 620px;
+  margin-left: -310px;
 
   border-top: 7px solid #ee3643;
 
@@ -2217,7 +2228,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 37px;
+  margin-bottom: 16px;
   padding-top: 48px;
 }
 
@@ -2225,7 +2236,7 @@ img {
   width: 220px;
   margin: 0;
   padding: 0;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .message-content .message-text-group {
@@ -2245,7 +2256,7 @@ img {
 .message-content .message-input {
   width: inherit;
   box-sizing: border-box;
-  padding: 9px 16px 10px 16px;
+  padding: 8px 16px 8px 16px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -2297,7 +2308,10 @@ img {
 /* Модальное окно-информер */
 
 .modal-informer {
+  top: 30%;
+  left: 50%;
   width: 620px;
+  margin-left: -310px;
 
   border-top: 7px solid #ee3643;
 
@@ -2305,15 +2319,15 @@ img {
 }
 
 .informer-content {
-  margin-bottom: 60px;
-  padding-top: 48px;
+  margin-bottom: 65px;
+  padding-top: 66px;
 }
 
 .modal-informer b {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 19px;
+  padding-top: 15px;
   padding-left: 99px;
 
   font-family: "Cuprum", "Arial", sans-serif;
