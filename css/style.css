@@ -1599,10 +1599,6 @@ img {
   margin-bottom: 26px;
 }
 
-.price-controls p {
-  margin: 0;
-}
-
 .filter-price-from,
 .filter-price-to {
   -webkit-box-sizing: border-box;
