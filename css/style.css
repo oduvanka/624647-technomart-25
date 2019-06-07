@@ -1150,9 +1150,6 @@ img {
 }
 
 .manufacture-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 218px;
   height: 143px;
   margin-left: 20px;
@@ -1176,40 +1173,46 @@ img {
 }
 
 .manufacture-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.manufacture-link-makita {
+  padding-bottom: 4px;
+}
+
+.manufacture-link-dewalt {
+  padding-bottom: 5px;
+}
+
+.manufacture-link-interskol {
+  padding-right: 2px;
+  padding-bottom: 15px;
+}
+
+.manufacture-link-hitachi {
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+.manufacture-link-aeg {
+  padding-bottom: 3px;
+}
+
+.manufacture-link-metabo {
+  padding-left: 3px;
+  padding-bottom: 6px;
+}
+
+.manufacture-link img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin: auto;
-}
-
-.manufacture-link-bosch img {
-  margin-top: 5px;
-}
-  
-.manufacture-link-makita img {
-  margin-top: 2px;
-}
-
-.manufacture-link-dewalt img {
-  margin-top: 2px;
-}
-  
-.manufacture-link-interskol img {
-  margin-bottom: 7px;
-}
-  
-.manufacture-link-hitachi img {
-  margin-top: 10px;
-  margin-left: 5px;
-}
-  
-.manufacture-link-lg img {
-  margin-top: 6px;
-}
-  
-.manufacture-link-aeg img {
-  margin-top: 4px;
-}
-  
-.manufacture-link-metabo img {
-  margin-left: 3px;
 }
 
 .services-wrapper {
