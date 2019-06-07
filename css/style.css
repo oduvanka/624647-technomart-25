@@ -171,6 +171,7 @@ img {
 
 .form-search {
   position: relative;
+  width: 270px;
 }
 
 .input-search {
@@ -995,10 +996,10 @@ img {
 
 .catalog-item .price-wrapper {
   position: relative;
-  margin-right: 55px;
+  margin-right: 54px;
   margin-bottom: 20px;
   margin-left: 42px;
-  padding: 10px 10px 10px 30px;
+  padding: 10px 11px 10px 30px;
 
   font-size: 17px;
   font-weight: 700;
@@ -1008,6 +1009,8 @@ img {
 
   background-color: #ee3643;
   border-top-left-radius: 3px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   border-bottom-left-radius: 3px;
 }
 
@@ -1015,7 +1018,7 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -19px;
   width: 0;
   height: 0;
 
@@ -1141,6 +1144,7 @@ img {
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-left: -20px;
 
   list-style: none;
 }
@@ -1151,14 +1155,10 @@ img {
   display: flex;
   width: 218px;
   height: 143px;
-  margin-right: 20px;
+  margin-left: 20px;
   margin-bottom: 20px;
 
   border: 1px solid #eaeaea;
-}
-
-.manufacture-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .manufacture-item:hover,
@@ -1180,36 +1180,36 @@ img {
 }
 
 .manufacture-link-bosch img {
-  padding-top: 5px;
+  margin-top: 5px;
 }
   
-.manufacture-link-makita {
-  padding-top: 2px;
+.manufacture-link-makita img {
+  margin-top: 2px;
 }
 
-.manufacture-link-dewalt {
-  padding-top: 2px;
+.manufacture-link-dewalt img {
+  margin-top: 2px;
 }
   
-.manufacture-link-interskol {
-  padding-bottom: 7px;
+.manufacture-link-interskol img {
+  margin-bottom: 7px;
 }
   
-.manufacture-link-hitachi {
-  padding-top: 10px;
-  padding-left: 5px;
+.manufacture-link-hitachi img {
+  margin-top: 10px;
+  margin-left: 5px;
 }
   
-.manufacture-link-lg {
-  padding-top: 3px;
+.manufacture-link-lg img {
+  margin-top: 6px;
 }
   
-.manufacture-link-aeg {
-  padding-top: 4px;
+.manufacture-link-aeg img {
+  margin-top: 4px;
 }
   
-.manufacture-link-metabo {
-  padding-left: 3px;
+.manufacture-link-metabo img {
+  margin-left: 3px;
 }
 
 .services-wrapper {
@@ -1533,6 +1533,7 @@ img {
 
 .filter-price {
   margin: 0;
+  padding: 0;
   margin-bottom: 16px;
 
   border: none;
@@ -1834,6 +1835,8 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
 }
 
 .sort-parameters label {
@@ -1874,7 +1877,9 @@ img {
 .sort-parameters input:hover + label,
 .sort-directions input:hover + label {
   color: #000000;
+}
 
+.sort-parameters input:hover + label {
   border-bottom: 1px solid #ee3643;
 }
 
