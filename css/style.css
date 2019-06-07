@@ -335,15 +335,19 @@ img {
   opacity: 0.5;
 }
 
+.bookmark-full,
 .cart-full {
   background-color: #ee3643;
 }
 
+.bookmark-full:hover,
+.bookmark-full:focus,
 .cart-full:hover,
 .cart-full:focus {
   background-color: #ca2c37;
 }
 
+.bookmark-full:active,
 .cart-full:active {
   background-color: #ba2732;
 }
