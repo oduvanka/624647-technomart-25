@@ -2,19 +2,27 @@ let btnShowMap = document.querySelector(".contacts-map");
 let btnCreateMessage = document.querySelector(".btn-create-message");
 let btnAddCartAll = document.querySelectorAll(".btn-add-cart");
 
-btnShowMap.addEventListener("click", function(evt) {
-  evt.preventDefault();
+if (btnShowMap) {
+  btnShowMap.addEventListener("click", function(evt) {
+    evt.preventDefault();
 
-  let modalMap = document.querySelector(".modal-map");
-  modalMap.classList.add("modal-show");
-});
+    let modalMap = document.querySelector(".modal-map");
+    modalMap.classList.add("modal-show");
+  });
+}
 
-btnCreateMessage.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  
-  let modalMessage = document.querySelector(".modal-message");
-  modalMessage.classList.add("modal-show");
-});
+if (btnCreateMessage) {
+  btnCreateMessage.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    
+    let modalMessage = document.querySelector(".modal-message");
+    modalMessage.classList.add("modal-show");
+  });
+}
+
+if (btnAddCartAll.length > 0) {
+  addEvtForBtnAddCart(btnAddCartAll);
+}
 
 function addEvtForBtnAddCart (arrBtns, btnN=0) {
   arrBtns[btnN].addEventListener("click", function(evt) {
@@ -28,5 +36,3 @@ function addEvtForBtnAddCart (arrBtns, btnN=0) {
     addEvtForBtnAddCart(arrBtns, btnN);
   }
 }
-
-addEvtForBtnAddCart(btnAddCartAll);
