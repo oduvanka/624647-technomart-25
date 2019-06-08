@@ -2409,6 +2409,10 @@ img {
   color: #a9a9a9;
 }
 
+.message-input-text {
+  resize: vertical;
+}
+
 .modal-message .btn-send-message {
   width: inherit;
 }
