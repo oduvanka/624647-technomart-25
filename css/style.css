@@ -1696,6 +1696,7 @@ img {
   width: 19px;
   height: 19px;
 
+  background-color: #ffffff;
   border: 2px solid #c5c5c5;
   border-radius: 2px;
 }
@@ -1727,7 +1728,15 @@ img {
   border-color: #b5b5b5;
 }
 
-.filter-manufactures input:hover + label::after {
+.filter-manufactures input:focus + label::before {
+  border-color: #b5b5b5;
+
+  outline: 1px dotted #212a3a;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.filter-manufactures input:hover + label::after,
+.filter-manufactures input:focus + label::after {
   border-color: #b5b5b5;
 }
 
@@ -1749,6 +1758,7 @@ img {
   width: 17px;
   height: 17px;
 
+  background-color: #ffffff;
   border: 4px solid #c5c5c5;
   border-radius: 50%;
 }
@@ -1767,6 +1777,15 @@ img {
 
 .filter-power-supply input:hover + label::before {
   border-color: #b5b5b5;
+}
+
+.filter-power-supply input:focus + label::before {
+  outline: 1px dotted #212a3a;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.filter-power-supply input:-moz-focusring + label::before {
+  -moz-outline-radius: 50%;
 }
 
 .filter-power-supply input:hover + label::after {
@@ -1926,6 +1945,12 @@ img {
 
 .sort-directions input:checked + .sort-direction-descending::before {
   border-top-color: #ee3643;
+}
+
+.sort-parameters input:focus + label,
+.sort-directions input:focus + label::before {
+  outline: 1px dotted #212a3a;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .btn-send-filter {
