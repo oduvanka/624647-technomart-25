@@ -2213,7 +2213,7 @@ img {
   margin-right: 160px;
 }
 
-.socials-list {
+.social-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2228,7 +2228,7 @@ img {
   list-style: none;
 }
 
-.socials-item a {
+.social-item a {
   display: block;
   width: 42px;
   min-height: 42px;
@@ -2237,13 +2237,13 @@ img {
   border-radius: 50%;
 }
 
-.socials-item a:hover,
-.socials-item a:focus,
-.socials-item a:active {
+.social-item a:hover,
+.social-item a:focus,
+.social-item a:active {
   background-color: #ee3643;
 }
 
-.socials-item-vkontakte a {
+.social-item-vkontakte a {
   background-image: url("../img/icon/icon-vk.svg");
 }
 
@@ -2255,7 +2255,7 @@ img {
   background-image: url("../img/icon/icon-insta.svg");
 }
 
-.socials-item-vkontakte a,
+.social-item-vkontakte a,
 .social-item-facebook a,
 .social-item-instagram a {
   background-repeat: no-repeat;
