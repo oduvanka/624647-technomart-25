@@ -640,15 +640,19 @@ img {
   color: #ffffff;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus {
   background-color: #293449;
 }
 
-.site-navigation a:active {
+.site-navigation a[href]:active {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #1d2739;
+}
+
+.site-navigation-current a {
+  background-color: #293449;
 }
 
 /* Основная часть - страница index */
