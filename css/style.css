@@ -598,7 +598,7 @@ img {
 }
 
 .additional-links-item a:hover,
-.user-navigation-link:focus {
+.additional-links-item a:focus {
   color: #ee3643;
 }
 
