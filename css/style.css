@@ -750,6 +750,24 @@ img {
   background-size: 78px 63px;
 }
 
+.label-new {
+  position: relative;
+}
+
+.label-new::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  
+  background-image: url("../img/flag-new.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px 60px;
+}
+
 .btn-offer {
   width: 135px;
   margin-bottom: 22px;
@@ -944,10 +962,12 @@ img {
 }
 
 .catalog-item {
-  position: relative;
-  width: 218px;
   margin-bottom: 21px;
   margin-left: 20px;
+}
+
+.catalog-item article {
+  width: 218px;
 
   text-align: center;
 
@@ -955,8 +975,8 @@ img {
   border: 1px solid #eaeaea;
 }
 
-.catalog-item:hover,
-.catalog-item:focus {
+.catalog-item article:hover,
+.catalog-item article:focus {
   border-color: transparent;
   -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
           box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1035,16 +1055,9 @@ img {
   margin: 0;
 }
 
-.label-new {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-
-  background-image: url("../img/flag-new.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.catalog-item .label-new::after {
+  top: -1px;
+  right: -1px;
 }
 
 .goods-actions {
@@ -1128,12 +1141,6 @@ img {
 
 .btn-add-bookmark:active {
   opacity: 0.3;
-}
-
-.catalog-item .label-new {
-  position: absolute;
-  top: -1px;
-  right: -1px;
 }
 
 .manufactures {
