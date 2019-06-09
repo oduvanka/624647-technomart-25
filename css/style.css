@@ -977,6 +977,7 @@ img {
 }
 
 .catalog-item article {
+  position: relative;
   width: 218px;
 
   text-align: center;
@@ -1080,7 +1081,7 @@ img {
   background-color: #ffffff;
 }
 
-.catalog-item:hover .goods-actions {
+.catalog-item article:hover .goods-actions {
   display: block;
 }
 
