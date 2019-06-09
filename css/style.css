@@ -878,8 +878,8 @@ img {
   height: 25px;
   margin-top: -12px;
 
-  border-left: 3px solid #c5c5c5;
-  border-bottom: 3px solid #c5c5c5;
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
 
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -894,8 +894,8 @@ img {
   height: 25px;
   margin-top: -12px;
 
-  border-top: 3px solid #c5c5c5;
-  border-right: 3px solid #c5c5c5;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
 
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
