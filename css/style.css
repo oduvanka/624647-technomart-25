@@ -103,6 +103,7 @@ img {
 /* Шапка */
 
 .main-header {
+  min-width: 960px;
   margin-bottom: 59px;
   padding-bottom: 60px;
 
@@ -657,6 +658,10 @@ img {
 }
 
 /* Основная часть - страница index */
+.main-content {
+  min-width: 960px;
+}
+
 .offers {
   margin-bottom: 34px;
 }
@@ -2062,6 +2067,7 @@ img {
 /* Подвал */
 
 .main-footer {
+  min-width: 960px;
   margin-top: 86px;
 
   font-family: "Cuprum", "Arial", sans-serif;
