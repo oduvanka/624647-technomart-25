@@ -4,6 +4,19 @@ let modalAll = document.querySelectorAll(".modal");
   btnAddCartAll = document.querySelectorAll(".btn-add-cart"),
   btnCloseModalAll = document.querySelectorAll(".btn-close");
 
+let isStorageSupport = true;
+
+let storageName = "",
+  storageEmail = "";
+
+/* Проверяет доступность localStoradge */
+try {
+  storageName = localStorage.getItem("messageName");
+  storageEmail = localStorage.getItem("messageEmail");
+}
+catch (err) {
+  isStorageSupport = false;
+}
 
 if (btnShowMap) {
   /* Добавляет обработчик клика на карту */
