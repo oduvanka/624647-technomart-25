@@ -1,40 +1,74 @@
-let btnShowMap = document.querySelector(".contacts-map");
-let btnCreateMessage = document.querySelector(".btn-create-message");
-let btnAddCartAll = document.querySelectorAll(".btn-add-cart");
+let modalAll = document.querySelectorAll(".modal");
+  btnShowMap = document.querySelector(".contacts-map"),
+  btnCreateMessage = document.querySelector(".btn-create-message"),
+  btnAddCartAll = document.querySelectorAll(".btn-add-cart"),
+  btnCloseModalAll = document.querySelectorAll(".btn-close");
+
 
 if (btnShowMap) {
+  /* Добавляет обработчик клика на карту */
   btnShowMap.addEventListener("click", function(evt) {
     evt.preventDefault();
 
     let modalMap = document.querySelector(".modal-map");
-    modalMap.classList.add("modal-show");
+    showModal(modalMap);
   });
 }
 
 if (btnCreateMessage) {
+  addEvtToBtnMessage(btnCreateMessage);
+}
+
+if (btnAddCartAll.length > 0) {
+  addEvtToBtnAddCart(btnAddCartAll);
+}
+
+if (btnCloseModalAll.length > 0) {
+  addEvtToBtnCloseModal(btnCloseModalAll);
+}
+
+/* Добавляет обработчик клика на кнопку Напишите нам */
+function addEvtToBtnMessage(btnCreateMessage) {
   btnCreateMessage.addEventListener("click", function(evt) {
     evt.preventDefault();
     
     let modalMessage = document.querySelector(".modal-message");
-    modalMessage.classList.add("modal-show");
+
+    showModal(modalMessage);
   });
 }
 
-if (btnAddCartAll.length > 0) {
-  addEvtForBtnAddCart(btnAddCartAll);
-}
-
-function addEvtForBtnAddCart (arrBtns, btnN=0) {
+/* Функция рекурсивно добавляет обработчик клика на кнопку В корзину
+arrBtns - все найденные кнопки В корзину,
+btnN - номер текущей кнопки */
+function addEvtToBtnAddCart(arrBtns, btnN=0) {
   arrBtns[btnN].addEventListener("click", function(evt) {
     evt.preventDefault();
     
     let modalInformer = document.querySelector(".modal-informer");
-    modalInformer.classList.add("modal-show");
+    showModal(modalInformer);
   });
   btnN++;
   if (btnN < arrBtns.length) {
-    addEvtForBtnAddCart(arrBtns, btnN);
+    addEvtToBtnAddCart(arrBtns, btnN);
   }
+}
+
+/* Функция рекурсивно добавляет обработчик на кнопку Закрыть окно,
+arrBtns - все найденные кнопки Закрыть окно,
+btnN - номер текущей кнопки */
+function addEvtToBtnCloseModal(arrBtns, btnN=0) {
+  arrBtns[btnN].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    
+    let parentModal = evt.target.parentElement.closest(".modal");
+    hideModal(parentModal);
+  });
+  btnN++;
+  if (btnN < arrBtns.length) {
+    addEvtToBtnCloseModal(arrBtns, btnN);
+  }
+}
 
 /* Функция добавляет окну класс, который делает его видимым,
 myModal - модальное окно*/
