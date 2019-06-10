@@ -45,9 +45,29 @@ function addEvtToBtnMessage(btnCreateMessage) {
   btnCreateMessage.addEventListener("click", function(evt) {
     evt.preventDefault();
     
-    let modalMessage = document.querySelector(".modal-message");
+    let modalMessage = document.querySelector(".modal-message"),
+      inputName = modalMessage.querySelector(".message-input-name"),
+      inputEmail = modalMessage.querySelector(".message-input-email"),
+      inputText = modalMessage.querySelector(".message-input-text");
 
     showModal(modalMessage);
+
+    if (storageName) {
+      inputName.value = storageName;
+    }
+    if (storageEmail) {
+      inputEmail.value = storageEmail;
+    }
+    
+    if (!storageName) {
+      inputName.focus();
+    }
+    else if (!storageEmail) {
+      inputEmail.focus();
+    }
+    else {
+      inputText.focus();
+    }
   });
 }
 
