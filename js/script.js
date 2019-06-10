@@ -29,7 +29,7 @@ if (btnShowMap) {
 }
 
 if (btnCreateMessage) {
-  addEvtToBtnMessage(btnCreateMessage);
+  addEvtToBtnMessage();
 }
 
 if (btnAddCartAll.length > 0) {
@@ -41,23 +41,21 @@ if (btnCloseModalAll.length > 0) {
 }
 
 /* Добавляет обработчик клика на кнопку Напишите нам */
-function addEvtToBtnMessage(btnCreateMessage) {
+function addEvtToBtnMessage() {
   btnCreateMessage.addEventListener("click", function(evt) {
     evt.preventDefault();
     
     let modalMessage = document.querySelector(".modal-message"),
-      inputName = modalMessage.querySelector(".message-input-name"),
-      inputEmail = modalMessage.querySelector(".message-input-email"),
-      inputText = modalMessage.querySelector(".message-input-text");
+      formMessage = modalMessage.querySelector(".modal-message-form"),
+      inputName = formMessage.querySelector(".message-input-name"),
+      inputEmail = formMessage.querySelector(".message-input-email"),
+      inputText = formMessage.querySelector(".message-input-text"),
+      btnSendMessage = formMessage.querySelector(".btn-send-message");
 
     showModal(modalMessage);
 
-    if (storageName) {
-      inputName.value = storageName;
-    }
-    if (storageEmail) {
-      inputEmail.value = storageEmail;
-    }
+    fillInput(inputName, storageName);
+    fillInput(inputEmail, storageEmail);
     
     if (!storageName) {
       inputName.focus();
@@ -68,9 +66,30 @@ function addEvtToBtnMessage(btnCreateMessage) {
     else {
       inputText.focus();
     }
+
+    addEvtToSendMessage(formMessage);
   });
 }
 
+function addEvtToSendMessage(formMessage) {
+  /* Отслеживает отправку формы с сообщением */
+  formMessage.addEventListener("submit", function(evt) {
+    let inputName = formMessage.querySelector(".message-input-name"),
+      inputEmail = formMessage.querySelector(".message-input-email"),
+      inputText = formMessage.querySelector(".message-input-text");
+
+    if (!inputName.value || !inputEmail.value || !inputText.value) {
+      evt.preventDefault();
+    }
+    else {
+      if (isStorageSupport) {
+        localStorage.setItem("technomartMessageName", inputName.value);
+        localStorage.setItem("technomartMessageEmail", inputEmail.value);
+        hideModal(modalMessage);
+      }
+    }
+  });
+}
 
 /* Функция заполняет значение в поле ввода 
 myInput - поле ввода,
