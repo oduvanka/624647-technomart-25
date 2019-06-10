@@ -71,6 +71,22 @@ function addEvtToBtnMessage(btnCreateMessage) {
   });
 }
 
+
+/* Функция заполняет значение в поле ввода 
+myInput - поле ввода,
+myValue - значение */
+function fillInput(myInput, myValue) {
+  if (myValue) {
+    myInput.value = myValue;
+  }
+}
+
+/* Функция очищает значение в поле ввода 
+myInput - поле ввода */
+function clearInput(myInput) {
+  myInput.value = "";
+}
+
 /* Функция рекурсивно добавляет обработчик клика на кнопку В корзину
 arrBtns - все найденные кнопки В корзину,
 btnN - номер текущей кнопки */
