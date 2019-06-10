@@ -35,4 +35,15 @@ function addEvtForBtnAddCart (arrBtns, btnN=0) {
   if (btnN < arrBtns.length) {
     addEvtForBtnAddCart(arrBtns, btnN);
   }
+
+/* Функция добавляет окну класс, который делает его видимым,
+myModal - модальное окно*/
+function showModal(myModal) {
+  myModal.classList.add("modal-show");
+}
+
+/* Функция добавляет окну класс, который скрывает его,
+myModal - модальное окно*/
+function hideModal(myModal) {
+  myModal.classList.remove("modal-show");
 }
