@@ -11,8 +11,8 @@ let storageName = "",
 
 /* Проверяет доступность localStoradge */
 try {
-  storageName = localStorage.getItem("messageName");
-  storageEmail = localStorage.getItem("messageEmail");
+  storageName = localStorage.getItem("technomartMessageName");
+  storageEmail = localStorage.getItem("technomartMessageEmail");
 }
 catch (err) {
   isStorageSupport = false;
