@@ -2287,6 +2287,10 @@ img {
   display: block;
 }
 
+.modal-error {
+  background-color: red;
+}
+
 .modal-container {
   width: 460px;
   margin: 0 auto;
