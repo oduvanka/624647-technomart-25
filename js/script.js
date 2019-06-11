@@ -60,13 +60,15 @@ function addEvtToBtnMessage() {
     if (!storageName) {
       inputName.focus();
     }
-    else if (!storageEmail) {
-      inputEmail.focus();
-    }
     else {
-      inputText.focus();
+      if (!storageEmail) {
+        inputEmail.focus();
+      }
+      else {
+        inputText.focus();
+      }
     }
-
+    
     addEvtToSendMessage(formMessage);
   });
 }
