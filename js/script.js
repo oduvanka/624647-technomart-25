@@ -150,7 +150,7 @@ function hidePopup(myPopup) {
   myPopup.classList.remove("modal-error");
 
   formMessage.removeEventListener("submit", sendMessage);
-  /*btnClosePopup.removeEventListener("click", onClickBtnClosePopup);*/
+  myPopup.querySelector(".btn-close").removeEventListener("click", onClickBtnClosePopup);
   window.removeEventListener("keydown", keydownClosePopup);
 }
 
