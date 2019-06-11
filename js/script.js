@@ -143,9 +143,3 @@ function fillInput(myInput, myValue) {
     myInput.value = myValue;
   }
 }
-
-/* Функция очищает значение в поле ввода 
-myInput - поле ввода */
-function clearInput(myInput) {
-  myInput.value = "";
-}
