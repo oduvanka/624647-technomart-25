@@ -1331,7 +1331,12 @@ img {
 }
 
 .service-info {
+  display: none;
   width: 620px;
+}
+
+.service-info-show {
+  display: block;
 }
 
 .service-info .title {
@@ -1353,16 +1358,12 @@ img {
 }
 
 .service-info-guarantee {
-  display: none;
-
   background-image: url("../img/services/guarantee.png");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 .service-info-credit {
-  display: none;
-
   background-image: url("../img/services/credit.png");
   background-repeat: no-repeat;
   background-position: bottom right;

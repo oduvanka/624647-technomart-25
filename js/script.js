@@ -3,6 +3,10 @@ var tabCart = document.querySelector(".main-header .cart");
   counterCart = tabCart.querySelector("span");
   counterBookmark = tabBookmark.querySelector("span");
 
+var listServices = document.querySelector(".services-list"),
+  currentService,
+  currentLinkService;
+
 var btnShowMap = document.querySelector(".contacts-map"),
   popupMap = document.querySelector(".modal-map");
 
@@ -53,7 +57,64 @@ if (btnCreateMessage) {
 }
 
 if (listCatalog) {
+  currentService = listServices.querySelector(".service-active");
+  currentLinkService = currentService.querySelector("a");
   listCatalog.addEventListener("click", clickCatalog);
+}
+
+if (listServices) {
+  listServices.addEventListener("click", clickSliderServices);
+}
+
+/* Функция для обработчика клика по каталогу товаров */
+function clickCatalog(evt) {
+  evt.preventDefault();
+
+  if (evt.target.classList.contains("btn-add-cart")) {
+    incCounterTab(numberCart, counterCart);
+
+    tabCart.classList.add("cart-full");
+
+    showPopup(popupInformer);
+  }
+  else if (evt.target.classList.contains("btn-add-bookmark")) {
+    incCounterTab(numberBookmark, counterBookmark);
+
+    tabBookmark.classList.add("bookmark-full");
+  }
+}
+
+/* Функция для обработки кликов по меню сервисов */
+function clickSliderServices(evt) {
+  evt.preventDefault();
+
+  var myLink = evt.target;
+  
+  if (myLink.hasAttribute("href")) {
+
+    var oldDataService = currentLinkService.getAttribute("data-service"),
+      oldInfo = document.querySelector(".service-info[data-service="+oldDataService+"]"),
+      
+      parentMyLink = myLink.closest(".service-item"),
+      myDataService = myLink.getAttribute("data-service"),
+      newInfo = document.querySelector(".service-info[data-service="+myDataService+"]");
+
+    /* Передаёт активность другому пункту меню - 
+    сохранённому активному возвращает ссылку и убирает класс активности,
+    у нового активного убирает ссылку, добавляет класс активности.
+    Переключает блок с информацией о сервисе */
+    
+    currentService.classList.remove("service-active");
+    currentLinkService.setAttribute("href", "#");
+    oldInfo.classList.remove("service-info-show");
+
+    currentService = parentMyLink;
+    currentLinkService = myLink;
+
+    currentService.classList.add("service-active");
+    currentLinkService.removeAttribute("href");
+    newInfo.classList.add("service-info-show");
+  }
 }
 
 /* Функция для обработчика клика на кнопку Напишите нам */
@@ -75,6 +136,8 @@ function createMessage(evt) {
     
     formMessage.addEventListener("submit", sendMessage);
 }
+
+/* МОДАЛЬНЫЕ ОКНА */
 
 /* Функция для обработчика отправки формы сообщения */
 function sendMessage(evt) {
@@ -125,24 +188,6 @@ function keydownClosePopup(evt) {
   }
 }
 
-/* Функция для обработчика клика по каталогу товаров */
-function clickCatalog(evt) {
-  evt.preventDefault();
-
-  if (evt.target.classList.contains("btn-add-cart")) {
-    incCounterTab(numberCart, counterCart);
-
-    tabCart.classList.add("cart-full");
-
-    showPopup(popupInformer);
-  }
-  else if (evt.target.classList.contains("btn-add-bookmark")) {
-    incCounterTab(numberBookmark, counterBookmark);
-
-    tabBookmark.classList.add("bookmark-full");
-  }
-}
-
 /* Функция добавляет окну класс, который скрывает его,
 myPopup - модальное окно*/
 function hidePopup(myPopup) {
@@ -153,6 +198,8 @@ function hidePopup(myPopup) {
   myPopup.querySelector(".btn-close").removeEventListener("click", onClickBtnClosePopup);
   window.removeEventListener("keydown", keydownClosePopup);
 }
+
+/* ОБЩЕГО НАЗНАЧЕНИЯ */
 
 /* Функция заполняет значение в поле ввода 
 myInput - поле ввода,
