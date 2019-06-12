@@ -354,7 +354,7 @@ img {
   background-color: #ba2732;
 }
 
-.main-header .btn-order-goods {
+.main-header .btn-checkout {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 130px;
@@ -366,12 +366,12 @@ img {
   background-color: #63a63e;
 }
 
-.main-header .btn-order-goods:hover,
-.main-header .btn-order-goods:focus {
+.main-header .btn-checkout:hover,
+.main-header .btn-checkout:focus {
   background-color: #5fbb2d;
 }
 
-.main-header .btn-order-goods:active {
+.main-header .btn-checkout:active {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #518534;
@@ -2288,7 +2288,6 @@ img {
   display: block;
 
   -webkit-animation: rotationVsShading 0.3s linear;
-
           animation: rotationVsShading 0.3s linear;
 }
 
@@ -2297,6 +2296,21 @@ img {
           animation: twitches 0.3s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.overlay-show {
+  display: block;
 }
 
 .modal-container {
@@ -2515,17 +2529,30 @@ img {
   background-position: 0 0;
 }
 
-.modal-informer .btn-order-goods {
+.btn-checkout {
   width: 220px;
   margin-right: 16px;
 }
 
-.modal-informer .btn-continue-shopping {
+.btn-continue-shopping {
   width: 220px;
 
   color: #000000;
 
   background-color: #ffffff;
+}
+
+.btn-continue-shopping:hover,
+.btn-continue-shopping:focus {
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #bdc6ca;
+          box-shadow: inset 0 0 0 1px #bdc6ca;
+}
+
+.btn-continue-shopping:active {
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #ee3643;
+          box-shadow: inset 0 0 0 1px #ee3643;
 }
 
 @-webkit-keyframes rotationVsShading {

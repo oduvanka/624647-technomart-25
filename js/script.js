@@ -3,9 +3,14 @@ var tabCart = document.querySelector(".main-header .cart");
   counterCart = tabCart.querySelector("span");
   counterBookmark = tabBookmark.querySelector("span");
 
+var listCatalog = document.querySelector(".catalog-list");
+
 var listServices = document.querySelector(".services-list"),
   currentService,
   currentLinkService;
+
+var overlay = document.querySelector(".overlay"),
+  currentPopup;
 
 var btnShowMap = document.querySelector(".contacts-map"),
   popupMap = document.querySelector(".modal-map");
@@ -17,15 +22,14 @@ var btnCreateMessage = document.querySelector(".btn-create-message"),
   inputEmail,
   inputText;
 
-var listCatalog = document.querySelector(".catalog-list"),
-  popupInformer = document.querySelector(".modal-informer");
+var popupInformer = document.querySelector(".modal-informer");
 
 var isStorageSupport = true;
 
-var storageName = "",
-  storageEmail = "",
-  numberCart = Number(counterCart.textContent),
-  numberBookmark = Number(counterBookmark.textContent);
+var numberCart = Number(counterCart.textContent),
+  numberBookmark = Number(counterBookmark.textContent),
+  storageName = "",
+  storageEmail = "";
 
 if (popupMessage) {
   formMessage = popupMessage.querySelector(".modal-message-form");
@@ -57,12 +61,12 @@ if (btnCreateMessage) {
 }
 
 if (listCatalog) {
-  currentService = listServices.querySelector(".service-active");
-  currentLinkService = currentService.querySelector("a");
   listCatalog.addEventListener("click", clickCatalog);
 }
 
 if (listServices) {
+  currentService = listServices.querySelector(".service-active");
+  currentLinkService = currentService.querySelector("a");
   listServices.addEventListener("click", clickSliderServices);
 }
 
@@ -71,14 +75,14 @@ function clickCatalog(evt) {
   evt.preventDefault();
 
   if (evt.target.classList.contains("btn-add-cart")) {
-    incCounterTab(numberCart, counterCart);
+    numberCart = incCounterTab(numberCart, counterCart);
 
     tabCart.classList.add("cart-full");
 
     showPopup(popupInformer);
   }
   else if (evt.target.classList.contains("btn-add-bookmark")) {
-    incCounterTab(numberBookmark, counterBookmark);
+    numberBookmark = incCounterTab(numberBookmark, counterBookmark);
 
     tabBookmark.classList.add("bookmark-full");
   }
@@ -141,12 +145,14 @@ function createMessage(evt) {
 
 /* Функция для обработчика отправки формы сообщения */
 function sendMessage(evt) {
-  evt.preventDefault();
+  
 
   if (!inputName.value || !inputEmail.value || !inputText.value) {
     popupMessage.classList.remove("modal-error");
     popupMessage.offsetWidth = popupMessage.offsetWidth;
     popupMessage.classList.add("modal-error");
+    
+    evt.preventDefault();
   }
   else {
     if (isStorageSupport) {
@@ -160,12 +166,20 @@ function sendMessage(evt) {
 /* Функция добавляет окну класс, который делает его видимым, и назначает обработчики закрытия окна
 myPopup - модальное окно*/
 function showPopup(myPopup) {
+  overlay.classList.add("overlay-show");
+  overlay.addEventListener("click", onClickOverlay);
+
+  currentPopup = myPopup;
   myPopup.classList.add("modal-show");
 
-  var btnClosePopup = myPopup.querySelector(".btn-close");
+  var btnClosePopup = myPopup.querySelector(".btn-close"),
+    btnContinueShopping= myPopup.querySelector(".btn-continue-shopping");
 
   if (btnClosePopup) {
     btnClosePopup.addEventListener("click", onClickBtnClosePopup);
+  }
+  if (btnContinueShopping) {
+    btnContinueShopping.addEventListener("click", onClickBtnClosePopup);
   }
   window.addEventListener("keydown", keydownClosePopup);
 }
@@ -174,7 +188,7 @@ function showPopup(myPopup) {
 function onClickBtnClosePopup(evt) {
   evt.preventDefault();
 
-  hidePopup(evt.target.closest(".modal"));
+  hidePopup(currentPopup);
 }
 
 /* Функция для обработчика нажатия по клавише Esc */
@@ -182,21 +196,41 @@ function keydownClosePopup(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
 
-    /*if (myPopup.classList.contains("modal-show")) {
-      hidePopup(myPopup);
-    }*/
+    if (currentPopup) {
+      hidePopup(currentPopup);
+    }
   }
+}
+
+/* Функция для обработчика клика по overlay */
+function onClickOverlay(evt) {
+  evt.preventDefault();
+
+  hidePopup(currentPopup);
 }
 
 /* Функция добавляет окну класс, который скрывает его,
 myPopup - модальное окно*/
 function hidePopup(myPopup) {
   myPopup.classList.remove("modal-show");
+  overlay.classList.remove("overlay-show");  
   myPopup.classList.remove("modal-error");
 
   formMessage.removeEventListener("submit", sendMessage);
-  myPopup.querySelector(".btn-close").removeEventListener("click", onClickBtnClosePopup);
+  
   window.removeEventListener("keydown", keydownClosePopup);
+  overlay.removeEventListener("click", onClickOverlay);
+
+  var btnPopupClose = myPopup.querySelector(".btn-close"),
+    btnContinueShopping = myPopup.querySelector(".btn-continue-shopping");
+  if (btnPopupClose) {
+    btnPopupClose.removeEventListener("click", onClickBtnClosePopup);
+  }
+  if (btnContinueShopping) {
+    btnContinueShopping.removeEventListener("click", onClickBtnClosePopup);
+  }
+
+  currentPopup = null;
 }
 
 /* ОБЩЕГО НАЗНАЧЕНИЯ */
@@ -212,8 +246,11 @@ function fillInput(myInput, myValue) {
 
 /* Функция вычисляет новое значение счётчика и обновляет его на вкладке,
 myNumber - текущее значение счётчика,
-myCounterTab - вкладка со счётчиком */
+myCounterTab - вкладка со счётчиком,
+возвращает - новое значение счётчика */
 function incCounterTab(myNumber, myCounterTab) {
   myNumber++;
   myCounterTab.textContent = myNumber;
+
+  return myNumber;
 }
