@@ -1369,6 +1369,10 @@ img {
   background-position: bottom right;
 }
 
+.btn-create-application {
+  width: 195px;
+}
+
 .about-company {
   width: 540px;
 }
