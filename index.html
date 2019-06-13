@@ -77,14 +77,14 @@
           <div class="offer-item offer-item-slider">
             <div class="slider">
               <ul class="slider-list">
-                <li class="slider-item slider-item-perforators">
+                <li class="slider-item slider-item-perforators" data-slide="perforators">
                   <div>
                     <h3 class="title offer-title">Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
                   </div>
                   <a class="btn btn-offer btn-details-offers" href="catalog.html">Открыть каталог</a>
                 </li>
-                <li class="slider-item slider-item-drills slide-active">
+                <li class="slider-item slider-item-drills slide-active" data-slide="drills">
                   <div>
                     <h3 class="title offer-title">Дрели</h3>
                     <p>Соседям на радость!</p>
@@ -92,11 +92,19 @@
                   <a class="btn btn-offer btn-details-offers" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
-              <button class="control-navigation control-navigation-back" type="button" title="Назад"><span class="visually-hidden">Назад</span></button>
-              <button class="control-navigation control-navigation-next" type="button" title="Вперёд"><span class="visually-hidden">Вперёд</span></button>
+              <button class="control-navigation control-navigation-back" type="button" title="Назад">
+                <span class="visually-hidden">Назад</span>
+              </button>
+              <button class="control-navigation control-navigation-next" type="button" title="Вперёд">
+                <span class="visually-hidden">Вперёд</span>
+              </button>
               <div class="slider-controls">
-                <button class="control-page control-page-slide2" type="button" title="Перфораторы"><span class="visually-hidden">Перфораторы</span></button>
-                <button class="control-page control-page-active control-page-slide1" type="button" title="Дрели"><span class="visually-hidden">Дрели</span></button>
+                <button class="control-page" type="button" title="Перфораторы" data-slide="perforators">
+                  <span class="visually-hidden">Перфораторы</span>
+                </button>
+                <button class="control-page control-page-active" type="button" title="Дрели" data-slide="drills">
+                  <span class="visually-hidden">Дрели</span>
+                </button>
               </div>
             </div>
           </div>
