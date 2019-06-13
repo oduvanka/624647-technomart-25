@@ -55,6 +55,11 @@ if (slider) {
 
   controlsSlider = slider.querySelector(".slider-controls");
   controlsSlider.addEventListener("click", clickControlsSlider);
+
+  controlNavigationBack = slider.querySelector(".control-navigation-back");
+  controlNavigationBack.addEventListener("click", clickControlNavigationSlide);
+  controlNavigationNext = slider.querySelector(".control-navigation-next");
+  controlNavigationNext.addEventListener("click", clickControlNavigationSlide);
 }
 
 if (listCatalog) {
@@ -92,6 +97,38 @@ function clickControlsSlider(evt) {
 
     currentDataSlide = newDataSlide;
   }
+}
+
+/* Функция для обработчика клика по кнопкам Назад-Вперёд в слайдере */
+function clickControlNavigationSlide(evt) {
+  evt.preventDefault();
+
+  var currentSlide = slider.querySelector(".slider-item[data-slide="+currentDataSlide+"]");
+  var newSlide,
+    newDataSlide;
+
+  var controlNavigationData = evt.target.getAttribute("data-slide");
+
+  if (controlNavigationData === "back") {
+    /* Назад */
+    newSlide = currentSlide.previousElementSibling;
+    if (!newSlide) {
+      newSlide = currentSlide.parentElement.lastElementChild;
+    }
+  }
+  else {
+    /* Вперёд */
+    newSlide = currentSlide.nextElementSibling;
+    if (!newSlide) {
+      newSlide = currentSlide.parentElement.firstElementChild;
+    }
+  }
+
+  newDataSlide = newSlide.getAttribute("data-slide");
+  replaceActiveSlide(newDataSlide);
+  replaceActiveControlPageSlider(newDataSlide);
+  
+  currentDataSlide = newDataSlide;
 }
 
 /* Функция заменяет текущий слайд на новый,
