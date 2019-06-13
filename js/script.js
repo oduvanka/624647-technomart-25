@@ -3,6 +3,10 @@ var tabCart = document.querySelector(".main-header .cart");
   counterCart = tabCart.querySelector("span");
   counterBookmark = tabBookmark.querySelector("span");
 
+var slider = document.querySelector(".slider"),
+  currentDataSlide,
+  controlsSlider;
+
 var listCatalog = document.querySelector(".catalog-list");
 
 var listServices = document.querySelector(".services-list"),
@@ -47,17 +51,10 @@ catch (err) {
   isStorageSupport = false;
 }
 
-if (btnShowMap) {
-  /* Добавляет обработчик клика на карту */
-  btnShowMap.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    showPopup(popupMap);
-  });
-}
-
-if (btnCreateMessage) {
-  btnCreateMessage.addEventListener("click", createMessage);
+if (slider) {
+  currentDataSlide = slider.querySelector(".slide-active").getAttribute("data-slide");
+  controlsSlider = slider.querySelector(".slider-controls");
+  controlsSlider.addEventListener("click", clickControlsSlider);
 }
 
 if (listCatalog) {
@@ -68,6 +65,52 @@ if (listServices) {
   currentService = listServices.querySelector(".service-active");
   currentLinkService = currentService.querySelector("a");
   listServices.addEventListener("click", clickSliderServices);
+}
+
+if (btnCreateMessage) {
+  btnCreateMessage.addEventListener("click", createMessage);
+}
+
+if (btnShowMap) {
+  /* Добавляет обработчик клика на карту */
+  btnShowMap.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    showPopup(popupMap);
+  });
+}
+
+/* Функция для обработчика клика по круглым кнопкам в слайдере */
+function clickControlsSlider(evt) {
+  evt.preventDefault();
+  if (evt.target.classList.contains("control-page")/* && (evt.target !== currentPageSlider)*/) {
+    var newDataSlide = evt.target.getAttribute("data-slide");
+
+    replaceActiveSlide(newDataSlide);
+    replaceActiveControlPageSlider(newDataSlide);
+
+    currentDataSlide = newDataSlide;
+  }
+}
+
+/* Функция заменяет текущий слайд на новый,
+newData - data-аттрибут нового слайда */
+function replaceActiveSlide(newData) {
+  var oldSlide = slider.querySelector(".slider-item[data-slide="+currentDataSlide+"]");
+  oldSlide.classList.remove("slide-active");
+
+  var newSlide = slider.querySelector(".slider-item[data-slide="+newData+"]");
+  newSlide.classList.add("slide-active");
+}
+
+/* Функция меняет активный переключатель слайдера,
+newData - data-аттрибут нового слайда */
+function replaceActiveControlPageSlider(newData) {
+  var oldControlPage = controlsSlider.querySelector(".control-page[data-slide="+currentDataSlide+"]");
+  oldControlPage.classList.remove("control-page-active");
+
+  var newControlPage = controlsSlider.querySelector(".control-page[data-slide="+newData+"]");
+  newControlPage.classList.add("control-page-active");
 }
 
 /* Функция для обработчика клика по каталогу товаров */
@@ -145,8 +188,6 @@ function createMessage(evt) {
 
 /* Функция для обработчика отправки формы сообщения */
 function sendMessage(evt) {
-  
-
   if (!inputName.value || !inputEmail.value || !inputText.value) {
     popupMessage.classList.remove("modal-error");
     popupMessage.offsetWidth = popupMessage.offsetWidth;
