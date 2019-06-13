@@ -10,8 +10,7 @@ var slider = document.querySelector(".slider"),
 var listCatalog = document.querySelector(".catalog-list");
 
 var listServices = document.querySelector(".services-list"),
-  currentService,
-  currentLinkService;
+  currentDataService;
 
 var overlay = document.querySelector(".overlay"),
   currentPopup;
@@ -53,6 +52,7 @@ catch (err) {
 
 if (slider) {
   currentDataSlide = slider.querySelector(".slide-active").getAttribute("data-slide");
+
   controlsSlider = slider.querySelector(".slider-controls");
   controlsSlider.addEventListener("click", clickControlsSlider);
 }
@@ -62,8 +62,8 @@ if (listCatalog) {
 }
 
 if (listServices) {
-  currentService = listServices.querySelector(".service-active");
-  currentLinkService = currentService.querySelector("a");
+  currentDataService = listServices.querySelector(".service-active").getAttribute("data-service");
+  
   listServices.addEventListener("click", clickSliderServices);
 }
 
@@ -82,9 +82,10 @@ if (btnShowMap) {
 
 /* Функция для обработчика клика по круглым кнопкам в слайдере */
 function clickControlsSlider(evt) {
-  evt.preventDefault();
-  if (evt.target.classList.contains("control-page")/* && (evt.target !== currentPageSlider)*/) {
-    var newDataSlide = evt.target.getAttribute("data-slide");
+  var newDataSlide = evt.target.getAttribute("data-slide");
+
+  if (evt.target.classList.contains("control-page") && (newDataSlide !== currentDataSlide)) {
+    evt.preventDefault();
 
     replaceActiveSlide(newDataSlide);
     replaceActiveControlPageSlider(newDataSlide);
@@ -133,35 +134,40 @@ function clickCatalog(evt) {
 
 /* Функция для обработки кликов по меню сервисов */
 function clickSliderServices(evt) {
-  evt.preventDefault();
+  var newDataService = evt.target.closest(".service-item").getAttribute("data-service");
 
-  var myLink = evt.target;
-  
-  if (myLink.hasAttribute("href")) {
-
-    var oldDataService = currentLinkService.getAttribute("data-service"),
-      oldInfo = document.querySelector(".service-info[data-service="+oldDataService+"]"),
-      
-      parentMyLink = myLink.closest(".service-item"),
-      myDataService = myLink.getAttribute("data-service"),
-      newInfo = document.querySelector(".service-info[data-service="+myDataService+"]");
-
-    /* Передаёт активность другому пункту меню - 
-    сохранённому активному возвращает ссылку и убирает класс активности,
-    у нового активного убирает ссылку, добавляет класс активности.
-    Переключает блок с информацией о сервисе */
+  if (evt.target.hasAttribute("href") && (newDataService !== currentDataService)) {
+    evt.preventDefault();
     
-    currentService.classList.remove("service-active");
-    currentLinkService.setAttribute("href", "#");
-    oldInfo.classList.remove("service-info-show");
+    replaceActiveLinkService(newDataService);
+    replaceActiveServiceInfo(newDataService);
 
-    currentService = parentMyLink;
-    currentLinkService = myLink;
-
-    currentService.classList.add("service-active");
-    currentLinkService.removeAttribute("href");
-    newInfo.classList.add("service-info-show");
+    currentDataService = newDataService;
   }
+}
+
+/* Функция меняет активный пункт в меню сервисов,
+newData - data-аттрибут нового сервиса */
+function replaceActiveLinkService(newData) {
+  var oldService = listServices.querySelector(".service-item[data-service="+currentDataService+"]"),
+    oldLinkService = oldService.querySelector("a");
+  oldService.classList.remove("service-active");
+  oldLinkService.setAttribute("href", "#");
+
+  var newService = listServices.querySelector(".service-item[data-service="+newData+"]"),
+    newLinkService = newService.querySelector("a");
+  newService.classList.add("service-active");
+  newLinkService.removeAttribute("href");
+}
+
+/* Функция меняет активный блок с информацией о сервисе,
+newData - data-аттрибут нового сервиса */
+function replaceActiveServiceInfo(newData) {
+var oldInfo = document.querySelector(".service-info[data-service="+currentDataService+"]");
+  oldInfo.classList.remove("service-info-show");
+
+var newInfo = document.querySelector(".service-info[data-service="+newData+"]");
+  newInfo.classList.add("service-info-show");
 }
 
 /* Функция для обработчика клика на кнопку Напишите нам */
