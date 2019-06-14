@@ -27,6 +27,12 @@ var btnCreateMessage = document.querySelector(".btn-create-message"),
 
 var popupInformer = document.querySelector(".modal-informer");
 
+var rangeСontrols = document.querySelector(".range-controls"),
+  rangeScale,
+  rangeBar,
+  toogleMin,
+  toogleMax;
+
 var isStorageSupport = true;
 
 var numberCart = Number(counterCart.textContent),
@@ -84,6 +90,99 @@ if (btnShowMap) {
     showPopup(popupMap);
   });
 }
+
+if (rangeСontrols) {
+  rangeScale = rangeСontrols.querySelector(".scale"),
+  rangeBar = rangeСontrols.querySelector(".bar"),
+  toogleMin = rangeСontrols.querySelector(".toogle-min"),
+  toogleMax = rangeСontrols.querySelector(".toogle-max");
+
+  var rangeCoords = getCoords(rangeСontrols),
+    currentToogle,
+    currentToogleCoords,
+    shiftX;
+
+  var deltaEdge = (rangeСontrols.offsetWidth - rangeScale.offsetWidth) / 2,
+    leftEdge,
+    rightEdge;
+  
+  toogleMin.addEventListener("mousedown", mousedownToogle);
+  toogleMax.addEventListener("mousedown", mousedownToogle);
+
+  rangeBar.style.position = "absolute";
+}
+
+/* Функция для обработчика нажатия кнопки мыши */
+function mousedownToogle(evt) {
+  currentToogle = evt.target;
+
+  currentToogleCoords = getCoords(currentToogle);
+  shiftX = evt.pageX - currentToogleCoords.left; // чтобы при клике ползунок не центрировался по курсору
+
+  currentToogle.addEventListener("dragstart", dragstartToogle);
+
+  document.addEventListener("mousemove", moveToogle);
+
+  currentToogle.addEventListener("mouseup", mouseupToogle);
+}
+
+/* Функция для обработчика начала перетаскивания.
+Отключает браузерное перетаскивание */
+function dragstartToogle(evt) {
+  evt.preventDefault();
+}
+
+/* Функция для обработчика перемещения мыши.
+Вычисляет новые координаты перемещаемого объекта */
+function moveToogle(evt) {
+  var newLeft = evt.pageX - shiftX - rangeCoords.left;
+
+  if (evt.target === toogleMin) {
+    leftEdge = deltaEdge;
+    rightEdge = getCoords(toogleMax).left - rangeCoords.left - 5;
+  }
+  else {
+    leftEdge = getCoords(toogleMin).left - rangeCoords.left + 5;
+    rightEdge = rangeСontrols.offsetWidth - deltaEdge - currentToogle.offsetWidth;
+  }
+
+  if (newLeft < leftEdge) {
+    newLeft = leftEdge;
+  }
+  else if (newLeft > rightEdge) {
+    newLeft = rightEdge;
+  }
+
+  currentToogle.style.left = newLeft + "px";
+
+  if (evt.target === toogleMin) {
+    rangeBar.style.left = newLeft + "px";
+  }
+  setWidthBar();
+}
+
+/* Функция для обработчика отпускания мыши.
+Удаляет назаченные обработчики перемещения и отпускания мыши */
+function mouseupToogle(evt) {
+  currentToogle.removeEventListener("dragstart", dragstartToogle);
+  document.removeEventListener("mousemove", moveToogle);
+  currentToogle.removeEventListener("mouseup", mouseupToogle);
+}
+
+function getCoords(elem) {   // кроме IE8-
+  var box = elem.getBoundingClientRect();
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
+  };
+}
+
+function setWidthBar() {
+  var deltaToogles = getCoords(toogleMax).left - getCoords(toogleMin).left;
+  rangeBar.style.width = deltaToogles + "px";
+}
+
+/* СЛАЙДЕРЫ */
 
 /* Функция для обработчика клика по круглым кнопкам в слайдере */
 function clickControlsSlider(evt) {
@@ -207,6 +306,8 @@ var newInfo = document.querySelector(".service-info[data-service="+newData+"]");
   newInfo.classList.add("service-info-show");
 }
 
+/* КНОПКИ И ССЫЛКИ НА СТРАНИЦЕ */
+
 /* Функция для обработчика клика на кнопку Напишите нам */
 function createMessage(evt) {
     evt.preventDefault();
@@ -316,6 +417,8 @@ function hidePopup(myPopup) {
 
   currentPopup = null;
 }
+
+/* ПОЛЗУНОК */
 
 /* ОБЩЕГО НАЗНАЧЕНИЯ */
 
