@@ -32,6 +32,8 @@ var rangeСontrols = document.querySelector(".range-controls"),
   rangeBar,
   toogleMin,
   toogleMax;
+var inputMinPrice = document.querySelector(".filter-price-from"),
+  inputMaxPrice = document.querySelector(".filter-price-to");
 
 var isStorageSupport = true;
 
@@ -100,15 +102,16 @@ if (rangeСontrols) {
   var currentToogle;
 
   var widthRange = getWidthElement(rangeСontrols),
-    rangeCoords = getCoords(rangeСontrols),
     widthRangeScale = getWidthElement(rangeScale),
+    widthRangeBar = getWidthBar(),
     widthToogleMin = getWidthElement(toogleMin),
     widthToogleMax = getWidthElement(toogleMax),
     maxWidthRangeBar = widthRangeScale - widthToogleMin - widthToogleMax,
+    rangeCoords = getCoords(rangeСontrols),
     currentToogleCoords,
     shiftX;
 
-  var baseEdge = (widthRange - widthRangeScale) / 2,
+  var baseEdge = (widthRange - widthRangeScale) / 2, //отступ между range и scale
     leftEdge,
     rightEdge;
   
@@ -144,7 +147,7 @@ function moveToogle(evt) {
       rightEdge = getCoords(toogleMax).left - rangeCoords.left - widthToogleMin;
     }
     else {
-      leftEdge = getCoords(toogleMin).left - rangeCoords.left + widthToogleMax;
+      leftEdge = getCoords(toogleMin).right - rangeCoords.left;
       rightEdge = widthRange - baseEdge - widthToogleMax;
     }
 
@@ -157,11 +160,16 @@ function moveToogle(evt) {
   
     currentToogle.style.left = newLeft + "px";
 
+    setWidthBar();
+
     if (currentToogle === toogleMin) {
       rangeBar.style.left = (newLeft + widthToogleMin) + "px";
+      setValueToInput(inputMinPrice, getMinPriceForInput());
     }
-    var newWidthBar = getWidthBar();
-    rangeBar.style.width = (newWidthBar + widthToogleMin) + "px";
+    else {
+      setValueToInput(inputMaxPrice, getMaxPriceForInput());
+    }
+    
 }
 
 /* Функция для обработчика отпускания мыши.
@@ -174,24 +182,57 @@ function mouseupToogle(evt) {
 
 /* Функция вычисляет координаты элемента с поправкой на его расположение на странице,
 elem - выбранный элемент,
-возвращает top и left элемента */
+возвращает числовые значения top, left и right элемента */
 function getCoords(elem) {
   var box = elem.getBoundingClientRect();
   return {
     top: box.top + pageYOffset,
-    left: box.left + pageXOffset
+    left: box.left + pageXOffset,
+    right: box.right + pageXOffset
   };
 }
 
-/* Функция возвращает ширину элемента,
+/* Функция возвращает числовую ширину элемента,
 elem - выбранный элемент */
 function getWidthElement(elem) {
   return elem.offsetWidth;
 }
 
-/* Функция возвращает ширину цветного индикатора между ползунками */
+/* Функция возвращает числовую ширину цветного индикатора между ползунками */
 function getWidthBar() {
-  return getCoords(toogleMax).left - (getCoords(toogleMin).left + widthToogleMin);
+  return getCoords(toogleMax).left - getCoords(toogleMin).right;
+}
+
+/* Функция вычисляет расстояние, на которое был сдвинут bar,
+возвращает числовое значение этого расстояния */
+function getLeftEdgeAtBar() {
+  var rangeBarLeftEdge = getCoords(rangeBar).left - rangeCoords.left - baseEdge - widthToogleMin;
+  
+  return rangeBarLeftEdge;
+}
+
+/* Функция вычисляет цену по положению левого ползунка,
+возвращает значение цены */
+function getMinPriceForInput() {
+  /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */ 
+  var minPriceForInput = getLeftEdgeAtBar() * 250;
+
+  return minPriceForInput;
+}
+
+/* Функция вычисляет цену по положению левого ползунка,
+возвращает значение цены */
+function getMaxPriceForInput() {
+  /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */
+  var maxPriceForInput = (getLeftEdgeAtBar() + widthRangeBar) * 250;
+
+  return maxPriceForInput;
+}
+
+/* Функция устанавливает ширину цветного индикатора между ползунками */
+function setWidthBar() {
+  widthRangeBar = getWidthBar();
+  rangeBar.style.width = widthRangeBar + "px";
 }
 
 /* СЛАЙДЕРЫ */
@@ -326,8 +367,8 @@ function createMessage(evt) {
 
     showPopup(popupMessage);
 
-    fillInput(inputName, storageName);
-    fillInput(inputEmail, storageEmail);
+    setValueToInput(inputName, storageName);
+    setValueToInput(inputEmail, storageEmail);
     
     inputText.focus();
     if (!storageName) {
@@ -437,8 +478,8 @@ function hidePopup(myPopup) {
 /* Функция заполняет значение в поле ввода 
 myInput - поле ввода,
 myValue - значение */
-function fillInput(myInput, myValue) {
-  if (myValue) {
+function setValueToInput(myInput, myValue) {
+  if (myInput && myValue) {
     myInput.value = myValue;
   }
 }
