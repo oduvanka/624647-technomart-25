@@ -97,12 +97,14 @@ if (rangeСontrols) {
   toogleMin = rangeСontrols.querySelector(".toogle-min"),
   toogleMax = rangeСontrols.querySelector(".toogle-max");
 
+  var currentToogle;
+
   var rangeCoords = getCoords(rangeСontrols),
-    currentToogle,
+    widthRangeScale = rangeScale.offsetWidth,
     currentToogleCoords,
     shiftX;
 
-  var deltaEdge = (rangeСontrols.offsetWidth - rangeScale.offsetWidth) / 2,
+  var baseEdge = (rangeСontrols.offsetWidth - rangeScale.offsetWidth) / 2,
     leftEdge,
     rightEdge;
   
@@ -120,10 +122,8 @@ function mousedownToogle(evt) {
   shiftX = evt.pageX - currentToogleCoords.left; // чтобы при клике ползунок не центрировался по курсору
 
   currentToogle.addEventListener("dragstart", dragstartToogle);
-
   document.addEventListener("mousemove", moveToogle);
-
-  currentToogle.addEventListener("mouseup", mouseupToogle);
+  document.addEventListener("mouseup", mouseupToogle);
 }
 
 /* Функция для обработчика начала перетаскивания.
@@ -137,39 +137,43 @@ function dragstartToogle(evt) {
 function moveToogle(evt) {
   var newLeft = evt.pageX - shiftX - rangeCoords.left;
 
-  if (evt.target === toogleMin) {
-    leftEdge = deltaEdge;
-    rightEdge = getCoords(toogleMax).left - rangeCoords.left - 5;
-  }
-  else {
-    leftEdge = getCoords(toogleMin).left - rangeCoords.left + 5;
-    rightEdge = rangeСontrols.offsetWidth - deltaEdge - currentToogle.offsetWidth;
-  }
+    if (currentToogle === toogleMin) {
+      leftEdge = baseEdge;
+      rightEdge = getCoords(toogleMax).left - rangeCoords.left - currentToogle.offsetWidth;
+    }
+    else {
+      leftEdge = getCoords(toogleMin).left - rangeCoords.left + currentToogle.offsetWidth;
+      rightEdge = rangeСontrols.offsetWidth - baseEdge - currentToogle.offsetWidth;
+    }
 
-  if (newLeft < leftEdge) {
-    newLeft = leftEdge;
-  }
-  else if (newLeft > rightEdge) {
-    newLeft = rightEdge;
-  }
+    if (newLeft < leftEdge) {
+      newLeft = leftEdge;
+    }
+    else if (newLeft > rightEdge) {
+      newLeft = rightEdge;
+    }
+  
+    currentToogle.style.left = newLeft + "px";
 
-  currentToogle.style.left = newLeft + "px";
-
-  if (evt.target === toogleMin) {
-    rangeBar.style.left = newLeft + "px";
-  }
-  setWidthBar();
+    if (currentToogle === toogleMin) {
+      rangeBar.style.left = newLeft + "px";
+    }
+    var newWidthBar = getWidthBar();
+    rangeBar.style.width = newWidthBar + "px";
 }
 
 /* Функция для обработчика отпускания мыши.
 Удаляет назаченные обработчики перемещения и отпускания мыши */
 function mouseupToogle(evt) {
   currentToogle.removeEventListener("dragstart", dragstartToogle);
-  document.removeEventListener("mousemove", moveToogle);
-  currentToogle.removeEventListener("mouseup", mouseupToogle);
+  document.removeEventListener("mousemove", moveToogle);  
+  document.removeEventListener("mouseup", mouseupToogle);
 }
 
-function getCoords(elem) {   // кроме IE8-
+/* Функция вычисляет координаты элемента с поправкой на его расположение на странице,
+elem - выбранный элемент,
+возвращает top и left элемента */
+function getCoords(elem) {
   var box = elem.getBoundingClientRect();
   return {
     top: box.top + pageYOffset,
@@ -177,9 +181,10 @@ function getCoords(elem) {   // кроме IE8-
   };
 }
 
-function setWidthBar() {
-  var deltaToogles = getCoords(toogleMax).left - getCoords(toogleMin).left;
-  rangeBar.style.width = deltaToogles + "px";
+/* Функция вычисляет ширину цветного индикатора между ползунками,
+возвращает значение ширины */
+function getWidthBar() {
+  return getCoords(toogleMax).left - getCoords(toogleMin).left;
 }
 
 /* СЛАЙДЕРЫ */
