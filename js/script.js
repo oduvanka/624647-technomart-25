@@ -538,7 +538,7 @@ function hidePopup(myPopup) {
 myInput - поле ввода,
 myValue - значение */
 function setValueToInput(myInput, myValue) {
-  if (myInput && myValue) {
+  if (myInput) {
     myInput.value = myValue;
   }
 }
