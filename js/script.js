@@ -99,19 +99,21 @@ if (rangeСontrols) {
 
   var currentToogle;
 
-  var rangeCoords = getCoords(rangeСontrols),
-    widthRangeScale = rangeScale.offsetWidth,
+  var widthRange = getWidthElement(rangeСontrols),
+    rangeCoords = getCoords(rangeСontrols),
+    widthRangeScale = getWidthElement(rangeScale),
+    widthToogleMin = getWidthElement(toogleMin),
+    widthToogleMax = getWidthElement(toogleMax),
+    maxWidthRangeBar = widthRangeScale - widthToogleMin - widthToogleMax,
     currentToogleCoords,
     shiftX;
 
-  var baseEdge = (rangeСontrols.offsetWidth - rangeScale.offsetWidth) / 2,
+  var baseEdge = (widthRange - widthRangeScale) / 2,
     leftEdge,
     rightEdge;
   
   toogleMin.addEventListener("mousedown", mousedownToogle);
   toogleMax.addEventListener("mousedown", mousedownToogle);
-
-  rangeBar.style.position = "absolute";
 }
 
 /* Функция для обработчика нажатия кнопки мыши */
@@ -139,11 +141,11 @@ function moveToogle(evt) {
 
     if (currentToogle === toogleMin) {
       leftEdge = baseEdge;
-      rightEdge = getCoords(toogleMax).left - rangeCoords.left - currentToogle.offsetWidth;
+      rightEdge = getCoords(toogleMax).left - rangeCoords.left - widthToogleMin;
     }
     else {
-      leftEdge = getCoords(toogleMin).left - rangeCoords.left + currentToogle.offsetWidth;
-      rightEdge = rangeСontrols.offsetWidth - baseEdge - currentToogle.offsetWidth;
+      leftEdge = getCoords(toogleMin).left - rangeCoords.left + widthToogleMax;
+      rightEdge = widthRange - baseEdge - widthToogleMax;
     }
 
     if (newLeft < leftEdge) {
@@ -156,10 +158,10 @@ function moveToogle(evt) {
     currentToogle.style.left = newLeft + "px";
 
     if (currentToogle === toogleMin) {
-      rangeBar.style.left = newLeft + "px";
+      rangeBar.style.left = (newLeft + widthToogleMin) + "px";
     }
     var newWidthBar = getWidthBar();
-    rangeBar.style.width = newWidthBar + "px";
+    rangeBar.style.width = (newWidthBar + widthToogleMin) + "px";
 }
 
 /* Функция для обработчика отпускания мыши.
@@ -181,10 +183,15 @@ function getCoords(elem) {
   };
 }
 
-/* Функция вычисляет ширину цветного индикатора между ползунками,
-возвращает значение ширины */
+/* Функция возвращает ширину элемента,
+elem - выбранный элемент */
+function getWidthElement(elem) {
+  return elem.offsetWidth;
+}
+
+/* Функция возвращает ширину цветного индикатора между ползунками */
 function getWidthBar() {
-  return getCoords(toogleMax).left - getCoords(toogleMin).left;
+  return getCoords(toogleMax).left - (getCoords(toogleMin).left + widthToogleMin);
 }
 
 /* СЛАЙДЕРЫ */
