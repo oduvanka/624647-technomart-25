@@ -1589,6 +1589,8 @@ img {
 }
 
 .range-controls .bar {
+  position: absolute;
+  left: 20px;
   width: 152px;
   height: inherit;
 
@@ -1612,7 +1614,7 @@ img {
 }
 
 .range-controls .toogle-min {
-  left: 18px;
+  left: 20px;
 }
 
 .range-controls .toogle-max {
