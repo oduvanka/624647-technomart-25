@@ -131,8 +131,8 @@ if (inputMinPrice) {
 }
 
 if (inputMaxPrice) {
-  inputMinPrice.type = "text";
-  inputMinPrice.style.paddingRight = "16px";
+  inputMaxPrice.type = "text";
+  inputMaxPrice.style.paddingRight = "16px";
   inputMaxPrice.addEventListener("focus", selectValueInput);
   inputMaxPrice.addEventListener("change", changeInput);
 }
@@ -225,7 +225,7 @@ function getWidthBar() {
 возвращает числовое значение этого расстояния */
 function getLeftEdgeAtBar() {
   var rangeBarLeftEdge = getCoords(rangeBar).left - rangeCoords.left - baseEdge - widthToogleMin;
-  
+
   return rangeBarLeftEdge;
 }
 
