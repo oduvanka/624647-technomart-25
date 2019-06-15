@@ -1590,8 +1590,8 @@ img {
 
 .range-controls .bar {
   position: absolute;
-  left: 20px;
-  width: 152px;
+  left: 40px;
+  width: 120px;
   height: inherit;
 
   background-color: #00ca74;
