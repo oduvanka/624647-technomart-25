@@ -124,11 +124,15 @@ if (rangeСontrols) {
 }
 
 if (inputMinPrice) {
+  inputMinPrice.type = "text";
+  inputMinPrice.style.paddingRight = "16px";
   inputMinPrice.addEventListener("focus", selectValueInput);
   inputMinPrice.addEventListener("change", changeInput);
 }
 
 if (inputMaxPrice) {
+  inputMinPrice.type = "text";
+  inputMinPrice.style.paddingRight = "16px";
   inputMaxPrice.addEventListener("focus", selectValueInput);
   inputMaxPrice.addEventListener("change", changeInput);
 }
@@ -250,7 +254,7 @@ function setBar() {
 
 /* Функция выделяет содержимое поля, если оно равно нолю, чтобы при вводе не было незначащего нуля */
 function selectValueInput(evt) {
-  if (evt.target.valueAsNumber === 0) {
+  if (Number(evt.target.value) === 0) {
     evt.target.select();
   }
 }
@@ -258,7 +262,7 @@ function selectValueInput(evt) {
 /* Функция для обработчика изменения поля ввода цены */
 function changeInput(evt) {
   var myInput = evt.target,
-  myInputValue = myInput.valueAsNumber;
+  myInputValue = Number(myInput.value);
 
   /* Проверим, чтобы значение поля От было всегда меньше значения поля До */
   if (myInputValue >= maxValuePrice) {
@@ -269,10 +273,10 @@ function changeInput(evt) {
     inputMinPrice.value = minValuePrice;
     inputMaxPrice.value = minValuePrice;
   }
-  else if (myInput === inputMinPrice && myInputValue > inputMaxPrice.valueAsNumber) {
+  else if (myInput === inputMinPrice && myInputValue > Number(inputMaxPrice.value)) {
     inputMaxPrice.value = maxValuePrice;
   }
-  else if (myInput === inputMaxPrice && myInputValue < inputMinPrice.valueAsNumber) {
+  else if (myInput === inputMaxPrice && myInputValue < Number(inputMinPrice.value)) {
     inputMinPrice.value = minValuePrice;
   }
 
@@ -281,8 +285,8 @@ function changeInput(evt) {
 
 /* Функция вычисляет новые координаты ползунков, основываясь на значениях из полей ввода */
 function setCoordsToogles() {
-  var leftPositionToogleMin = (inputMinPrice.valueAsNumber / rublesPerRixel) + baseEdge;
-  var leftPositionToogleMax = (inputMaxPrice.valueAsNumber / rublesPerRixel) + widthToogleMin + baseEdge;
+  var leftPositionToogleMin = (Number(inputMinPrice.value) / rublesPerRixel) + baseEdge;
+  var leftPositionToogleMax = (Number(inputMaxPrice.value) / rublesPerRixel) + widthToogleMin + baseEdge;
 
   toogleMin.style.left = Math.round(leftPositionToogleMin) + "px";
   toogleMax.style.left = Math.round(leftPositionToogleMax) + "px";
