@@ -43,7 +43,8 @@ var numberCart = Number(counterCart.textContent),
   storageEmail = "",
   
   minValuePrice = 0,
-  maxValuePrice = 35000; /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */ 
+  maxValuePrice = 35000, /* 120px:30тр = 140px:Xтр; X = 35тр; */
+  rublesPerRixel = 250; /*  35тр/140px = 250 руб/px */
 
 if (popupMessage) {
   formMessage = popupMessage.querySelector(".modal-message-form");
@@ -123,12 +124,16 @@ if (rangeСontrols) {
 }
 
 if (inputMinPrice) {
+  inputMinPrice.addEventListener("focus", selectValueInput);
   inputMinPrice.addEventListener("change", changeInput);
 }
 
 if (inputMaxPrice) {
+  inputMaxPrice.addEventListener("focus", selectValueInput);
   inputMaxPrice.addEventListener("change", changeInput);
 }
+
+/* ФИЛЬТРЫ */
 
 /* Функция для обработчика нажатия кнопки мыши */
 function mousedownToogle(evt) {
@@ -171,10 +176,9 @@ function moveToogle(evt) {
   
     currentToogle.style.left = newLeft + "px";
 
-    setWidthBar();
+    setBar();
 
     if (currentToogle === toogleMin) {
-      rangeBar.style.left = (newLeft + widthToogleMin) + "px";
       setValueToInput(inputMinPrice, getMinPriceForInput());
     }
     else {
@@ -224,7 +228,7 @@ function getLeftEdgeAtBar() {
 /* Функция вычисляет цену по положению левого ползунка,
 возвращает значение цены */
 function getMinPriceForInput() {
-  var minPriceForInput = getLeftEdgeAtBar() * 250;
+  var minPriceForInput = getLeftEdgeAtBar() * rublesPerRixel;
 
   return minPriceForInput;
 }
@@ -232,21 +236,29 @@ function getMinPriceForInput() {
 /* Функция вычисляет цену по положению левого ползунка,
 возвращает значение цены */
 function getMaxPriceForInput() {
-  var maxPriceForInput = (getLeftEdgeAtBar() + widthRangeBar) * 250;
+  var maxPriceForInput = (getLeftEdgeAtBar() + widthRangeBar) * rublesPerRixel;
 
   return maxPriceForInput;
 }
 
 /* Функция устанавливает ширину цветного индикатора между ползунками */
-function setWidthBar() {
+function setBar() {
   widthRangeBar = getWidthBar();
   rangeBar.style.width = widthRangeBar + "px";
+  rangeBar.style.left = (getCoords(toogleMin).right - rangeCoords.left) + "px";
 }
 
-/* Функция для обработчика изменения поле ввода цены */
+/* Функция выделяет содержимое поля, если оно равно нолю, чтобы при вводе не было незначащего нуля */
+function selectValueInput(evt) {
+  if (evt.target.valueAsNumber === 0) {
+    evt.target.select();
+  }
+}
+
+/* Функция для обработчика изменения поля ввода цены */
 function changeInput(evt) {
   var myInput = evt.target,
-  myInputValue = myInput.value;
+  myInputValue = myInput.valueAsNumber;
 
   /* Проверим, чтобы значение поля От было всегда меньше значения поля До */
   if (myInputValue >= maxValuePrice) {
@@ -257,12 +269,25 @@ function changeInput(evt) {
     inputMinPrice.value = minValuePrice;
     inputMaxPrice.value = minValuePrice;
   }
-  else if (myInput === inputMinPrice && myInputValue > inputMaxPrice.value) {
+  else if (myInput === inputMinPrice && myInputValue > inputMaxPrice.valueAsNumber) {
     inputMaxPrice.value = maxValuePrice;
   }
-  else if (myInput === inputMaxPrice && myInputValue < inputMinPrice.value) {
+  else if (myInput === inputMaxPrice && myInputValue < inputMinPrice.valueAsNumber) {
     inputMinPrice.value = minValuePrice;
   }
+
+  setCoordsToogles();
+}
+
+/* Функция вычисляет новые координаты ползунков, основываясь на значениях из полей ввода */
+function setCoordsToogles() {
+  var leftPositionToogleMin = (inputMinPrice.valueAsNumber / rublesPerRixel) + baseEdge;
+  var leftPositionToogleMax = (inputMaxPrice.valueAsNumber / rublesPerRixel) + widthToogleMin + baseEdge;
+
+  toogleMin.style.left = Math.round(leftPositionToogleMin) + "px";
+  toogleMax.style.left = Math.round(leftPositionToogleMax) + "px";
+
+  setBar();
 }
 
 /* СЛАЙДЕРЫ */
