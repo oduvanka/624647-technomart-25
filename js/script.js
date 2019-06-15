@@ -40,7 +40,10 @@ var isStorageSupport = true;
 var numberCart = Number(counterCart.textContent),
   numberBookmark = Number(counterBookmark.textContent),
   storageName = "",
-  storageEmail = "";
+  storageEmail = "",
+  
+  minValuePrice = 0,
+  maxValuePrice = 35000; /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */ 
 
 if (popupMessage) {
   formMessage = popupMessage.querySelector(".modal-message-form");
@@ -119,6 +122,14 @@ if (rangeСontrols) {
   toogleMax.addEventListener("mousedown", mousedownToogle);
 }
 
+if (inputMinPrice) {
+  inputMinPrice.addEventListener("change", changeInput);
+}
+
+if (inputMaxPrice) {
+  inputMaxPrice.addEventListener("change", changeInput);
+}
+
 /* Функция для обработчика нажатия кнопки мыши */
 function mousedownToogle(evt) {
   currentToogle = evt.target;
@@ -169,7 +180,6 @@ function moveToogle(evt) {
     else {
       setValueToInput(inputMaxPrice, getMaxPriceForInput());
     }
-    
 }
 
 /* Функция для обработчика отпускания мыши.
@@ -214,7 +224,6 @@ function getLeftEdgeAtBar() {
 /* Функция вычисляет цену по положению левого ползунка,
 возвращает значение цены */
 function getMinPriceForInput() {
-  /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */ 
   var minPriceForInput = getLeftEdgeAtBar() * 250;
 
   return minPriceForInput;
@@ -223,7 +232,6 @@ function getMinPriceForInput() {
 /* Функция вычисляет цену по положению левого ползунка,
 возвращает значение цены */
 function getMaxPriceForInput() {
-  /* 120px:30тр = 140px:Xтр; X = 35тр; 1px = 250p. */
   var maxPriceForInput = (getLeftEdgeAtBar() + widthRangeBar) * 250;
 
   return maxPriceForInput;
@@ -233,6 +241,28 @@ function getMaxPriceForInput() {
 function setWidthBar() {
   widthRangeBar = getWidthBar();
   rangeBar.style.width = widthRangeBar + "px";
+}
+
+/* Функция для обработчика изменения поле ввода цены */
+function changeInput(evt) {
+  var myInput = evt.target,
+  myInputValue = myInput.value;
+
+  /* Проверим, чтобы значение поля От было всегда меньше значения поля До */
+  if (myInputValue >= maxValuePrice) {
+    inputMinPrice.value = maxValuePrice;
+    inputMaxPrice.value = maxValuePrice;
+  }
+  else if (myInputValue <= minValuePrice) {
+    inputMinPrice.value = minValuePrice;
+    inputMaxPrice.value = minValuePrice;
+  }
+  else if (myInput === inputMinPrice && myInputValue > inputMaxPrice.value) {
+    inputMaxPrice.value = maxValuePrice;
+  }
+  else if (myInput === inputMaxPrice && myInputValue < inputMinPrice.value) {
+    inputMinPrice.value = minValuePrice;
+  }
 }
 
 /* СЛАЙДЕРЫ */
