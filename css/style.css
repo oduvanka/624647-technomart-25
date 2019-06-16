@@ -943,9 +943,15 @@ img {
 }
 
 .section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px;
   padding: 24px 24px 26px 28px;
 
@@ -957,7 +963,8 @@ img {
 }
 
 .section-header .btn {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 253px;
 }
 
@@ -1879,7 +1886,8 @@ img {
 }
 
 .sort-parameters-wrap {
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   min-width: 424px;
 }
 
