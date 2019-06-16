@@ -1156,11 +1156,11 @@ img {
   opacity: 0.3;
 }
 
-.manufactures {
+.manufacturers {
   margin-bottom: 65px;
 }
 
-.manufactures-list {
+.manufacturers-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1173,12 +1173,12 @@ img {
   list-style: none;
 }
 
-.manufacture-item {
+.manufacturer-item {
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
-.manufacture-link {
+.manufacturer-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1193,34 +1193,34 @@ img {
   border: 1px solid #eaeaea;
 }
 
-.manufacture-link:hover,
-.manufacture-link:focus  {
+.manufacturer-link:hover,
+.manufacturer-link:focus  {
   border-color: transparent;
   -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
           box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.manufacture-link:active {
+.manufacturer-link:active {
   border-color: transparent;
   -webkit-box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
           box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
 
-.manufacture-link-makita {
+.manufacturer-link-makita {
   padding-bottom: 4px;
 }
 
-.manufacture-link-dewalt {
+.manufacturer-link-dewalt {
   padding-bottom: 5px;
 }
 
-.manufacture-link-interskol {
+.manufacturer-link-interskol {
   padding-right: 2px;
   padding-bottom: 15px;
 }
 
-.manufacture-link-hitachi {
+.manufacturer-link-hitachi {
   padding-top: 2px;
   padding-left: 5px;
 }
@@ -1229,12 +1229,12 @@ img {
   padding-bottom: 3px;
 }
 
-.manufacture-link-metabo {
+.manufacturer-link-metabo {
   padding-left: 3px;
   padding-bottom: 6px;
 }
 
-.manufacture-link img {
+.manufacturer-link img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin: auto;
@@ -1654,7 +1654,7 @@ img {
   border-radius: 3px;
 }
 
-.filter-manufactures,
+.filter-manufacturers,
 .filter-power-supply {
   margin: 0;
   padding: 0;
@@ -1662,7 +1662,7 @@ img {
   border: none;
 }
 
-.filter-manufactures {
+.filter-manufacturers {
   margin-bottom: 17px;
 
   border-bottom: 1px solid #e5e5e5;
@@ -1676,17 +1676,17 @@ img {
   letter-spacing: 0.01em;
 }
 
-.filter-manufactures p,
+.filter-manufacturers p,
 .filter-power-supply p {
   margin: 0;
   margin-bottom: 16px;
 }
 
-.filter-manufactures p:last-child {
+.filter-manufacturers p:last-child {
   margin-bottom: 18px;
 }
 
-.filter-manufactures label,
+.filter-manufacturers label,
 .filter-power-supply label {
   position: relative;
   padding-left: 35px;
@@ -1697,12 +1697,12 @@ img {
   color: #000000;
 }
 
-.filter-manufactures input:disabled + label,
 .filter-power-supply input:disabled + label {
+.manufacturer-checkbox:disabled + label,
   color: rgba(0, 0, 0, 0.4);
 }
 
-.filter-manufactures label::before {
+.filter-manufacturers label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1715,7 +1715,7 @@ img {
   border-radius: 2px;
 }
 
-.filter-manufactures input:checked + label::after {
+.manufacturer-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -1738,28 +1738,28 @@ img {
           transform: rotate(45deg);
 }
 
-.filter-manufactures input:hover + label::before {
+.manufacturer-checkbox:hover + label::before {
   border-color: #b5b5b5;
 }
 
-.filter-manufactures input:focus + label::before {
+.manufacturer-checkbox:focus + label::before {
   border-color: #b5b5b5;
 
   outline: 1px dotted #212a3a;
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-.filter-manufactures input:hover + label::after,
-.filter-manufactures input:focus + label::after {
+.manufacturer-checkbox:hover + label::after,
+.manufacturer-checkbox:focus + label::after {
   border-color: #b5b5b5;
 }
 
-.filter-manufactures input:disabled + label::before {
+.manufacturer-checkbox:disabled + label::before {
   border-color: #b5b5b5;
   opacity: 0.3;
 }
 
-.filter-manufactures input:disabled + label::after {
+.manufacturer-checkbox:disabled + label::after {
   border-color: #b5b5b5;
   opacity: 0.3;
 }
