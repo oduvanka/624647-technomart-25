@@ -400,7 +400,7 @@ function replaceActiveLinkService(newData) {
   var oldService = listServices.querySelector(".service-item[data-service="+currentDataService+"]"),
     oldLinkService = oldService.querySelector("a");
   oldService.classList.remove("service-active");
-  oldLinkService.setAttribute("href", "#");
+  oldLinkService.setAttribute("href", currentDataService + ".html");
 
   var newService = listServices.querySelector(".service-item[data-service="+newData+"]"),
     newLinkService = newService.querySelector("a");
