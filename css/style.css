@@ -1565,7 +1565,7 @@ img {
   border-radius: 3px;
 }
 
-.filters legend {
+.filter-group-name {
   margin-bottom: 14px;
 
   font-size: 17px;
@@ -1835,7 +1835,9 @@ img {
   position: absolute;
   top: 0;
   left: 240px;
-  width: 665px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 700px;
   padding-right: 16px;
   padding-left: 19px;
 

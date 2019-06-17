@@ -88,7 +88,7 @@
           <form class="filters" action="https://echo.htmlacademy.ru" method="GET">
             <h3 class="filters-header">Фильтр:</h3>
             <fieldset class="filter-price">
-              <legend>Цена:</legend>
+              <legend class="filter-group-name">Цена:</legend>
               <div class="filter-price-range">
                 <div class="range-controls">
                   <div class="scale">
@@ -109,7 +109,7 @@
               </div>
             </fieldset>
             <fieldset class="filter-manufacturers">
-              <legend>Производители:</legend>
+              <legend class="filter-group-name">Производители:</legend>
               <p> 
                 <input class="manufacturer-checkbox visually-hidden-input" type="checkbox" id="manufacturers-bosch" name="manufacturers" value="bosch" checked>
                 <label for="manufacturers-bosch">BOSCH</label>
@@ -132,7 +132,7 @@
               </p>
             </fieldset>
             <fieldset class="filter-power-supply">
-              <legend>Питание:</legend>
+              <legend class="filter-group-name">Питание:</legend>
               <p>
                 <input class="power-supply-radio visually-hidden-input" type="radio" id="power-supply-battery" name="power-supply" value="battery" checked>
                 <label for="power-supply-battery">Аккумуляторные</label>
@@ -145,7 +145,6 @@
             <section class="sorting">
               <h3 class="sorting-header">Сортировка:</h3>
               <fieldset class="sort-parameters">
-                <legend class="visually-hidden">По параметрам</legend>
                 <div class="sort-parameters-wrap">
                   <p>
                     <input class="sort-param-radio visually-hidden-input" type="radio" id="sort-param-price" name="sort-params" value="price" checked>
@@ -162,7 +161,6 @@
                 </div>
               </fieldset>
               <fieldset class="sort-directions">
-                <legend class="visually-hidden">По направлению</legend>
                 <div class="sort-directions-wrap">
                   <p>
                     <input class="sort-direction-radio visually-hidden-input" type="radio" id="sort-direction-ascending" name="sort-direction" value="ascending" checked>
