@@ -1040,11 +1040,9 @@ img {
   background-color: #ffffff;
 }
 
-.catalog-item .price-wrapper {
+.catalog-item .price-new {
   position: relative;
-  margin-right: 54px;
-  margin-bottom: 20px;
-  margin-left: 42px;
+  margin: 0px 54px 20px 42px;
   padding: 10px 13px 10px 28px;
 
   font-size: 17px;
@@ -1060,7 +1058,7 @@ img {
   border-bottom-left-radius: 3px;
 }
 
-.catalog-item .price-wrapper::after {
+.catalog-item .price-new::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1071,10 +1069,6 @@ img {
   border-left: 20px solid #ee3643;
   border-top: 19px solid transparent;
   border-bottom: 19px solid transparent;
-}
-
-.catalog-item .price-new {
-  margin: 0;
 }
 
 .catalog-item .label-new::after {
